@@ -1,0 +1,72 @@
+body {
+	font-family: "Helvetica", Helvetica, sans-serif;
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+header h1 {
+	margin-bottom: 0px;
+}
+
+p.author {
+	font-size: 80%;
+}
+
+nav {
+	margin: 15px 0px 15px 0px;
+}
+
+h2 {
+	border-bottom: 1px solid #000;
+}
+
+#download ul {
+	list-style-type: none;
+    padding: 0px;
+}
+
+.warning {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.nav ul {
+	margin: 10px 0px 10px 0px;
+}
+
+p.note:before {
+	content: "Note.";
+	font-weight: bold;
+	padding-right: 7px;
+}
+
+figure {
+    display: block;
+	margin: 10px 0px 10px 0px;
+}
+
+figcaption {
+	font-style: italic;
+	display: block;
+}
+
+footer {
+	border-top: 1px solid #000;
+	font-size: 80%;
+	margin-top: 40px;
+	overflow: auto;
+}
+
+footer p {
+	margin: 8px 0px 0px 0px;
+}
+
+#footer_left {
+	float: left;
+}
+
+#footer_right {
+	float: right;
+}
