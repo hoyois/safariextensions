@@ -52,6 +52,24 @@ figcaption {
 	display: block;
 }
 
+table {
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+tbody {
+    border-bottom: 1px solid black;
+}
+
+td {
+    padding: 5px 10px;
+}
+
 footer {
 	border-top: 1px solid #000;
 	font-size: 80%;

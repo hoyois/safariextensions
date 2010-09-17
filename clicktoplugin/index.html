@@ -21,25 +21,28 @@
 <div id="download" class="nav">
 <b>Download links</b>
 <ul>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-1.4.5.safariextz">Download ClickToPlugin 1.4.5</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-1.4.5.safariextz">Télécharger ClickToPlugin 1.4.5 en français</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-1.4.6.safariextz">Download ClickToPlugin 1.4.6</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-1.4.6.safariextz">Télécharger ClickToPlugin 1.4.6 en français</a></li>
 <li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.ru-1.4.5.safariextz">Скачать ClickToPlugin 1.4.5 по-русски</a></li>
 </ul>
 </div>
 
-<div class="warning"><p>ClickToPlugin 1.4.5 requires Safari 5.0.1 or newer.</p></div>
+<div class="warning"><p>ClickToPlugin 1.4.6 requires Safari 5.0.1 or newer.</p></div>
 
 <div id="contents" class="nav">
 <b>Jump to</b>
 <ul>
 	<li><a href="#features">Features</a></li>
 	<li><a href="#settings">Settings</a></li>
+	<li><a href="#faq_issues">FAQ &amp; Common Issues</a></li>
 	<li><a href="#changelog">Release Notes</a></li>
 </ul>
 </div>
 
 <div id="intro">
-<p>This is an extension of my ClickToFlash extension that can deal with all types of embedded content. Feel free to <a href="mailto:marc%20dot%20hoyois%20@t%20gmail%20dot%20com?subject=%5BCTP%5D%20Your%20extension%20rocks,%20but...">request features</a> and please <a href="mailto:marc%20dot%20hoyois%20@t%20gmail%20dot%20com?subject=%5BCTP%5D%20This%20piece%20of%20garbage%20doesn%27t%20work%21">report bugs</a>.</p>
+<p>This is an extension of my ClickToFlash extension that can deal with all types of embedded content.</p>
+
+<p>Feel free to <a href="mailto:marc%20dot%20hoyois%20@t%20gmail%20dot%20com?subject=%5BCTP%5D%20Your%20extension%20rocks,%20but...">request features</a> and please <a href="mailto:marc%20dot%20hoyois%20@t%20gmail%20dot%20com?subject=%5BCTP%5D%20This%20piece%20of%20garbage%20doesn%27t%20work%21">report bugs</a>. <b>However, please read the <a href="#faq_issues">FAQ &amp; Common Issues</a> section carefully before sending me an email.</b></p>
 
 <p>To unpack the source to the current directory, run <code>xar -f /path/to/ClickToPlugin.safariextz -x</code>. You can also <a href="http://github.com/hoyois/clicktoflash/tree/click-to-plugin">browse the latest source</a> on GitHub.</p>
 </div>
@@ -89,6 +92,7 @@
 <li><b>YouTube videos.</b> Both on-site and embedded videos. All YouTube videos have H.264-encoded MP4-contained sources. Resolutions in this format are Medium (&#x2264;360p, always available), 720p, 1080p, and 4K.</li>
 <li><b>Vimeo videos.</b> Both on-site and embedded videos. All Vimeo videos have H.264-encoded sources, and most of them are in MP4 containers. A few are FLV files that Safari cannot play natively. Resolutions are 360p and 720p.</li>
 <li><b> Dailymotion videos.</b> Both on-site and embedded videos (not including external videos available on Dailymotion's website). All Dailymotion videos available in 'high quality' have H.264-encoded MP4-contained sources. Resolution are &#x2264;480p and 720p.</li>
+<li>Videos played in the <a href="http://www.longtailvideo.com/">JW Player</a>, if they are playable by QuickTime.</li>
 <li>Objects with <code>&lt;video&gt;</code> fallback content.</li>
 <li>Objects handled by the QuickTime web plugin. At this time, HTML5 videos in Safari do not seem to allow streaming, and ClickToPlugin is not able to detect streaming videos that are wrapped in a <code>.mov</code> container. For those videos, Safari's video player will never get past the 'Loading...' stage, but you can select 'Reload in QuickTime' from the contextual menu to access the stream.</li>
 </ul>
@@ -100,6 +104,7 @@
 	<li><b>Veoh videos.</b> (requires Perian) Both on-site and embedded videos (not including external videos available on Veoh's website). I was not able to find any video on Veoh with resolution higher than 360p. Contact me if you know any.</li>
 	<li>Videos played in the <a href="http://slvideoplayer.codeplex.com/">Silverlight Video Player</a>. (requires Flip4Mac)</li>
 	<li>Directly embedded Windows Media videos. (requires Flip4Mac)</li>
+	<li>Directly embedded DivX videos. (requires Perian)</li>
 </ul>
 
 <p><b>Note.</b> Playback of nonnative codecs in Safari uses much more CPU than native playback. Moreover, if autoplay is enabled, Safari usually starts playing the video too early for smooth playback. For these reasons the feature can be disabled completely. In my casual testing, playback of 480p YouTube videos using Perian uses on average half as much CPU as YouTube's Flash player, while playback of Windows Media videos using Flip4Mac uses on average 60% as much CPU as the Silverlight Video Player.</p>
@@ -132,7 +137,7 @@
 </figure>
 
 <p><b>Block all MIME types</b><br />
-To block all embedded content. An exception is made for natively supported MIME types, such as common image types, PDF documents, and SVG drawings.</p>
+To block all embedded content. An exception is made for natively supported MIME types, such as common image types, PDF documents, and SVG documents.</p>
 
 <p>MIME types are strings of the form '<em>type</em>/<em>subtype</em>[;<em>parameters</em>]' specifying the nature of the embedded content. Common <em>type</em>s are:</p>
 <ul>
@@ -144,7 +149,7 @@ To block all embedded content. An exception is made for natively supported MIME 
 
 <p>Here is a useful list of more specific matches:</p>
 <ul>
-<li><b>flash, futuresplash</b> matches all content handled by the Flash plugin;</li>
+<li><b>flash futuresplash</b> matches all content handled by the Flash plugin;</li>
 <li><b>silverlight</b> matches all content handled by the Silverlight plugin;</li>
 <li><b>java</b> matches all content handled by Java plugins;</li>
 <li><b>x-ms</b> matches Windows Media content;</li>
@@ -199,15 +204,13 @@ Sets the initial volume of videos created by ClickToPlugin. Videos on the active
 </figure>
 
 <p><b>Location matches</b><br />
-Matches embedded content on pages whose URL contains one of these strings.</p>
+Matches Flash content in documents whose URL contains one of these strings.</p>
 
 <p><b>Source matches</b><br />
-Matches embedded content whose source URL contains one of these strings.</p>
-
-<p><b>Note.</b> If a string is enclosed in parenthesis, it will be interpreted as a regular expression.</p>
+Matches Flash content whose source URL contains one of these strings.</p>
 
 <p><b>Size matches</b><br />
-Small Flash elements, also called 'invisible Flash', make it difficult for the user to locate and click their placeholders. Because they are not meant to be seen, such objects usually have important behind-the-scene functions, and not allowing them to load may cripple the functionality of some pages. A common effect of invisible Flash is the message <em>Please install Flash player</em> being displayed instead of the expected Flash content: this happens because an invisible Flash element whose function is to replace this message by the Flash content failed to load. In such cases, allowing invisible elements (or adding their source to the whitelist) is required to even have the possibility to access the main content. The size of these control elements is usually 1x1 px, but some websites are known to use control elements up to 8x8 px in size.</p>
+Matches the offset size of an element.</p>
 
 <h3 id="menus">Contextual menu items</h3>
 
@@ -240,8 +243,76 @@ sIFR is a pre-CSS3 technology for displaying advanced typography on the web. It 
 <p><b>Opacity</b><br />
 This slider controls the opacity of the placeholder elements, from invisible to opaque.</p>
 
+<p><b>Block content manually</b><br />
+If ticked, a pop-up box asks the user for confirmation before blocking any element. This box displays the following information about the element: its type (Flash, Silverlight, etc.), its location, its source, its position within its document, and its size. Further, an option 'Show Element' is added to the contextual menu of placeholder elements; selecting it shows the location and source of the blocked element, as well as the blocked element itself. This is useful for getting information about invisible elements or the location of elements within iframes.</p>
+
+<h2 id="faq_issues">FAQ &amp; Common Issues</h2>
+
+<h3 id="faq">FAQ</h3>
+
+<p><b>Q. Can I use this extension together with the ClickToFlash plugin?</b><br />
+<b>A.</b> No, unless you want to have to click twice to unlock every element.</p>
+
+<p><b>Q. Why would I want to allow all elements below a given size?</b><br />
+<b>A.</b> You don't. For security and privacy reasons, automatically allowing elements on random pages is not recommended. Also, elements can be small at first but later grow to become full-fledged ads.<br />
+The reason why some people will still use this setting despite my recommendation is the following.
+Very small elements, also called 'invisible' elements, are not meant to be seen and thus often have important functions. Some web pages will be crippled when they are blocked, and obviously it is difficult to locate them and load them manually. For example, a common effect of invisible Flash is the message <em>Please install Flash player</em> being displayed instead of expected Flash content: this happens because an invisible Flash element whose function is to replace this message by the Flash object failed to load. The size of these control elements is usually 1x1 px, but some websites are known to use invisible elements up to 8x8 px in size.<br />
+That said, you should only use this setting to quickly check if an issue on a trusted page is caused by an invisible element. If it resolves the issue, turns the setting back off and use the 'Block content manually' setting to find out the source of the culprit, and match it with the source whitelist.</p>
+
+<p><b>Q. Can I use regular expressions in whitelists?</b><br />
+<b>A.</b> Yes! All whitelist-like text fields in the settings support regular expressions. For a string to be considered as a regular expression, it must be enclosed in parentheses. These regular expressions must follow the Javascript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
+
+<h3 id="issues">Common issues</h3>
+
+<h4>Google Street View not working</h4>
+
+<p>For Google Street View to work, add <code>maps.gstatic.com</code> to the source whitelist.</p>
+
+<h4>Content still being blocked after whitelisting a page</h4>
+
+<p>This happens because the blocked elements are within iframes. Iframes allow a single tab to contain several documents, each with its own location, and the URL displayed in Safari's toolbar is the location of the main document only. The location whitelist considers the location of an element to be that of its document. To find out the real location of an element, tick the 'Block content manually' checkbox in the settings, right-click on the element's placeholder, and select 'Show Element'.</p>
+
+<h4 id="list_invisible">List of invisible elements</h4>
+
+<p>Many issues are caused by blocked invisible elements. Here is a table of known invisible elements which must be allowed to access some functionality on the page:</p>
+
+<table>
+<thead>
+<tr>
+    <td>Domains</td>
+    <td>Function of invisible element</td>
+    <td>Size</td>
+    <td>Source</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>prostopleer.com &amp; others</td>
+    <td>Required by SoundManager2, a common sound API</td>
+    <td>8x8</td>
+    <td>soundmanager2_flash9.swf</td>
+</tr>
+<tr>
+    <td>www.bbc.co.uk</td>
+    <td>Loads video players on some news pages</td>
+    <td>1x1</td>
+    <td>emp_proxy.swf</td>
+</tr>
+<tr>
+    <td>www.hulu.com</td>
+    <td>Loads the main video player</td>
+    <td>1x1</td>
+    <td>http://www.hulu.com/loadplayer.swf</td>
+</tr>
+</tbody>
+</table>
 
 <h2 id="changelog">Release Notes</h2>
+
+<p id="v1.4.6"><b>Version 1.4.6</b> (September 16, 2010)</p>
+<ul>
+    <li>Based on <a href="../clicktoflash/#v1.7.6">ClickToFlash 1.7.6</a></li>
+</ul>
 
 <p id="v1.4.5"><b>Version 1.4.5</b> (September 10, 2010)</p>
 <ul>
@@ -329,7 +400,7 @@ This slider controls the opacity of the placeholder elements, from invisible to 
 </ul>
 
 <footer>
-<p id="footer_left">Updated on September 10, 2010</p>
+<p id="footer_left">Updated on September 16, 2010</p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 </footer>
 
