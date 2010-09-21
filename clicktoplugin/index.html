@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>ClickToPlugin Safari extension</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="author" content="Marc Hoyois" />
 	<meta name="description" content="Prevents embedded content from loading automatically" />
 	<meta name="keywords" content="safari extension, block plugins, clicktoplugin" />
@@ -21,13 +21,13 @@
 <div id="download" class="nav">
 <b>Download links</b>
 <ul>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-1.4.6.safariextz">Download ClickToPlugin 1.4.6</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-1.4.6.safariextz">Télécharger ClickToPlugin 1.4.6 en français</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.ru-1.4.6.safariextz">Скачать ClickToPlugin 1.4.6 по-русски</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-1.4.7.safariextz">Download ClickToPlugin 1.4.7</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-1.4.7.safariextz">Télécharger ClickToPlugin 1.4.7 en français</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.ru-1.4.7.safariextz">Скачать ClickToPlugin 1.4.7 по-русски</a></li>
 </ul>
 </div>
 
-<div class="warning"><p>ClickToPlugin 1.4.6 requires Safari 5.0.1 or newer.</p></div>
+<div class="warning"><p>ClickToPlugin 1.4.7 requires Safari 5.0.1 or newer.</p></div>
 
 <div id="contents" class="nav">
 <b>Jump to</b>
@@ -58,7 +58,7 @@
 
 <h2 id="features">Features</h2>
 <h3 id="features_blocking">Blocking embedded content</h3>
-<p>ClickToPlugin can replace every <code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code>, and <code>&lt;applet&gt;</code> element on a web page by a placeholder element (fig.&nbsp;1) during page-loading. The user can load the embedded content manually by clicking on this placeholder. The type of content that ClickToPlugin blocks can be specified in the <a href="#MIME_settings">settings</a>. Right-clicking on the placeholder reveals the usual contextual menu with one added item, 'Hide Plugin', which effectively removes the HTML element from the webpage. This is useful for getting rid of overlays that block access to page content. Additional contextual menu items for adding a page or source to the whitelist and unlocking all Flash elements on the page can be enabled in the <a href="#menus">settings</a>.</p>
+<p>ClickToPlugin can replace every <code>&lt;embed&gt;</code> and <code>&lt;object&gt;</code> element on a web page by a placeholder element (fig.&nbsp;1) during page-loading. The user can load the embedded content manually by clicking on this placeholder. The type of content that ClickToPlugin blocks can be specified in the <a href="#MIME_settings">settings</a>. Right-clicking on the placeholder reveals the usual contextual menu with one added item, 'Hide Plugin', which effectively removes the HTML element from the webpage. This is useful for getting rid of overlays that block access to page content. Additional contextual menu items for adding a page or source to the whitelist and unlocking all Flash elements on the page can be enabled in the <a href="#menus">settings</a>.</p>
 
 <figure>
 <img src="CTP_Flash.png" alt="Flash placeholder" />
@@ -69,7 +69,7 @@
 <figcaption>Figure 1: Examples of placeholder elements</figcaption>
 </figure>
 
-<p><b>Note on Java applets.</b> <code>&lt;embed&gt;</code> and <code>&lt;object&gt;</code> elements fire a 'beforeload' event before their content is fetched by the browser, and they can be replaced by placeholder elements at that time. HTML4's deprecated <code>&lt;applet&gt;</code> elements, however, fire no such event. Although those elements are also replaced by placeholders eventually, ClickToPlugin is unable to prevent the Java plugin from launching when a page contains <code>&lt;applet&gt;</code> elements. A bug report has been <a href="https://bugs.webkit.org/show_bug.cgi?id=44023">filed</a>.</p>
+<p class="note">This extension does not block <code>&lt;applet&gt;</code> elements. These elements are used to embed Java applets into web pages and will launch a Java plugin. The reason is that they <a href="https://bugs.webkit.org/show_bug.cgi?id=44023">cannot</a> be blocked.</p>
 
 <h3 id="features_replacing">Replacing blocked content by HTML5 videos</h3>
 <p>ClickToPlugin is able to replace certain blocked elements by HTML5 <code>&lt;video&gt;</code> tags. The label of the placeholder is then changed accordingly, and an 'HD' prefix is added if ClickToPlugin knows that the video has resolution 720p or 1080p (fig.&nbsp;2). Clicking on such a placeholder loads Safari's video player. In Snow Leopard this video player features a fullscreen button (fig.&nbsp;3) and uses hardware acceleration on supported Macs. Double-clicking inside the video player toggles looping.</p>
@@ -101,13 +101,13 @@
 <ul>
 	<li>480p YouTube videos. (requires Perian)</li>
 	<li>All remaining Vimeo and Dailymotion videos. (requires Perian)</li>
-	<li><b>Veoh videos.</b> (requires Perian) Both on-site and embedded videos (not including external videos available on Veoh's website). I was not able to find any video on Veoh with resolution higher than 360p. Contact me if you know any.</li>
+	<li><b>Veoh videos.</b> (requires Perian) Both on-site and embedded videos (not including external videos available on Veoh's website).</li>
 	<li>Videos played in the <a href="http://slvideoplayer.codeplex.com/">Silverlight Video Player</a>. (requires Flip4Mac)</li>
 	<li>Directly embedded Windows Media videos. (requires Flip4Mac)</li>
 	<li>Directly embedded DivX videos. (requires Perian)</li>
 </ul>
 
-<p><b>Note.</b> Playback of nonnative codecs in Safari uses much more CPU than native playback. Moreover, if autoplay is enabled, Safari usually starts playing the video too early for smooth playback. For these reasons the feature can be disabled completely. In my casual testing, playback of 480p YouTube videos using Perian uses on average half as much CPU as YouTube's Flash player, while playback of Windows Media videos using Flip4Mac uses on average 60% as much CPU as the Silverlight Video Player.</p>
+<p class="note">Playback of nonnative codecs in Safari uses much more CPU than native playback. Moreover, if autoplay is enabled, Safari usually starts playing the video too early for smooth playback. For these reasons the feature can be disabled completely. In my casual testing, playback of 480p YouTube videos using Perian uses on average half as much CPU as YouTube's Flash player, while playback of Windows Media videos using Flip4Mac uses on average 60% as much CPU as the Silverlight Video Player.</p>
 
 <h4>Download links</h4>
 
@@ -161,7 +161,7 @@ Instead of manually greenlisting the numerous MIME types handled by the QuickTim
 
 <p>To see the full list of active plugins and which MIME types they control, go to 'Help' > 'Installed Plug-ins' in Safari's toolbar.</p>
 
-<p><b>Note.</b> If you only want to block Flash content, I recommend using the more lightweight <a href="../clicktoflash">ClickToFlash extension</a>.</p>
+<p class="note">If you only want to block Flash content, I recommend using the more lightweight <a href="../clicktoflash">ClickToFlash extension</a>.</p>
 
 <h3 id="video_settings">Video Settings</h3>
 
@@ -182,7 +182,7 @@ If ticked, ClickToPlugin can load whole playlists from YouTube (on-site and embe
 If ticked, a preview image of the video is shown on the placeholder instead of the usual gray gradient. Such preview images are not available for all videos.</p>
 
 <p><b>Load the video player automatically</b><br />
-If ticked, ClickToPlugin automatically replaces blocked elements on locations matching a string in the text field by <code>&lt;video&gt;</code> elements when available, without waiting for the user to click on a placeholder. Strings in the text field must be separated by commas. Simply leave the text field blank to use this behavior on all web pages.</p>
+If ticked, ClickToPlugin automatically replaces blocked elements on locations matching a string in the text field by <code>&lt;video&gt;</code> elements when available, without waiting for the user to click on a placeholder. Strings in the text field must be separated by spaces. Simply leave the text field blank to use this behavior on all web pages.</p>
 
 <p><b>Initial behavior</b><br />
 Choose whether ClickToPlugin creates <code>&lt;video&gt;</code> tags with the 'preload' attribute set to 'none', to 'auto', or with the 'autoplay' attribute. With the 'Do not buffer' option, the video will only start buffering when the 'Play' button is clicked.</p>
@@ -200,14 +200,13 @@ Sets the initial volume of videos created by ClickToPlugin. Videos on the active
 
 <figure>
 <img src="Whitelists.png" alt="Whitelist settings screenshot" />
-<img src="Whitelists2.png" alt="Whitelist settings screenshot 2" />
 </figure>
 
 <p><b>Location matches</b><br />
-Matches Flash content in documents whose URL contains one of these strings.</p>
+Matches embedded content in documents whose absolute URL contains one of these strings.</p>
 
 <p><b>Source matches</b><br />
-Matches Flash content whose source URL contains one of these strings.</p>
+Matches embedded content whose absolute URL contains one of these strings.</p>
 
 <p><b>Size matches</b><br />
 Matches the offset size of an element.</p>
@@ -250,39 +249,46 @@ If ticked, a pop-up box asks the user for confirmation before blocking any eleme
 
 <h3 id="faq">FAQ</h3>
 
-<p><b>Q. Can I use this extension together with the ClickToFlash plugin?</b><br />
-<b>A.</b> No, unless you want to have to click twice to unlock every element.</p>
+<p class="question">Can I use this extension together with the ClickToFlash plugin?</p>
+<p class="answer">No, unless you want to have to click twice to unlock every element.</p>
 
-<p><b>Q. Why would I want to allow all elements below a given size?</b><br />
-<b>A.</b> You don't. For security and privacy reasons, automatically allowing elements on random pages is not recommended. Also, elements can be small at first but later grow to become full-fledged ads.<br />
-The reason why some people will still use this setting despite my recommendation is the following.
-Very small elements, also called 'invisible' elements, are not meant to be seen and thus often have important functions. Some web pages will be crippled when they are blocked, and obviously it is difficult to locate them and load them manually. For example, a common effect of invisible Flash is the message <em>Please install Flash player</em> being displayed instead of expected Flash content: this happens because an invisible Flash element whose function is to replace this message by the Flash object failed to load. The size of these control elements is usually 1x1 px, but some websites are known to use invisible elements up to 8x8 px in size.<br />
-That said, you should only use this setting to quickly check if an issue on a trusted page is caused by an invisible element. If it resolves the issue, turn the setting back off and use the 'Block content manually' setting to find out the source of the culprit, and match it with the source whitelist.</p>
+<p class="question">Why would I want to allow all elements below a given size?</p>
+<p class="answer">You don't. For security and privacy reasons, automatically allowing elements on random pages is not recommended. Also, elements can be small at first but later grow to become full-fledged ads.</p>
+<p>The reason why some people will still use this setting despite my recommendation is the following.
+Very small elements, also called 'invisible' elements, are not meant to be seen and thus often have important functions. Some web pages will be crippled when they are blocked, and obviously it is difficult to locate them and load them manually. For example, a common effect of invisible Flash is the message <em>Please install Flash player</em> being displayed instead of expected Flash content: this happens because an invisible Flash element whose function is to replace this message by the Flash object failed to load. The size of these control elements is usually 1x1 px, but some websites are known to use invisible elements up to 8x8 px in size.</p>
+<p>That said, you should only use this setting to quickly check if an issue on a trusted page is caused by an invisible element. If it resolves the issue, turn the setting back off and use the 'Block content manually' setting to find out the source of the culprit, and match it with the source whitelist.</p>
 
-<p><b>Q. Can I use regular expressions in whitelists?</b><br />
-<b>A.</b> Yes! All whitelist-like text fields in the settings support regular expressions. For a string to be considered as a regular expression, it must be enclosed in parentheses. These regular expressions must follow the Javascript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
+<p class="question">Can I use regular expressions in whitelists?</p>
+<p class="answer">Yes! All whitelist-like text fields in the settings support regular expressions. For a string to be considered as a regular expression, it must be enclosed in parentheses. These regular expressions must follow the Javascript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
+
+<p class="question" id="applet_blocking">Why did you remove blocking of Java <code>&lt;applet&gt;</code>s in version 1.4.7?</p>
+<p class="answer">Before 1.4.7, the extension was listening to mutation events, which is known to affect performance significantly. Primarily for this reason, the DOM level 3 specification <a href="http://www.w3.org/TR/DOM-Level-3-Events/#_34">deprecates</a> the use of those events, and the WebKit team even <a href="https://bugs.webkit.org/show_bug.cgi?id=8191">decided</a> not to implement one of them, preferring to wait for better solutions. Mutation events were in particular used to detect <code>&lt;applet&gt;</code> elements. However,</p>
+<ul>
+    <li>the blocking of <code>&lt;applet&gt;</code>s was fake anyway: the Java plugin would still launch and often make the beach ball appear,</li>
+    <li>the extension still blocks Java <code>&lt;object&gt;</code>s, and</li>
+    <li>the <code>&lt;applet&gt;</code> tag should slowly disappear as it is deprecated in HTML4 and invalid in HTML5.</li>
+</ul>
+<p>True blocking of <code>&lt;applet&gt;</code> elements will be introduced as soon as it is actually possible, namely when <a href="https://bugs.webkit.org/show_bug.cgi?id=44023">this WebKit bug</a> is addressed.</p></p>
 
 <h3 id="issues">Common issues</h3>
 
 <h4>Google Street View not working</h4>
 
-<p>For Google Street View to work, add <code>maps.gstatic.com</code> to the source whitelist.</p>
+<p>Add <code>maps.gstatic.com</code> to the source whitelist.</p>
 
 <h4>Content still being blocked after whitelisting a page</h4>
 
-<p>This happens because the blocked elements are within iframes. Iframes allow a single tab to contain several documents, each with its own location, and the URL displayed in Safari's toolbar is the location of the main document only. The location whitelist considers the location of an element to be that of its document. To find out the real location of an element, tick the 'Block content manually' checkbox in the settings, right-click on the element's placeholder, and select 'Show Element'.</p>
+<p>A single tab can contain several documents, each with its own URL, and the URL displayed in Safari's toolbar is that of the root document only. The location whitelist considers the location of an element to be the URL of its document. To find out the real location of an element, tick the 'Block content manually' checkbox in the settings, right-click on the element's placeholder, and select 'Show Element'.</p>
 
-<h4 id="list_invisible">List of invisible elements</h4>
-
-<p>Many issues are caused by blocked invisible elements. Here is a table of known invisible elements which must be allowed to access some functionality on the page:</p>
+<h4 id="list_invisible">List of invisible elements having critical functions</h4>
 
 <table>
 <thead>
 <tr>
-    <td>Domains</td>
-    <td>Function of invisible element</td>
-    <td>Size</td>
-    <td>Source</td>
+    <th>Domains</th>
+    <th>Function of invisible element</th>
+    <th>Size</th>
+    <th>Source</th>
 </tr>
 </thead>
 <tbody>
@@ -314,6 +320,12 @@ That said, you should only use this setting to quickly check if an issue on a tr
 </table>
 
 <h2 id="changelog">Release Notes</h2>
+
+<p id="v1.4.6"><b>Version 1.4.7</b> (September 21, 2010)</p>
+<ul>
+    <li>Does not block <code>&lt;applet&gt;</code> elements anymore (read <a href="#applet_blocking">why</a>)</li>
+    <li>Based on <a href="../clicktoflash/#v1.7.7">ClickToFlash 1.7.7</a></li>
+</ul>
 
 <p id="v1.4.6"><b>Version 1.4.6</b> (September 16, 2010)</p>
 <ul>
@@ -406,7 +418,7 @@ That said, you should only use this setting to quickly check if an issue on a tr
 </ul>
 
 <footer>
-<p id="footer_left">Updated on September 18, 2010</p>
+<p id="footer_left">Updated on September 21, 2010</p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 </footer>
 

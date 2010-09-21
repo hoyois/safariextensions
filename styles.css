@@ -1,21 +1,24 @@
 body {
 	font-family: "Helvetica", Helvetica, sans-serif;
+	margin: 0 20px;
 }
 
 header {
-	margin-bottom: 20px;
+    margin: 0 0 20px 0;
+    padding: 20px 0 0 0;
 }
 
 header h1 {
-	margin-bottom: 0px;
+	margin: 0;
 }
 
 p.author {
 	font-size: 80%;
+	margin: 0;
 }
 
 nav {
-	margin: 15px 0px 15px 0px;
+	margin: 15px 0;
 }
 
 h2 {
@@ -24,7 +27,7 @@ h2 {
 
 #download ul {
 	list-style-type: none;
-    padding: 0px;
+    padding: 0;
 }
 
 .warning {
@@ -33,23 +36,40 @@ h2 {
 }
 
 .nav ul {
-	margin: 10px 0px 10px 0px;
+	margin: 10px 0;
 }
 
 p.note:before {
-	content: "Note.";
+	content: "Note. ";
 	font-weight: bold;
-	padding-right: 7px;
 }
 
 figure {
     display: block;
-	margin: 10px 0px 10px 0px;
+	margin: 10px 0;
 }
 
 figcaption {
+    display: block;
 	font-style: italic;
-	display: block;
+}
+
+code {
+    font-family: "Courier", monospace;
+    font-size: 90%;
+}
+
+p.question {
+    font-weight: bold;
+}
+
+p.question:before {
+    content: "Q. ";
+}
+
+p.answer:before {
+    content: "A. ";
+    font-weight: bold;
 }
 
 table {
@@ -57,16 +77,12 @@ table {
     border-collapse: collapse;
 }
 
-thead {
-    border-bottom: 1px solid black;
-    font-weight: bold;
-}
-
-tbody {
+thead, tbody {
     border-bottom: 1px solid black;
 }
 
-td {
+th, td {
+    text-align: left;
     padding: 5px 10px;
 }
 
@@ -75,10 +91,6 @@ footer {
 	font-size: 80%;
 	margin-top: 40px;
 	overflow: auto;
-}
-
-footer p {
-	margin: 8px 0px 0px 0px;
 }
 
 #footer_left {
