@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ClickToPlugin Safari extension</title>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<meta name="author" content="Marc Hoyois" />
-	<meta name="description" content="Prevents embedded content from loading automatically" />
-	<meta name="keywords" content="safari extension, block plugins, clicktoplugin" />
-	<link rel="stylesheet" type="text/css" href="../styles.css" />
+    <meta charset="utf-8" />
+    <meta name="author" content="Marc Hoyois" />
+    <meta name="description" content="Prevents embedded content from loading automatically" />
+    <title>ClickToPlugin Safari extension</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
 </head>
 <body>
 <header id="top">
@@ -21,21 +20,21 @@
 <div id="download" class="nav">
 <b>Download links</b>
 <ul>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-1.4.7.safariextz">Download ClickToPlugin 1.4.7</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-1.4.7.safariextz">Télécharger ClickToPlugin 1.4.7 en français</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.ru-1.4.7.safariextz">Скачать ClickToPlugin 1.4.7 по-русски</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-1.4.8.safariextz">Download ClickToPlugin 1.4.8</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-1.4.8.safariextz">Télécharger ClickToPlugin 1.4.8 en français</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.ru-1.4.8.safariextz">Скачать ClickToPlugin 1.4.8 по-русски</a></li>
 </ul>
 </div>
 
-<div class="warning"><p>ClickToPlugin 1.4.7 requires Safari 5.0.1 or newer.</p></div>
+<div class="warning"><p>ClickToPlugin 1.4.8 requires Safari 5.0.1 or newer.</p></div>
 
 <div id="contents" class="nav">
 <b>Jump to</b>
 <ul>
-	<li><a href="#features">Features</a></li>
-	<li><a href="#settings">Settings</a></li>
-	<li><a href="#faq_issues">FAQ &amp; Common Issues</a></li>
-	<li><a href="#changelog">Release Notes</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#settings">Settings</a></li>
+    <li><a href="#faq_issues">FAQ &amp; Common Issues</a></li>
+    <li><a href="#changelog">Release Notes</a></li>
 </ul>
 </div>
 
@@ -48,17 +47,23 @@
 </div>
 
 <h3 id="acknowledgements">Acknowledgements</h3>
-<p>Both of my extensions owe a lot to several people. As they gain in popularity, I felt I should give more proper credits to them.</p>
+<p>Both of my extensions owe a lot to several people:</p>
 <ul>
-	<li>This extension is directly built on <a href="http://github.com/mattball/ClickToFlash-safari-extension">this other ClickToFlash extension</a> by Matt Ball. Although most of the Javascript code and overall organization has changed, my extension still uses two key ideas from it: a ClickToFlash class that is instantiated by every web page and an army of 'killers' having the task to find HTML5 video replacements. The awesome CSS of the placeholders is also Matt's.</li>
-	<li>I learned from Félix Cloutier (developer of <a href="http://safari.laissemoichercherca.com/plugincustoms">Plugin Customs</a>) how to detect Java applets.</li>
-	<li>I learned from Rodger Combs' <a href="http://combsconnections.tk/extensions/">Plugin Blocker</a> extension about AJAX requests and how to use them to fetch the URL of videos on Vimeo and Veoh.</li>
+    <li>This extension is directly built on <a href="http://github.com/mattball/ClickToFlash-safari-extension">this previous ClickToFlash extension</a> by Matt Ball. Although most of the Javascript code and overall organization has changed, my extension still uses two key ideas from it: a ClickToFlash class that is instantiated by every web page and an army of 'killers' having the task to find HTML5 video replacements. The awesome CSS of the placeholders is also Matt's.</li>
+    <li>I learned from Félix Cloutier (developer of <a href="http://safari.laissemoichercherca.com/plugincustoms">Plugin Customs</a>) how to detect Java applets.</li>
+    <li>I learned from Rodger Combs' <a href="http://combsconnections.tk/extensions/">Plugin Blocker</a> extension about AJAX requests and how to use them to fetch the URL of videos on Vimeo and Veoh.</li>
 </ul>
-<p>I also learned Javascript through those three extensions, so <b>thanks a lot guys!</b></p>
+
+<p>Further, thanks should be given to</p>
+<ul>
+    <li>Yuli Cherkashin (Юлий Черкашин) for the Russian localization.</li>
+</ul>
 
 <h2 id="features">Features</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
+
 <h3 id="features_blocking">Blocking embedded content</h3>
-<p>ClickToPlugin can replace every <code>&lt;embed&gt;</code> and <code>&lt;object&gt;</code> element on a web page by a placeholder element (fig.&nbsp;1) during page-loading. The user can load the embedded content manually by clicking on this placeholder. The type of content that ClickToPlugin blocks can be specified in the <a href="#MIME_settings">settings</a>. Right-clicking on the placeholder reveals the usual contextual menu with one added item, 'Hide Plugin', which effectively removes the HTML element from the webpage. This is useful for getting rid of overlays that block access to page content. Additional contextual menu items for adding a page or source to the whitelist and unlocking all Flash elements on the page can be enabled in the <a href="#menus">settings</a>.</p>
+<p>ClickToPlugin can replace every <code>&lt;embed&gt;</code> and <code>&lt;object&gt;</code> element on a web page by a placeholder element (fig.&#160;1) during page-loading. The user can load the embedded content manually by clicking on this placeholder. The type of content that ClickToPlugin blocks can be specified in the <a href="#MIME_settings">settings</a>. Right-clicking on the placeholder reveals the usual contextual menu with one added item, 'Hide Plugin', which effectively removes the HTML element from the webpage. This is useful for getting rid of overlays that block access to page content. Additional contextual menu items for adding a page or source to the whitelist and unlocking all Flash elements on the page can be enabled in the <a href="#menus">settings</a>.</p>
 
 <figure>
 <img src="CTP_Flash.png" alt="Flash placeholder" />
@@ -72,7 +77,7 @@
 <p class="note">This extension does not block <code>&lt;applet&gt;</code> elements. These elements are used to embed Java applets into web pages and will launch a Java plugin. The reason is that they <a href="https://bugs.webkit.org/show_bug.cgi?id=44023">cannot</a> be blocked.</p>
 
 <h3 id="features_replacing">Replacing blocked content by HTML5 videos</h3>
-<p>ClickToPlugin is able to replace certain blocked elements by HTML5 <code>&lt;video&gt;</code> tags. The label of the placeholder is then changed accordingly, and an 'HD' prefix is added if ClickToPlugin knows that the video has resolution 720p or 1080p (fig.&nbsp;2). Clicking on such a placeholder loads Safari's video player. In Snow Leopard this video player features a fullscreen button (fig.&nbsp;3) and uses hardware acceleration on supported Macs. Double-clicking inside the video player toggles looping.</p>
+<p>ClickToPlugin is able to replace certain blocked elements by HTML5 <code>&lt;video&gt;</code> tags. The label of the placeholder is then changed accordingly, and an 'HD' prefix is added if ClickToPlugin knows that the video has resolution 720p or 1080p (fig.&#160;2). Clicking on such a placeholder loads Safari's video player. In Snow Leopard this video player features a fullscreen button (fig.&#160;3) and uses hardware acceleration on supported Macs. Double-clicking inside the video player toggles looping.</p>
 
 <figure>
 <img src="CTP_H264.png" alt="Video placeholder" />
@@ -97,21 +102,21 @@
 <li>Objects handled by the QuickTime web plugin. At this time, HTML5 videos in Safari do not seem to allow streaming, and ClickToPlugin is not able to detect streaming videos that are wrapped in a <code>.mov</code> container. For those videos, Safari's video player will never get past the 'Loading...' stage, but you can select 'Reload in QuickTime' from the contextual menu to access the stream.</li>
 </ul>
 
-<p>With the help of third-party QuickTime components, ClickToPlugin can further replace the following elements:
+<p>With the help of third-party QuickTime components, ClickToPlugin can further replace the following elements:</p>
 <ul>
-	<li>480p YouTube videos. (requires Perian)</li>
-	<li>All remaining Vimeo and Dailymotion videos. (requires Perian)</li>
-	<li><b>Veoh videos.</b> (requires Perian) Both on-site and embedded videos (not including external videos available on Veoh's website).</li>
-	<li>Videos played in the <a href="http://slvideoplayer.codeplex.com/">Silverlight Video Player</a>. (requires Flip4Mac)</li>
-	<li>Directly embedded Windows Media videos. (requires Flip4Mac)</li>
-	<li>Directly embedded DivX videos. (requires Perian)</li>
+    <li>480p YouTube videos. (requires Perian)</li>
+    <li>All remaining Vimeo and Dailymotion videos. (requires Perian)</li>
+    <li><b>Veoh videos.</b> (requires Perian) Both on-site and embedded videos (not including external videos available on Veoh's website).</li>
+    <li>Videos played in the <a href="http://slvideoplayer.codeplex.com/">Silverlight Video Player</a>. (requires Flip4Mac)</li>
+    <li>Directly embedded Windows Media videos. (requires Flip4Mac)</li>
+    <li>Directly embedded DivX videos. (requires Perian)</li>
 </ul>
 
 <p class="note">Playback of nonnative codecs in Safari uses much more CPU than native playback. Moreover, if autoplay is enabled, Safari usually starts playing the video too early for smooth playback. For these reasons the feature can be disabled completely. In my casual testing, playback of 480p YouTube videos using Perian uses on average half as much CPU as YouTube's Flash player, while playback of Windows Media videos using Flip4Mac uses on average 60% as much CPU as the Silverlight Video Player.</p>
 
 <h4>Download links</h4>
 
-<p>Hovering the mouse over the bottom of a video placeholder reveals a link to the video (fig.&nbsp;4 left) that can be used to download the video directly (right-click the link and select 'Download Linked File'). Once the video player has been loaded, a similar link can be accessed by moving the mouse cursor upward from the play/pause button (fig.&nbsp;4 right).</p>
+<p>Hovering the mouse over the bottom of a video placeholder reveals a link (fig.&#160;4 left) which can be clicked to start downloading the video. Once the video player has been loaded, a similar link appears when moving the mouse cursor upward from the play/pause button (fig.&#160;4 right).</p>
 
 <figure>
 <img src="CTP_Download1.tiff" alt="Video download link on placeholder" />
@@ -121,7 +126,7 @@
 
 <h4>Playlists</h4>
 
-<p>If the 'Use playlists' setting is enabled, ClickToPlugin can sometimes load whole playlists into the video player. This feature is available for YouTube's on-site playlists (<code>&amp;p=</code> URLs), YouTube's embedded playlists, and JW Player playlists. When a playlist is used, an additional control bar appears above the default one, featuring the title of the video being played, previous/next buttons to navigate the playlist, and an input field that can be used to jump to a video in the playlist (fig.&nbsp;5). The title of the video also serves as a link to the video that can be used for direct download.</p>
+<p>If the 'Use playlists' setting is enabled, ClickToPlugin can sometimes load whole playlists into the video player. This feature is available for YouTube's on-site playlists (<code>&amp;p=</code> URLs), YouTube's embedded playlists, and JW Player playlists. When a playlist is used, an additional control bar appears above the default one, featuring the title of the video being played, previous/next buttons to navigate the playlist, and an input field that can be used to jump to a video in the playlist (fig.&#160;5). The title of the video also serves as a link to the video that can be used for direct download.</p>
 
 <figure>
 <img src="CTP_Playlist.png" alt="Video playlist" />
@@ -129,6 +134,7 @@
 </figure>
 
 <h2 id="settings">Settings</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
 
 <h3 id="MIME_settings">MIME Settings</h3>
 
@@ -246,6 +252,7 @@ This slider controls the opacity of the placeholder elements, from invisible to 
 If ticked, a pop-up box asks the user for confirmation before blocking any element. This box displays the following information about the element: its type (Flash, Silverlight, etc.), its location, its source, its position within its document, and its size. Further, an option 'Show Element' is added to the contextual menu of placeholder elements; selecting it shows the location and source of the blocked element, as well as the blocked element itself. This is useful for getting information about invisible elements or the location of elements within iframes.</p>
 
 <h2 id="faq_issues">FAQ &amp; Common Issues</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
 
 <h3 id="faq">FAQ</h3>
 
@@ -268,13 +275,13 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
     <li>the extension still blocks Java <code>&lt;object&gt;</code>s, and</li>
     <li>the <code>&lt;applet&gt;</code> tag should slowly disappear as it is deprecated in HTML4 and invalid in HTML5.</li>
 </ul>
-<p>True blocking of <code>&lt;applet&gt;</code> elements will be introduced as soon as it is actually possible, namely when <a href="https://bugs.webkit.org/show_bug.cgi?id=44023">this WebKit bug</a> is addressed.</p></p>
+<p>True blocking of <code>&lt;applet&gt;</code> elements will be introduced as soon as it is actually possible, namely when <a href="https://bugs.webkit.org/show_bug.cgi?id=44023">this WebKit bug</a> is addressed.</p>
 
 <h3 id="issues">Common issues</h3>
 
 <h4>Google Street View not working</h4>
 
-<p>Add <code>maps.gstatic.com</code> to the source whitelist.</p>
+<p>Add <code>maps.gstatic.com</code> to the source whitelist or, if you have the 'Load All Plugins' contextual menu item enabled, use it after dragging the yellow guy on the map.</p>
 
 <h4>Content still being blocked after whitelisting a page</h4>
 
@@ -294,15 +301,21 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 <tbody>
 <tr>
     <td>prostopleer.com &amp; others</td>
-    <td>Required by SoundManager2 for Flash 9, a common sound API</td>
+    <td>Required by SoundManager2 for Flash 9</td>
     <td>8x8</td>
     <td>soundmanager2_flash9.swf</td>
 </tr>
 <tr>
-    <td>soundcloud.com, github.com &amp; others</td>
-    <td>Required by SoundManager2 for Flash 8, a common sound API</td>
-    <td>6x6</td>
+    <td>github.com, soundcloud.com, www.discogs.com &amp; others</td>
+    <td>Required by SoundManager2 for Flash 8</td>
+    <td>6x6 or 8x8</td>
     <td>soundmanager2.swf</td>
+</tr>
+<tr>
+    <td>www.amazon.com</td>
+    <td>Amazon music samples</td>
+    <td>1x1</td>
+    <td>g-ecx.images-amazon.com</td>
 </tr>
 <tr>
     <td>www.bbc.co.uk</td>
@@ -316,12 +329,24 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
     <td>1x1</td>
     <td>http://www.hulu.com/loadplayer.swf</td>
 </tr>
+<tr>
+    <td>various</td>
+    <td>Required by Yahoo! Media Player</td>
+    <td>1x1</td>
+    <td>flashsound-2.0.31.swf</td>
+</tr>
 </tbody>
 </table>
 
 <h2 id="changelog">Release Notes</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
 
-<p id="v1.4.6"><b>Version 1.4.7</b> (September 21, 2010)</p>
+<p id="v1.4.8"><b>Version 1.4.8</b> (September 29, 2010)</p>
+<ul>
+    <li>Based on <a href="../clicktoflash/#v1.7.9">ClickToFlash 1.7.9</a></li>
+</ul>
+
+<p id="v1.4.7"><b>Version 1.4.7</b> (September 21, 2010)</p>
 <ul>
     <li>Does not block <code>&lt;applet&gt;</code> elements anymore (read <a href="#applet_blocking">why</a>)</li>
     <li>Based on <a href="../clicktoflash/#v1.7.7">ClickToFlash 1.7.7</a></li>
@@ -360,65 +385,65 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 <p id="v1.4"><b>Version 1.4</b> (September 4, 2010)</p>
 <ul>
     <li>Improved plugin detection</li>
-	<li>Based on <a href="../clicktoflash/#v1.7">ClickToFlash 1.7</a></li>
+    <li>Based on <a href="../clicktoflash/#v1.7">ClickToFlash 1.7</a></li>
 </ul>
 
 <p id="v1.3.3"><b>Version 1.3.3</b> (August 20, 2010)</p>
 <ul>
-	<li>Based on <a href="../clicktoflash/#v1.6.3">ClickToFlash 1.6.3</a></li>
+    <li>Based on <a href="../clicktoflash/#v1.6.3">ClickToFlash 1.6.3</a></li>
 </ul>
 
 <p id="v1.3.2"><b>Version 1.3.2</b> (August 16, 2010)</p>
 <ul>
-	<li>Based on <a href="../clicktoflash/#v1.6.2">ClickToFlash 1.6.2</a></li>
+    <li>Based on <a href="../clicktoflash/#v1.6.2">ClickToFlash 1.6.2</a></li>
 </ul>
 
 <p id="v1.3.1"><b>Version 1.3.1</b> (August 14, 2010)</p>
 <ul>
-	<li>Based on <a href="../clicktoflash/#v1.6.1">ClickToFlash 1.6.1</a></li>
+    <li>Based on <a href="../clicktoflash/#v1.6.1">ClickToFlash 1.6.1</a></li>
 </ul>
 
 <p id="v1.3"><b>Version 1.3</b> (August 13, 2010)</p>
 <ul>
-	<li>Based on <a href="../clicktoflash/#v1.6">ClickToFlash 1.6</a></li>
+    <li>Based on <a href="../clicktoflash/#v1.6">ClickToFlash 1.6</a></li>
 </ul>
 
 <p id="v1.2.1"><b>Version 1.2.1</b> (August 8, 2010)</p>
 <ul>
-	<li>Improved handling of QuickTime objects</li>
+    <li>Improved handling of QuickTime objects</li>
 </ul>
 
 <p id="v1.2"><b>Version 1.2</b> (August 8, 2010)</p>
 <ul>
-	<li>Safari's native MIME types are not blocked anymore</li>
-	<li>Can now replace Silverlight, QuickTime, and Windows Media content by HTML5 videos</li>
-	<li>Fixed invisible elements whitelisting</li>
-	<li>Based on <a href="../clicktoflash/#v1.5.1">ClickToFlash 1.5.1</a></li>
+    <li>Safari's native MIME types are not blocked anymore</li>
+    <li>Can now replace Silverlight, QuickTime, and Windows Media content by HTML5 videos</li>
+    <li>Fixed invisible elements whitelisting</li>
+    <li>Based on <a href="../clicktoflash/#v1.5.1">ClickToFlash 1.5.1</a></li>
 </ul>
 
 <p id="v1.1.1"><b>Version 1.1.1</b> (August 6, 2010)</p>
 <ul>
-	<li>Fixed a stupid typo in the code</li>
+    <li>Fixed a stupid typo in the code</li>
 </ul>
 
 <p id="v1.1"><b>Version 1.1</b> (August 6, 2010)</p>
 <ul>
-	<li>Based on <a href="../clicktoflash/#v1.5">ClickToFlash 1.5</a></li>
+    <li>Based on <a href="../clicktoflash/#v1.5">ClickToFlash 1.5</a></li>
 </ul>
 
 <p id="v1.0.1"><b>Version 1.0.1</b> (August 3, 2010)</p>
 <ul>
-	<li>Fixed potential compatibility issues by trying not to block objects created by other extensions</li>
+    <li>Fixed potential compatibility issues by trying not to block objects created by other extensions</li>
 </ul>
 
 <p id="v1.0"><b>Version 1.0</b> (August 3, 2010)</p>
 <ul>
-	<li>Initial release, based on <a href="../clicktoflash/#v1.4">ClickToFlash 1.4</a></li>
-	<li>Extension icon by Ast A. Moore</li>
+    <li>Initial release, based on <a href="../clicktoflash/#v1.4">ClickToFlash 1.4</a></li>
+    <li>Extension icon by Ast A. Moore</li>
 </ul>
 
 <footer>
-<p id="footer_left">Updated on September 21, 2010</p>
+<p id="footer_left">Updated on September 29, 2010</p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 </footer>
 

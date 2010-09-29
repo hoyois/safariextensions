@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ClickToFlash Safari extension</title>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<meta name="author" content="Marc Hoyois" />
-	<meta name="description" content="Prevents Flash content from loading automatically" />
-	<meta name="keywords" content="safari extension, block flash, clicktoflash" />
-	<link rel="stylesheet" type="text/css" href="../styles.css" />
+    <meta charset="utf-8" />
+    <meta name="author" content="Marc Hoyois" />
+    <meta name="description" content="Prevents Flash content from loading automatically" />
+    <title>ClickToFlash Safari extension</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
 </head>
 <body>
 <header id="top">
@@ -21,21 +20,21 @@
 <div id="download" class="nav">
 <b>Download links</b>
 <ul>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash-1.7.8.safariextz">Download ClickToFlash 1.7.8</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-1.7.8.safariextz">Télécharger ClickToFlash 1.7.8 en français</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.7.8.safariextz">Скачать ClickToFlash 1.7.8 по-русски</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash-1.7.9.safariextz">Download ClickToFlash 1.7.9</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-1.7.9.safariextz">Télécharger ClickToFlash 1.7.9 en français</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.7.9.safariextz">Скачать ClickToFlash 1.7.9 по-русски</a></li>
 </ul>
 </div>
 
-<div class="warning"><p>ClickToFlash 1.7.8 requires Safari 5.0.1 or newer.</p></div>
+<div class="warning"><p>ClickToFlash 1.7.9 requires Safari 5.0.1 or newer.</p></div>
 
 <div id="contents" class="nav">
 <b>Jump to</b>
 <ul>
-	<li><a href="#features">Features</a></li>
-	<li><a href="#settings">Settings</a></li>
-	<li><a href="#faq_issues">FAQ &amp; Common Issues</a></li>
-	<li><a href="#changelog">Release Notes</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#settings">Settings</a></li>
+    <li><a href="#faq_issues">FAQ &amp; Common Issues</a></li>
+    <li><a href="#changelog">Release Notes</a></li>
 </ul>
 </div>
 
@@ -48,17 +47,23 @@
 </div>
 
 <h3 id="acknowledgements">Acknowledgements</h3>
-<p>Both of my extensions owe a lot to several people. As they gain in popularity, I felt I should give more proper credits to them.</p>
+<p>Both of my extensions owe a lot to several people:</p>
 <ul>
-	<li>This extension is directly built on <a href="http://github.com/mattball/ClickToFlash-safari-extension">this other ClickToFlash extension</a> by Matt Ball. Although most of the Javascript code and overall organization has changed, my extension still uses two key ideas from it: a ClickToFlash class that is instantiated by every web page and an army of 'killers' having the task to find HTML5 video replacements. The awesome CSS of the placeholders is also Matt's.</li>
-	<li>I learned from Félix Cloutier (developer of <a href="http://safari.laissemoichercherca.com/plugincustoms">Plugin Customs</a>) how to detect Java applets.</li>
-	<li>I learned from Rodger Combs' <a href="http://combsconnections.tk/extensions/">Plugin Blocker</a> extension about AJAX requests and how to use them to fetch the URL of videos on Vimeo and Veoh.</li>
+    <li>This extension is directly built on <a href="http://github.com/mattball/ClickToFlash-safari-extension">this previous ClickToFlash extension</a> by Matt Ball. Although most of the Javascript code and overall organization has changed, my extension still uses two key ideas from it: a ClickToFlash class that is instantiated by every web page and an army of 'killers' having the task to find HTML5 video replacements. The awesome CSS of the placeholders is also Matt's.</li>
+    <li>I learned from Félix Cloutier (developer of <a href="http://safari.laissemoichercherca.com/plugincustoms">Plugin Customs</a>) how to detect Java applets.</li>
+    <li>I learned from Rodger Combs' <a href="http://combsconnections.tk/extensions/">Plugin Blocker</a> extension about AJAX requests and how to use them to fetch the URL of videos on Vimeo and Veoh.</li>
 </ul>
-<p>I also learned Javascript through those three extensions, so <b>thanks a lot guys!</b></p>
+
+<p>Further, thanks should be given to</p>
+<ul>
+    <li>Yuli Cherkashin (Юлий Черкашин) for the Russian localization.</li>
+</ul>
 
 <h2 id="features">Features</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
+
 <h3 id="features_blocking">Blocking Flash</h3>
-<p>ClickToFlash replaces every Flash element by a placeholder element (fig.&nbsp;1) before the browser starts fetching the Flash content. The user can load the Flash content manually by clicking on this placeholder. Right-clicking on the placeholder reveals the usual contextual menu with one added item, 'Hide Flash', which effectively removes the HTML element from the webpage. This is useful for getting rid of Flash overlays that block access to page content. Additional contextual menu items for adding a page or source to the whitelist and unlocking all Flash elements on the page can be enabled in the <a href="#menus">settings</a>.</p>
+<p>ClickToFlash replaces every Flash element by a placeholder element (fig.&#160;1) before the browser starts fetching the Flash content. The user can load the Flash content manually by clicking on this placeholder. Right-clicking on the placeholder reveals the usual contextual menu with one added item, 'Hide Flash', which effectively removes the HTML element from the webpage. This is useful for getting rid of Flash overlays that block access to page content. Additional contextual menu items for adding a page or source to the whitelist and unlocking all Flash elements on the page can be enabled in the <a href="#menus">settings</a>.</p>
 
 <figure>
 <img src="CTF_Flash.png" alt="Flash placeholder" />
@@ -66,7 +71,7 @@
 </figure>
 
 <h3 id="features_replacing">Replacing Flash by HTML5 videos</h3>
-<p>ClickToFlash is able to replace certain Flash elements by HTML5 <code>&lt;video&gt;</code> tags. The label of the placeholder is then changed accordingly, and an 'HD' prefix is added if ClickToFlash knows that the video has resolution 720p or 1080p (fig.&nbsp;2). Clicking on such a placeholder loads Safari's video player. In Snow Leopard this video player features a fullscreen button (fig.&nbsp;3) and uses hardware acceleration on supported Macs. Double-clicking inside the video player toggles looping.</p>
+<p>ClickToFlash is able to replace certain Flash elements by HTML5 <code>&lt;video&gt;</code> tags. The label of the placeholder is then changed accordingly, and an 'HD' prefix is added if ClickToFlash knows that the video has resolution 720p or 1080p (fig.&#160;2). Clicking on such a placeholder loads Safari's video player. In Snow Leopard this video player features a fullscreen button (fig.&#160;3) and uses hardware acceleration on supported Macs. Double-clicking inside the video player toggles looping.</p>
 
 <figure>
 <img src="CTF_H264.png" alt="Video placeholder" />
@@ -90,18 +95,18 @@
 <li>Flash objects with <code>&lt;video&gt;</code> fallback content.</li>
 </ul>
 
-<p>If the Perian component is installed, ClickToFlash can further replace the following elements:
+<p>If the Perian component is installed, ClickToFlash can further replace the following elements:</p>
 <ul>
-	<li>480p YouTube videos.</li>
-	<li>All remaining Vimeo and Dailymotion videos.</li>
-	<li><b>Veoh videos.</b> Both on-site and embedded videos (not including external videos available on Veoh's website).</li>
+    <li>480p YouTube videos.</li>
+    <li>All remaining Vimeo and Dailymotion videos.</li>
+    <li><b>Veoh videos.</b> Both on-site and embedded videos (not including external videos available on Veoh's website).</li>
 </ul>
 
 <p class="note">Playback of nonnative codecs in Safari uses much more CPU than native playback. Moreover, if autoplay is enabled, Safari usually starts playing the video too early for smooth playback. For these reasons the feature can be disabled completely. In my casual testing, for 480p YouTube videos, playback using Perian uses on average half as much CPU as YouTube's Flash player.</p>
 
 <h4>Download links</h4>
 
-<p>Hovering the mouse over the bottom of a video placeholder reveals a link to the video (fig.&nbsp;4 left) that can be used to download the video directly (right-click the link and select 'Download Linked File'). Once the video player has been loaded, a similar link can be accessed by moving the mouse cursor upward from the play/pause button (fig.&nbsp;4 right).</p>
+<p>Hovering the mouse over the bottom of a video placeholder reveals a link (fig.&#160;4 left) which can be clicked to start downloading the video. Once the video player has been loaded, a similar link appears when moving the mouse cursor upward from the play/pause button (fig.&#160;4 right).</p>
 
 <figure>
 <img src="CTF_Download1.tiff" alt="Video download link on placeholder" />
@@ -111,7 +116,7 @@
 
 <h4>Playlists</h4>
 
-<p>If the 'Use playlists' setting is enabled, ClickToFlash can sometimes load whole playlists into the video player. This feature is available for YouTube's on-site playlists (<code>&amp;p=</code> URLs), YouTube's embedded playlists, and JW Player playlists. When a playlist is used, an additional control bar appears above the default one, featuring the title of the video being played, previous/next buttons to navigate the playlist, and an input field that can be used to jump to a video in the playlist (fig.&nbsp;5). The title of the video also serves as a link to the video that can be used for direct download.</p>
+<p>If the 'Use playlists' setting is enabled, ClickToFlash can sometimes load whole playlists into the video player. This feature is available for YouTube's on-site playlists (<code>&amp;p=</code> URLs), YouTube's embedded playlists, and JW Player playlists. When a playlist is used, an additional control bar appears above the default one, featuring the title of the video being played, previous/next buttons to navigate the playlist, and an input field that can be used to jump to a video in the playlist (fig.&#160;5). The title of the video also serves as a link to the video that can be used for direct download.</p>
 
 <figure>
 <img src="CTF_Playlist.png" alt="Video playlist" />
@@ -119,6 +124,7 @@
 </figure>
 
 <h2 id="settings">Settings</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
 
 <h3 id="video_settings">Video Settings</h3>
 
@@ -203,6 +209,7 @@ This slider controls the opacity of the placeholder elements, from invisible to 
 If ticked, a pop-up box asks the user for confirmation before blocking any element. This box displays the following information about the element: its location, its source, its position within its document, and its size. Further, an option 'Show Element' is added to the contextual menu of placeholder elements; selecting it shows the location and source of the blocked element, as well as the blocked element itself. This is useful for getting information about invisible elements or the location of elements within iframes.</p>
 
 <h2 id="faq_issues">FAQ &amp; Common Issues</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
 
 <h3 id="faq">FAQ</h3>
 
@@ -222,7 +229,7 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 
 <h4>Google Street View not working</h4>
 
-<p>Add <code>maps.gstatic.com</code> to the source whitelist.</p>
+<p>Add <code>maps.gstatic.com</code> to the source whitelist or, if you have the 'Load All Flash' contextual menu item enabled, use it after dragging the yellow guy on the map.</p>
 
 <h4>Content still being blocked after whitelisting a page</h4>
 
@@ -242,15 +249,21 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 <tbody>
 <tr>
     <td>prostopleer.com &amp; others</td>
-    <td>Required by SoundManager2 for Flash 9, a common sound API</td>
+    <td>Required by SoundManager2 for Flash 9</td>
     <td>8x8</td>
     <td>soundmanager2_flash9.swf</td>
 </tr>
 <tr>
-    <td>soundcloud.com, github.com &amp; others</td>
-    <td>Required by SoundManager2 for Flash 8, a common sound API</td>
-    <td>6x6</td>
+    <td>github.com, soundcloud.com, www.discogs.com &amp; others</td>
+    <td>Required by SoundManager2 for Flash 8</td>
+    <td>6x6 or 8x8</td>
     <td>soundmanager2.swf</td>
+</tr>
+<tr>
+    <td>www.amazon.com</td>
+    <td>Amazon music samples</td>
+    <td>1x1</td>
+    <td>g-ecx.images-amazon.com</td>
 </tr>
 <tr>
     <td>www.bbc.co.uk</td>
@@ -264,10 +277,25 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
     <td>1x1</td>
     <td>http://www.hulu.com/loadplayer.swf</td>
 </tr>
+<tr>
+    <td>various</td>
+    <td>Required by Yahoo! Media Player</td>
+    <td>1x1</td>
+    <td>flashsound-2.0.31.swf</td>
+</tr>
 </tbody>
 </table>
 
 <h2 id="changelog">Release Notes</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
+
+<p id="v1.7.9"><b>Version 1.7.9</b> (September 29, 2010)</p>
+<ul>
+    <li>Clicking on a download link downloads the video directly</li>
+    <li>Displays the blocked element's source as a tooltip when hovering a placeholder</li>
+    <li>Placeholders inherit CSS box model and positioning properties of the blocked element to preserve page layout</li>
+    <li>Fixed progressive loading of playlists</li>
+</ul>
 
 <p id="v1.7.8"><b>Version 1.7.8</b> (September 23, 2010)</p>
 <ul>
@@ -291,140 +319,139 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 
 <p id="v1.7.5"><b>Version 1.7.5</b> (September 10, 2010)</p>
 <ul>
-	<li>Fixed a bug introduced in 1.7.4 that could create several placeholder elements for the same blocked element</li>
+    <li>Fixed a bug introduced in 1.7.4 that could create several placeholder elements for the same blocked element</li>
 </ul>
 
 <p id="v1.7.4"><b>Version 1.7.4</b> (September 9, 2010)</p>
 <ul>
-	<li>Fixed Flash elements not showing up or not behaving properly when restored, in particular in those instances where the original ClickToFlash plugin works but this extension did not</li>
-	<li>CSS has been completely rewritten to be more effective</li>
-	<li>Worked around a bug in Safari that changed the aspect ratio of the video element when using full-page zoom (thanks Adrian Luff!)</li>
-	<li>Fixed: some embedded Vimeo videos were not being replaced</li>
+    <li>Fixed Flash elements not showing up or not behaving properly when restored, in particular in those instances where the original ClickToFlash plugin works but this extension did not</li>
+    <li>CSS has been completely rewritten to be more effective</li>
+    <li>Worked around a bug in Safari that changed the aspect ratio of the video element when using full-page zoom (thanks Adrian Luff!)</li>
+    <li>Fixed: some embedded Vimeo videos were not being replaced</li>
 </ul>
 
 <p id="v1.7.3"><b>Version 1.7.3</b> (September 6, 2010)</p>
 <ul>
-	<li>Fixed a typo affecting source blacklisting (thanks Marc Saurfelt!)</li>
-	<li>Improved CSS to better override author stylesheets</li>
+    <li>Fixed a typo affecting source blacklisting (thanks Marc Saurfelt!)</li>
+    <li>Improved CSS to better override author stylesheets</li>
 </ul>
 
 <p id="v1.7.2"><b>Version 1.7.2</b> (September 4, 2010)</p>
 <ul>
-	<li>Fixed a potential compatibility issue with other extensions (regression introduced in 1.7, thanks Mike Cosentino!)</li>
+    <li>Fixed a potential compatibility issue with other extensions (regression introduced in 1.7, thanks Mike Cosentino!)</li>
 </ul>
 
 <p id="v1.7.1"><b>Version 1.7.1</b> (September 4, 2010)</p>
 <ul>
-	<li>Fixed handling of elements with no source and no type (regression introduced in 1.7)</li>
+    <li>Fixed handling of elements with no source and no type (regression introduced in 1.7)</li>
 </ul>
 
 <p id="v1.7"><b>Version 1.7</b> (September 4, 2010)</p>
 <ul>
-	<li>Preview images on video placeholders</li>
-	<li>Direct link to the video at the bottom of video placeholders</li>
-	<li>The setting to load the video player automatically is now a whitelist</li>
-	<li>Lighter placeholders</li>
-	<li>Improved CSS of video elements (controls stay at the bottom)</li>
-	<li>Adding a location or source to the whitelist loads the targeted content at once</li>
-	<li>Support for YouTube's future on-site player</li>
-	<li>Support for Vimeo's new universal player</li>
-	<li>Higher-quality poster images for Dailymotion videos</li>
-	<li>Fixed Vimeo's SD video URLs: they now correctly points to the 360p version in all cases</li>
-	<li>Fixed relative URL resolution</li>
-	<li>Fixed a vulnerability that would allow invalid HTML to bypass ClickToFlash's blocking</li>
-	<li>COMING SOON: Russian localization thanks to Юлий Черкашин</li>
+    <li>Preview images on video placeholders</li>
+    <li>Direct link to the video at the bottom of video placeholders</li>
+    <li>The setting to load the video player automatically is now a whitelist</li>
+    <li>Lighter placeholders</li>
+    <li>Improved CSS of video elements (controls stay at the bottom)</li>
+    <li>Adding a location or source to the whitelist loads the targeted content at once</li>
+    <li>Support for YouTube's future on-site player</li>
+    <li>Support for Vimeo's new universal player</li>
+    <li>Higher-quality poster images for Dailymotion videos</li>
+    <li>Fixed Vimeo's SD video URLs: they now correctly points to the 360p version in all cases</li>
+    <li>Fixed relative URL resolution</li>
+    <li>Fixed a vulnerability that would allow invalid HTML to bypass ClickToFlash's blocking</li>
 </ul>
 
 <p id="v1.6.3"><b>Version 1.6.3</b> (August 20, 2010)</p>
 <ul>
-	<li>To download a video directly, move the mouse cursor up from the play/pause button to reveal a link</li>
-	<li>Added a slider to control the opacity of the placeholder elements</li>
-	<li>Most contextual menu items are now optional</li>
-	<li>Added 'View in QuickTime Player' contextual menu item</li>
-	<li>Tweaked the CSS so that inline objects remain inline (thanks Roberto!)</li>
-	<li><del>TODO: Update this webpage&#x2026;</del></li>
+    <li>To download a video directly, move the mouse cursor up from the play/pause button to reveal a link</li>
+    <li>Added a slider to control the opacity of the placeholder elements</li>
+    <li>Most contextual menu items are now optional</li>
+    <li>Added 'View in QuickTime Player' contextual menu item</li>
+    <li>Tweaked the CSS so that inline objects remain inline (thanks Roberto!)</li>
+    <li><del>TODO: Update this webpage&#x2026;</del></li>
 </ul>
 
 <p id="v1.6.2"><b>Version 1.6.2</b> (August 16, 2010)</p>
 <ul>
-	<li>First .2 release ever!</li>
-	<li>The 'Load All Flash' contextual menu item is hidden if there is no blocked Flash on the page</li>
-	<li>'View on YouTube' works for playlists</li>
-	<li>Fixed a few unfortunate typos affecting playlist controls</li>
-	<li>Fixed: volume setting became ineffective in 1.6</li>
-	<li>Longest changelog yet!</li>
+    <li>First .2 release ever!</li>
+    <li>The 'Load All Flash' contextual menu item is hidden if there is no blocked Flash on the page</li>
+    <li>'View on YouTube' works for playlists</li>
+    <li>Fixed a few unfortunate typos affecting playlist controls</li>
+    <li>Fixed: volume setting became ineffective in 1.6</li>
+    <li>Longest changelog yet!</li>
 </ul>
 
 <p id="v1.6.1"><b>Version 1.6.1</b> (August 14, 2010)</p>
 <ul>
-	<li>Added a contextual menu item to view an embedded video from YouTube, Vimeo, Dailymotion, or Veoh on the main website</li>
-	<li>Fixed more: some embedded YouTube videos were not being replaced</li>
+    <li>Added a contextual menu item to view an embedded video from YouTube, Vimeo, Dailymotion, or Veoh on the main website</li>
+    <li>Fixed more: some embedded YouTube videos were not being replaced</li>
 </ul>
 
 <p id="v1.6"><b>Version 1.6</b> (August 13, 2010)</p>
 <ul>
-	<li>Playlist support for YouTube and the JW Player</li>
-	<li>Added a contextual menu item to download the video file</li>
-	<li>Fixed: some embedded YouTube videos were not being replaced</li>
+    <li>Playlist support for YouTube and the JW Player</li>
+    <li>Added a contextual menu item to download the video file</li>
+    <li>Fixed: some embedded YouTube videos were not being replaced</li>
 </ul>
 
 <p id="v1.5.1"><b>Version 1.5.1</b> (August 8, 2010)</p>
 <ul>
-	<li>Code optimization made possible by the disappearance of a bug in Safari 5.0.1</li>
+    <li>Code optimization made possible by the disappearance of a bug in Safari 5.0.1</li>
 </ul>
 
 <p id="v1.5"><b>Version 1.5</b> (August 6, 2010)</p>
 <ul>
-	<li>Added support for Veoh videos (requires Perian)</li>
-	<li>Added a setting to use nonnative codecs only as a last resort</li>
-	<li>Fixed: some embedded Vimeo videos were not being replaced</li>
-	<li>Worked around the fact that Safari would load fallback content upon restoring an object if fallback content was being used when it was removed</li>
+    <li>Added support for Veoh videos (requires Perian)</li>
+    <li>Added a setting to use nonnative codecs only as a last resort</li>
+    <li>Fixed: some embedded Vimeo videos were not being replaced</li>
+    <li>Worked around the fact that Safari would load fallback content upon restoring an object if fallback content was being used when it was removed</li>
 </ul>
 
 <p id="v1.4"><b>Version 1.4</b> (August 3, 2010)</p>
 <ul>
-	<li>Added 'Load All Flash' contextual menu item</li>
-	<li>In the whitelist settings, a string enclosed in parentheses is now interpreted as a regular expression</li>
-	<li>Debugging mode is now a hidden setting</li>
+    <li>Added 'Load All Flash' contextual menu item</li>
+    <li>In the whitelist settings, a string enclosed in parentheses is now interpreted as a regular expression</li>
+    <li>Debugging mode is now a hidden setting</li>
 </ul>
 
 <p id="v1.3"><b>Version 1.3</b> (August 2, 2010)</p>
 <ul>
-	<li>Extension icon by Ast A. Moore</li>
-	<li>Added optional use of nonnative codecs. With Perian installed ClickToFlash can now replace:
-	<ul>
-		<li>360p and 480p YouTube videos</li>
-		<li>all the previously unplayable Vimeo and Dailymotion videos</li>
-	</ul>
-	</li>
-	<li>Added more control over the attributes of the <code>&lt;video&gt;</code> tags</li>
+    <li>Extension icon by Ast A. Moore</li>
+    <li>Added optional use of nonnative codecs. With Perian installed ClickToFlash can now replace:
+    <ul>
+        <li>360p and 480p YouTube videos</li>
+        <li>all the previously unplayable Vimeo and Dailymotion videos</li>
+    </ul>
+    </li>
+    <li>Added more control over the attributes of the <code>&lt;video&gt;</code> tags</li>
 </ul>
 
 <p id="v1.2"><b>Version 1.2</b> (August 2, 2010)</p>
 <ul>
-	<li>Added negated whitelisting</li>
-	<li>Added an optional contextual menu item to add a source or location to the whitelist</li>
-	<li>Replacement of embedded YouTube videos now works if YouTube is in HTML5 Beta (thanks again Ast!)</li>
+    <li>Added negated whitelisting</li>
+    <li>Added an optional contextual menu item to add a source or location to the whitelist</li>
+    <li>Replacement of embedded YouTube videos now works if YouTube is in HTML5 Beta (thanks again Ast!)</li>
 </ul>
 
 <p id="v1.1.1"><b>Version 1.1.1</b> (July 31, 2010)</p>
 <ul>
-	<li>Fixed Flash not being blocked on some sites due to invalid MIME types (thanks Ast A. Moore!)</li>
+    <li>Fixed Flash not being blocked on some sites due to invalid MIME types (thanks Ast A. Moore!)</li>
 </ul>
 
 <p id="v1.1"><b>Version 1.1</b> (July 31, 2010)</p>
 <ul>
-	<li>Fixed whitelisting</li>
-	<li>The 'Remove Element' contextual menu item now removes all parent nodes of the element as long as they have a single child.</li>
+    <li>Fixed whitelisting</li>
+    <li>The 'Remove Element' contextual menu item now removes all parent nodes of the element as long as they have a single child.</li>
 </ul>
 
 <p id="v1.0"><b>Version 1.0</b> (July 30, 2010)</p>
 <ul>
-	<li>Initial release</li>
+    <li>Initial release</li>
 </ul>
 
 <footer>
-<p id="footer_left">Updated on September 23, 2010</p>
+<p id="footer_left">Updated on September 29, 2010</p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 </footer>
 

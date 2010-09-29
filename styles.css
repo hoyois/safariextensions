@@ -25,6 +25,15 @@ h2 {
 	border-bottom: 1px solid #000;
 }
 
+.toplink {
+    position: relative;
+    bottom: 3.3em;
+    float: right;
+    margin: 0;
+    padding: 0;
+    font-size: 80%;
+}
+
 #download ul {
 	list-style-type: none;
     padding: 0;
@@ -39,7 +48,7 @@ h2 {
 	margin: 10px 0;
 }
 
-p.note:before {
+p.note::before {
 	content: "Note. ";
 	font-weight: bold;
 }
@@ -63,11 +72,11 @@ p.question {
     font-weight: bold;
 }
 
-p.question:before {
+p.question::before {
     content: "Q. ";
 }
 
-p.answer:before {
+p.answer::before {
     content: "A. ";
     font-weight: bold;
 }
