@@ -99,7 +99,7 @@ footer {
 	border-top: 1px solid #000;
 	font-size: 80%;
 	margin-top: 40px;
-	overflow: auto;
+	width: 100%;
 }
 
 #footer_left {
@@ -109,3 +109,8 @@ footer {
 #footer_right {
 	float: right;
 }
+
+#footer_middle {
+    text-align: center;
+}
+
