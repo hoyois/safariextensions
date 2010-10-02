@@ -39,13 +39,13 @@ h2 {
     padding: 0;
 }
 
+#download ul, #content ul {
+    margin: 10px 0;
+}
+
 .warning {
 	font-weight: bold;
 	font-style: italic;
-}
-
-.nav ul {
-	margin: 10px 0;
 }
 
 p.note::before {
@@ -99,7 +99,6 @@ footer {
 	border-top: 1px solid #000;
 	font-size: 80%;
 	margin-top: 40px;
-	width: 100%;
 }
 
 #footer_left {
