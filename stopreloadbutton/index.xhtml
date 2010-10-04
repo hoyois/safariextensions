@@ -23,12 +23,21 @@
 </ul>
 </div>
 
-<p><a href="http://github.com/hoyois/stopreloadbutton">Browse the source</a> on Github.</p>
+<p>This simple proof-of-concept extension adds a reload button in Safari's toolbar that transforms into a stop button when a page is loading. It thus provides exactly the same functionality as the built-in Stop/Reload control in the address bar, but in the form of a button that can be placed anywhere in the toolbar (as it used to be before Safari 4).</p>
 
 <figure>
 <img src="Stop.png" alt="Stop button"/>
 <img src="Reload.png" alt="Reload button"/>
 </figure>
+
+<p>You can <a href="http://github.com/hoyois/stopreloadbutton">browse the trivial source</a> on Github.</p>
+
+<h4>Known issues</h4>
+<p>The button does not work on pages entirely restored from Safari's cache. This is the consequence of a bug in the extension API that prevents such pages from receiving messages sent by an extension's global page; it has been reported. For this extension the bug could be circumvented, but at the expense of not remembering the scrolling state when reloading.</p>
+
+<footer>
+<p id="footer_left">Updated on October 3, 2010</p>
+</footer>
 
 </body>
 </html>
