@@ -19,7 +19,7 @@
 
 <div id="download">
 <ul>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/StopReloadButton-1.1.1.safariextz">Download Stop/Reload Button 1.1</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/StopReloadButton-1.2.safariextz">Download Stop/Reload Button 1.2</a></li>
 </ul>
 </div>
 
@@ -32,6 +32,9 @@
 
 <p>You can <a href="http://github.com/hoyois/stopreloadbutton">browse the source</a> on Github.</p>
 
+<h4>Fixed in version 1.2</h4>
+<p>Better late than never: I just discovered the target property of message events, pointing to the tab whence the message was sent. This allowed me to clean up the code and fix the button's behavior on tabs opening in the background.</p>
+
 <h4>Fixed in version 1.1</h4>
 <p>The button was not working at all with multiple windows! The extension now uses a much more robust messaging system: the global page knows which tab is sending a message and only reacts if the tab is active in its window.</p>
 
@@ -39,7 +42,7 @@
 <p>The button does not work on pages entirely restored from Safari's cache. This is the consequence of a bug in the extension API that prevents such pages from receiving messages sent by an extension's global page; it has been reported. For this extension the bug could be circumvented, but at the expense of not remembering the scrolling state when reloading.</p>
 
 <footer>
-<p id="footer_left">Updated on October 8, 2010</p>
+<p id="footer_left">Updated on October 10, 2010</p>
 </footer>
 
 </body>
