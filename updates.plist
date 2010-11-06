@@ -10,11 +10,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.8.5</string>
+			<string>1.8.6</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.8.5</string>
+			<string>1.8.6</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash-1.8.5.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash-1.8.6.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -22,11 +22,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.8.5</string>
+			<string>1.8.6</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.8.5</string>
+			<string>1.8.6</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-1.8.5.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-1.8.6.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -34,11 +34,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.8.5</string>
+			<string>1.8.6</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.8.5</string>
+			<string>1.8.6</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.8.5.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.8.6.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -46,11 +46,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.8.5</string>
+			<string>1.8.6</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.8.5</string>
+			<string>1.8.6</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.zh_TW-1.8.5.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.zh_TW-1.8.6.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -58,11 +58,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.5.4.2</string>
+			<string>1.5.5</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.5.4</string>
+			<string>1.5.5</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-1.5.4.2.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-1.5.5.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -70,11 +70,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.5.4.2</string>
+			<string>1.5.5</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.5.4</string>
+			<string>1.5.5</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-1.5.4.2.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-1.5.5.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -82,11 +82,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.5.4.2</string>
+			<string>1.5.5</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.5.4</string>
+			<string>1.5.5</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.ru-1.5.4.2.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.ru-1.5.5.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -94,11 +94,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.5.4.2</string>
+			<string>1.5.5</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.5.4</string>
+			<string>1.5.5</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.zh_TW-1.5.4.2.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.zh_TW-1.5.5.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -118,11 +118,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.0</string>
+			<string>1.1</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.0</string>
+			<string>1.1</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/VideoContext-1.0.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/VideoContext-1.1.safariextz</string>
 		</dict>
 	</array>
 </dict>
