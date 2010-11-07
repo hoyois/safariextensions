@@ -54,6 +54,18 @@
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
+			<string>com.hoyois.safari.clicktoflash.es</string>
+			<key>Developer Identifier</key>
+			<string>GY5KR7239Q</string>
+			<key>CFBundleVersion</key>
+			<string>1.8.6.1</string>
+			<key>CFBundleShortVersionString</key>
+			<string>1.8.6</string>
+			<key>URL</key>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.es-1.8.6.1.safariextz</string>
+		</dict>
+		<dict>
+			<key>CFBundleIdentifier</key>
 			<string>com.hoyois.safari.clicktoplugin</string>
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
@@ -99,6 +111,18 @@
 			<string>1.5.5</string>
 			<key>URL</key>
 			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.zh_TW-1.5.5.safariextz</string>
+		</dict>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.hoyois.safari.clicktoplugin.es</string>
+			<key>Developer Identifier</key>
+			<string>GY5KR7239Q</string>
+			<key>CFBundleVersion</key>
+			<string>1.5.5</string>
+			<key>CFBundleShortVersionString</key>
+			<string>1.5.5</string>
+			<key>URL</key>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.es-1.5.5.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
