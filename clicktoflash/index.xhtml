@@ -20,15 +20,15 @@
 <div id="download">
 <b>Download links</b>
 <ul>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash-1.8.6.safariextz">Download ClickToFlash 1.8.6</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-1.8.6.safariextz">Télécharger ClickToFlash 1.8.6 en français</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.8.6.safariextz">Скачать ClickToFlash 1.8.6 по-русски</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.zh_TW-1.8.6.safariextz">按此下載正體中文的 ClickToFlash 1.8.6</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.es-1.8.6.1.safariextz">Descargar ClickToFlash 1.8.6 en Español</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash-1.8.7.safariextz">Download ClickToFlash 1.8.7</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-1.8.7.safariextz">Télécharger ClickToFlash 1.8.7 en français</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.8.7.safariextz">Скачать ClickToFlash 1.8.7 по-русски</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.zh_TW-1.8.7.safariextz">按此下載正體中文的 ClickToFlash 1.8.7</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.es-1.8.7.safariextz">Descargar ClickToFlash 1.8.7 en Español</a></li>
 </ul>
 </div>
 
-<div class="warning"><p>ClickToFlash 1.8.6 requires Safari 5.0.1 or newer.</p></div>
+<div class="warning"><p>ClickToFlash 1.8.7 requires Safari 5.0.1 or newer.</p></div>
 
 <div id="contents">
 <b>Jump to</b>
@@ -233,10 +233,6 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 
 <h3 id="issues">Common issues</h3>
 
-<h4>Google Street View not working</h4>
-
-<p>Add <code>maps.gstatic.com</code> to the source whitelist or, if you have the 'Load All Flash' contextual menu item enabled, use it after dragging the yellow guy on the map.</p>
-
 <h4>Content still being blocked after whitelisting a page</h4>
 
 <p>A single tab can contain several documents, each with its own URL, and the URL displayed in Safari's toolbar is that of the root document only. The location whitelist considers the location of an element to be the URL of its document. To find out the real location of an element, tick the 'Block content manually' checkbox in the settings, right-click on the element's placeholder, and select 'Show Element'.</p>
@@ -295,10 +291,16 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 <h2 id="changelog">Release Notes</h2>
 <p class="toplink"><a href="#top">To the top</a></p>
 
+<p id="v1.8.7"><b>Version 1.8.7</b> (November 7, 2010)</p>
+<ul>
+    <li>Fixed a placeholder layout issue affecting notably Google Street View (thanks Joe Strzemp!)</li>
+    <li>Fixed a typo affecting replacement of some embedded Vimeo videos</li>
+</ul>
+
 <p id="v1.8.6"><b>Version 1.8.6</b> (November 6, 2010)</p>
 <ul>
     <li>Some previously unreplaced Vimeo videos are now available in HTML5</li>
-    <li>All event listeners are registered using the addEventListener method, to avoid conflicts with other scripts</li>
+    <li>All event listeners are registered using the addEventListener method, to avoid conflicts with other scripts (thanks Josh Rafofsky!)</li>
 </ul>
 
 <p id="v1.8.5"><b>Version 1.8.5</b> (October 31, 2010)</p>
