@@ -20,15 +20,15 @@
 <div id="download">
 <b>Download links</b>
 <ul>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash-1.8.7.safariextz">Download ClickToFlash 1.8.7</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-1.8.7.safariextz">Télécharger ClickToFlash 1.8.7 en français</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.8.7.1.safariextz">Скачать ClickToFlash 1.8.7 по-русски</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.zh_TW-1.8.7.safariextz">按此下載正體中文的 ClickToFlash 1.8.7</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.es-1.8.7.safariextz">Descargar ClickToFlash 1.8.7 en Español</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash-1.8.8.safariextz">Download ClickToFlash 1.8.8</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-1.8.8.safariextz">Télécharger ClickToFlash 1.8.8 en français</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.8.8.safariextz">Скачать ClickToFlash 1.8.8 по-русски</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.zh_TW-1.8.8.safariextz">按此下載正體中文的 ClickToFlash 1.8.8</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.es-1.8.8.safariextz">Descargar ClickToFlash 1.8.8 en Español</a></li>
 </ul>
 </div>
 
-<div class="warning"><p>ClickToFlash 1.8.7 requires Safari 5.0.1 or newer.</p></div>
+<div class="warning"><p>ClickToFlash 1.8.8 requires Safari 5.0.1 or newer.</p></div>
 
 <div id="contents">
 <b>Jump to</b>
@@ -233,6 +233,10 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 
 <h3 id="issues">Common issues</h3>
 
+<h4>Gmail autocomplete and other functions not working</h4>
+
+<p>I haven't been able to confirm any incompatibility between this extension and Gmail. However, several users were able to solve their problem by whitelisting <code>mail.google.com</code>.</p>
+
 <h4>Content still being blocked after whitelisting a page</h4>
 
 <p>A single tab can contain several documents, each with its own URL, and the URL displayed in Safari's toolbar is that of the root document only. The location whitelist considers the location of an element to be the URL of its document. To find out the real location of an element, tick the 'Block content manually' checkbox in the settings, right-click on the element's placeholder, and select 'Show Element'.</p>
@@ -290,6 +294,11 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 
 <h2 id="changelog">Release Notes</h2>
 <p class="toplink"><a href="#top">To the top</a></p>
+
+<p id="v1.8.8"><b>Version 1.8.8</b> (November 21, 2010)</p>
+<ul>
+    <li>Worked around a bug in Safari 5.0.3 that broke video replacements when Flash was not installed</li>
+</ul>
 
 <p id="v1.8.7"><b>Version 1.8.7</b> (November 7, 2010)</p>
 <ul>
@@ -505,7 +514,7 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 </ul>
 
 <footer>
-<p id="footer_left">Updated on November 7, 2010</p>
+<p id="footer_left">Updated on November 21, 2010</p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 <p id="footer_middle"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoflash%2F;verbose=1">XHTML5</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoflash%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
