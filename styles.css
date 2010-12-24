@@ -39,7 +39,7 @@ h2 {
     padding: 0;
 }
 
-#download ul, #content ul {
+#download ul, #requirements ul, #contents ul {
     margin: 10px 0;
 }
 
@@ -92,6 +92,7 @@ thead, tbody {
 
 th, td {
     text-align: left;
+    vertical-align: top;
     padding: 5px 10px;
 }
 
