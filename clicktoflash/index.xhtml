@@ -20,16 +20,24 @@
 <div id="download">
 <b>Download links</b>
 <ul>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.0b.safariextz">Download ClickToFlash 2.0 beta</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash-1.9.2.safariextz">Download ClickToFlash 1.9.2</a></li>
-<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-1.9.2.safariextz">Télécharger ClickToFlash 1.9.2 en français</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.0.safariextz">Download ClickToFlash 2.0</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-2.0.safariextz">Télécharger ClickToFlash 2.0 en français</a></li>
 <li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.9.2.safariextz">Скачать ClickToFlash 1.9.2 по-русски</a></li>
 <li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.zh_TW-1.9.2.safariextz">按此下載正體中文的 ClickToFlash 1.9.2</a></li>
 <li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.es-1.9.2.safariextz">Descargar ClickToFlash 1.9.2 en Español</a></li>
+<!--<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-2.0.safariextz">Скачать ClickToFlash 2.0 по-русски</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.zh_TW-2.0.safariextz">按此下載正體中文的 ClickToFlash 2.0</a></li>
+<li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToFlash.es-2.0.safariextz">Descargar ClickToFlash 2.0 en Español</a></li>-->
 </ul>
 </div>
 
-<div class="warning"><p>ClickToFlash 1.9.2 requires Safari 5.0.1 or newer.</p></div>
+<div id="requirements">
+<b>Requirements</b>
+<ul>
+    <li>Safari 5.0.1 or higher</li>
+    <li>On Windows, QuickTime is required for HTML5 video</li>
+</ul>
+</div>
 
 <div id="contents">
 <b>Jump to</b>
@@ -68,20 +76,20 @@
 <p class="toplink"><a href="#top">To the top</a></p>
 
 <h3 id="features_blocking">Blocking Flash</h3>
-<p>ClickToFlash prevents the Flash plugin from running automatically, resulting in faster browsing, reduced fan usage, and increased battery life. It replaces every Flash object by a placeholder element (fig.&#160;1) that can be clicked to load the embedded content. Right-clicking on a placeholder reveals the usual contextual menu with one added item, 'Hide Flash', which effectively removes the HTML element from the webpage. This is useful for getting rid of Flash overlays that block access to page content. Additional contextual menu items for adding a page or source to the whitelist and unlocking all Flash elements on the page can be enabled in the <a href="#menus">settings</a>.</p>
+<p>ClickToFlash prevents the Flash plugin from running automatically, resulting in faster browsing, reduced fan usage, and increased battery life. It replaces every Flash object by a placeholder element (fig.&#160;1) that can be clicked to load the embedded content. Right-clicking on a placeholder reveals the usual contextual menu with one added item, 'Hide Flash', which effectively removes the HTML element from the webpage. This is useful for getting rid of Flash overlays that block access to page content. Additional contextual menu items for adding a page or element to the whitelist and unlocking all Flash elements on the page can be enabled in the <a href="#menus">settings</a>.</p>
 
 <figure>
 <img src="CTF_Flash.png" alt="Flash placeholder"/>
 <figcaption>Figure 1: Flash placeholder element</figcaption>
 </figure>
 
-<h3 id="features_replacing">Replacing Flash by HTML5 videos</h3>
-<p>ClickToFlash is able to replace certain Flash elements by HTML5 <code>&lt;video&gt;</code> tags. The label of the placeholder is then changed accordingly, and an 'HD' prefix is added if ClickToFlash knows that the video has resolution 720p or 1080p (fig.&#160;2). Clicking on such a placeholder loads Safari's video player. In Snow Leopard this video player features a fullscreen button (fig.&#160;3) and uses hardware acceleration on supported Macs. Double-clicking inside the video player toggles looping.</p>
+<h3 id="features_replacing">Replacing Flash by HTML5 elements</h3>
+<p>ClickToFlash is able to replace certain Flash elements by HTML5 media elements. The label of the placeholder is then changed accordingly (fig.&#160;2). Clicking on such a placeholder loads Safari's video player. In Snow Leopard this video player features a fullscreen button (fig.&#160;3) and uses hardware acceleration on supported Macs. Double-clicking inside the video player toggles looping.</p>
 
 <figure>
 <img src="CTF_H264.png" alt="Video placeholder"/>
 <img src="CTF_HDH264.png" alt="HD Video placeholder"/>
-<figcaption>Figure 2: Video placeholder elements</figcaption>
+<figcaption>Figure 2: Examples of video placeholder elements</figcaption>
 </figure>
 
 <figure>
@@ -91,54 +99,31 @@
 
 <p>The original Flash element can still be loaded by option-clicking or middle-clicking the placeholder, by right-clicking on the placeholder and choosing 'Load Flash', or by right-clicking the video and choosing 'Reload in Flash'.</p>
 
-<p>ClickToFlash can replace most videos (both on-site and embedded) from the following web sites: YouTube, Vimeo, Dailymotion, Blip.tv, Break.com, Megavideo, Metacafe, and Veoh. In addition, ClickToFlash will find audio/video replacements to several generic Flash players and use existing <code>&lt;audio&gt;</code>/<code>&lt;video&gt;</code> fallback content.</p>
+<p>ClickToFlash can create HTML5 versions of most videos (both on-site and embedded) from the following web sites: YouTube, Vimeo, Dailymotion, Blip.tv, Break.com, Megavideo, Metacafe, and Veoh. In addition, ClickToFlash will find audio/video replacements to several generic Flash players and use existing <code>&lt;audio&gt;</code>/<code>&lt;video&gt;</code> fallback content.</p>
 
-<p class="note">Playback of nonnative codecs in Safari uses much more CPU than native playback. Moreover, if autoplay is enabled, Safari usually starts playing the video too early for smooth playback. For these reasons the feature can be disabled completely. In my casual testing, for 480p YouTube videos, playback using Perian uses on average half as much CPU as YouTube's Flash player.</p>
+<p class="note">Playback of nonnative codecs in Safari uses much more CPU than native playback and does not benefit from hardware acceleration. Moreover, if autoplay is enabled, Safari may start playing the video too early for smooth playback.</p>
 
-<h4>Playlists</h4>
+<h4 id="sources">Source selection</h4>
+
+<p>If the 'Show list of available sources' setting is enabled, a list of all available video sources (for example differing in quality) appears when hovering in the top left corner of the video placeholder or the video element (fig.&#160;4). On the video placeholder, clicking on a source loads that source. On the video element, clicking on a source loads that source and jumps to the current playback time if the video is seekable. When right-clicking on a source, the 'Download Video' and 'View in QuickTime Player' options apply to that particular source.</p>
+
+<figure>
+<img src="Sources.png" alt="List of sources on placeholder"/>
+<img src="Sources2.png" alt="List of sources on video element"/>
+<figcaption>Figure 4: Lists of sources</figcaption>
+</figure>
+
+<h4 id="playlists">Playlists</h4>
 
 <p>If the 'Use playlists' setting is enabled, ClickToFlash can sometimes load whole playlists into the video player. This feature is available for YouTube's on-site playlists (<code>&amp;p=</code> URLs), YouTube's embedded playlists, and JW Player playlists. When a playlist is used, an additional control bar appears above the default one, featuring the title of the video being played, previous/next buttons to navigate the playlist, and an input field that can be used to jump to a video in the playlist (fig.&#160;5).</p>
 
 <figure>
-<img src="CTF_Playlist.png" alt="Video playlist"/>
+<img src="Playlist.png" alt="Video playlist"/>
 <figcaption>Figure 5: Video playlist controls</figcaption>
 </figure>
 
 <h2 id="settings">Settings</h2>
 <p class="toplink"><a href="#top">To the top</a></p>
-
-<h3 id="video_settings">Video Settings</h3>
-
-<figure>
-<img src="Video_Settings.png" alt="Video settings screenshot"/>
-<img src="Video_Settings2.png" alt="Video settings screenshot 2"/>
-<img src="Video_Settings3.png" alt="Video settings screenshot 3"/>
-<img src="Video_Settings4.png" alt="Video settings screenshot 4"/>
-</figure>
-
-<p><b>Look for video replacements to Flash</b><br/>
-If unticked, ClickToFlash does not go through the process of looking for video files to replace Flash elements. All the following options are then without effect.</p>
-
-<p><b>Use playlists</b><br/>
-If ticked, ClickToFlash can load whole playlists from YouTube (on-site and embedded) and the JW Player into the HTML5 video player.</p>
-
-<p><b>Show preview image on placeholder</b><br/>
-If ticked, a preview image of the video is shown on the placeholder instead of the usual gray gradient. Such preview images are not available for all videos.</p>
-
-<p><b>Load the video player automatically</b><br/>
-If ticked, ClickToFlash automatically replaces Flash elements on locations matching a string in the text field by <code>&lt;video&gt;</code> elements when available, without waiting for the user to click on a placeholder. Strings in the text field must be separated by spaces. Simply leave the text field blank to use this behavior on all web pages.</p>
-
-<p><b>Initial behavior</b><br/>
-Choose whether ClickToFlash creates <code>&lt;video&gt;</code> tags with the 'preload' attribute set to 'none', to 'auto', or with the 'autoplay' attribute. With the 'Do not buffer' option, the video will only start buffering when the 'Play' button is clicked.</p>
-
-<p><b>Nonnative codecs</b><br/>
-Prescribe whether ClickToFlash considers video files that will use third-party QuickTime components to play. If 'Use only as a last resort' is selected, ClickToFlash will not load such videos unless there are no natively playable videos available. If 'Use freely' is selected, ClickToFlash will load the highest-quality video regardless of its format.</p>
-
-<p><b>Max resolution</b><br/>
-An upper bound on the resolutions of the videos loaded by ClickToFlash. (Because YouTube's videos are of average quality, I find that it is worth choosing the 1080p option even on a 720p screen.)</p>
-
-<p><b>Sound volume</b><br/>
-Sets the initial volume of videos created by ClickToFlash. Videos on the active page will also respond to this slider while playing.</p>
 
 <h3 id="whitelist_settings">Whitelists</h3>
 
@@ -146,20 +131,61 @@ Sets the initial volume of videos created by ClickToFlash. Videos on the active 
 <img src="Whitelists.png" alt="Whitelists settings screenshot"/>
 </figure>
 
-<p><b>Location matches</b><br/>
-Matches Flash content in documents whose absolute URL contains one of these strings.</p>
+<p>Items in whitelists must be separated by spaces.</p>
 
-<p><b>Source matches</b><br/>
-Matches Flash content whose absolute URL contains one of these strings.</p>
+<p><b>Locations whitelist</b><br/>
+Matches Flash content in documents whose absolute URLs contain an item of this list.</p>
 
-<p><b>Size matches</b><br/>
-Matches the offset size of an element.</p>
+<p><b>Sources whitelist</b><br/>
+Matches Flash content whose absolute URL (i.e. the URL of the SWF file) contains an item of this list.</p>
+
+<p><b>Negate lists</b><br/>
+Tick this to use these lists as blacklists instead of whitelists.</p>
+
+<h3 id="video_settings">HTML5 Settings</h3>
+
+<figure>
+<img src="HTML5_Settings.png" alt="HTML5 settings screenshot"/>
+<img src="HTML5_Settings2.png" alt="HTML5 settings screenshot 2"/>
+<img src="HTML5_Settings3.png" alt="HTML5 settings screenshot 3"/>
+<img src="HTML5_Settings4.png" alt="HTML5 settings screenshot 4"/>
+</figure>
+
+<p><b>Look for media replacements to Flash</b><br/>
+If unticked, ClickToFlash does not go through the process of looking for video files to replace Flash elements. All the following options are then without effect.</p>
+
+<p><b>Show list of available sources</b><br/>
+See <a href="#sources">above</a>.</p>
+
+<p><b>Show preview image</b><br/>
+If ticked, a preview image of the video is shown on the placeholder instead of the usual gray gradient. Such preview images are not available for all videos.</p>
+
+<p><b>Use playlists</b><br/>
+See <a href="#playlists">above</a>.</p>
+
+<p><b>Load the media player automatically</b><br/>
+If ticked, ClickToFlash automatically replaces Flash elements on locations matching a string in the text field by HTML5 media elements when available, without waiting for the user to click on a placeholder. Strings in the text field must be separated by spaces. Simply leave the text field blank to use this behavior on all web pages.</p>
+
+<p><b>Initial behavior</b><br/>
+Choose whether ClickToFlash creates <code>&lt;video&gt;</code> tags with the 'preload' attribute set to 'none', to 'auto', or with the 'autoplay' attribute. With the 'Do not buffer' option, the video will only start buffering when the 'Play' button is clicked.</p>
+
+<p><b>Preferred source</b><br/>
+An upper bound on the resolutions of the videos loaded by ClickToFlash. If 'Flash' is selected, HTML5 video can only be loaded from the list of sources (a star will appear on the placeholder's badge to indicate that alternative media sources are available).</p>
+
+<p><b>Nonnative codecs</b><br/>
+Prescribe whether ClickToFlash considers video files that will use third-party QuickTime components to play. If 'Use only as a last resort' is selected, ClickToFlash will not load such videos unless there are no natively playable videos available. If 'Use freely' is selected, ClickToFlash will load the highest-quality video regardless of its format.</p>
+
+<p><b>Sound volume</b><br/>
+Sets the initial volume of videos created by ClickToFlash. Videos on the active page will also respond to this slider while playing.</p>
 
 <h3 id="menus">Contextual menu items</h3>
 
 <figure>
 <img src="Contextual_menu_items.png" alt="Contextual menu items settings screenshot"/>
 </figure>
+
+<p><b>Disable/Enable ClickToFlash</b><br/>
+Disabling ClickToFlash prevents it from injecting its scripts in any new web page. The active page is reloaded, while ClickToFlash will continue to work normally in other existing pages. Enabling ClickToFlash has the opposite effect.</p>
 
 <p><b>Add to Whitelist</b><br/>
 A contextual menu item that reads 'Add Source to Whitelist' on placeholder elements and 'Add Location to Whitelist' elsewhere. When selected, a JavaScript pop-up box appears with the URL of the source or location that the user can trim before adding to the respective whitelist.</p>
@@ -168,13 +194,13 @@ A contextual menu item that reads 'Add Source to Whitelist' on placeholder eleme
 Appears everywhere except on placeholder elements and loads all blocked Flash in a document.</p>
 
 <p><b>Load Invisible Flash</b><br/>
-A Flash object is considered invisible if its size is at most that specified in the <a href="#whitelist_settings">whitelist settings</a>.</p>
+A Flash object is considered invisible if its size is at most 8x8 pixels.</p>
 
 <p><b>Download Video</b><br/>
 Appears on video placeholders and video elements.</p>
 
 <p><b>View on Site</b><br/>
-Appears on embedded YouTube, Vimeo, Dailymotion, and Veoh videos. It loads the video on its respective website in a new tab.</p>
+Appears on embedded Blip.tv, Break.com, Dailymotion, Megavideo, Metacafe, Veoh, Vimeo, and YouTube videos. It loads the video on its respective website in a new tab.</p>
 
 <p><b>View in QuickTime Player</b><br/>
 Opens a video in the QuickTime Player application.</p>
@@ -186,14 +212,43 @@ Opens a video in the QuickTime Player application.</p>
 <img src="Other2.png" alt="Other settings screenshot 2"/>
 </figure>
 
-<p><b>sIFR Text</b><br/>
+<p><b>Allow invisible Flash</b><br/>
+A Flash object is considered invisible if its size is at most 8x8 pixels.</p>
+
+<p><b>Block Flash manually</b><br/>
+If ticked, a pop-up box asks the user for confirmation before blocking any element. This box displays the following information about the element: its location, its source, its position within its document, and its size. Further, an option 'Show Element' is added to the contextual menu of placeholder elements; selecting it shows the location and source of the blocked element, as well as the blocked element itself. This is useful for getting information about invisible elements or the location of elements within iframes.</p>
+
+<p><b>sIFR text</b><br/>
 sIFR is a pre-CSS3 technology for displaying advanced typography on the web. It uses JavaScript to replace some text elements on the page by text-mimicking Flash elements. Choose 'Show text only' to disable this process and display the original HTML text.</p>
 
 <p><b>Opacity</b><br/>
 This slider controls the opacity of the placeholder elements, from invisible to opaque.</p>
 
-<p><b>Block content manually</b><br/>
-If ticked, a pop-up box asks the user for confirmation before blocking any element. This box displays the following information about the element: its location, its source, its position within its document, and its size. Further, an option 'Show Element' is added to the contextual menu of placeholder elements; selecting it shows the location and source of the blocked element, as well as the blocked element itself. This is useful for getting information about invisible elements or the location of elements within iframes.</p>
+<h3 id="hidden_settings">Hidden settings</h3>
+
+<p>Hidden settings cannot be modified from Safari's preferences. To set the hidden setting <code>key</code> to the value <code>value</code>, run <code>defaults write com.apple.Safari ExtensionSettings-com.hoyois.safari.clicktoflash-GY5KR7239Q -dict-add key -string 'value'</code> in the Terminal (to undo, use the default value). Safari must be restarted for the new values to take effect. You can use this command to set any other setting as well, but keep in mind that <code>value</code> must be a JSON-parseable string.</p>
+
+<table>
+<thead>
+<tr>
+    <th>Key</th>
+    <th>Default</th>
+    <th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>maxInvisibleSize</td>
+    <td>8</td>
+    <td>Must be a number. An element is considered invisible if its width and its height are at most this number.</td>
+</tr>
+<tr>
+    <td>disabledKillers</td>
+    <td>[]</td>
+    <td>Must be an array of integers (e.g. [5,7,8]). Each integer corresponds to a killer to be deactivated: 0 YouTube, 1 Vimeo, 2 Dailymotion, 3 Break.com, 4 Blip.tv, 5 Metacafe, 6 Tumblr, 7 Veoh, 8 Megavideo, 9 Broadcast Interactive, 10 Generic (this numbering might change with each update).</td>
+</tr>
+</tbody>
+</table>
 
 <h2 id="faq_issues">FAQ &amp; Common Issues</h2>
 <p class="toplink"><a href="#top">To the top</a></p>
@@ -207,26 +262,24 @@ If ticked, a pop-up box asks the user for confirmation before blocking any eleme
 <p class="answer">No. However, websites can check if your browser supports a given plugin, and change the page accordingly. For example, Vimeo, Dailymotion, and Veoh do not insert the Flash player on the page unless you have Flash, so there's nothing for ClickToFlash to replace.</p>
 
 <p class="question">Can I use this extension together with the YouTube5 extension?</p>
-<p class="answer">Yes, but to make sure that YouTube5's custom player is used whenever possible, you must add <code>youtube.com/v/ s.ytimg.com moogaloop moogalover newa_5lrU0z.swf</code> to the source whitelist. The YouTube5 extension also blocks the Flash that it replaces.</p>
+<p class="answer">Yes, but to make sure that YouTube5's custom player is used whenever possible, you must add <code>youtube.com/v/ s.ytimg.com vimeo.com/moogaloop newa_5lrU0z.swf</code> to the sources whitelist. The YouTube5 extension also blocks the Flash that it replaces.</p>
 
-<p class="question">Why would I want to allow all elements below a given size?</p>
-<p class="answer">You don't. For security and privacy reasons, automatically allowing elements on random pages is not recommended. Also, elements can be small at first but later grow to become full-fledged ads.</p>
-<p>The reason why some people will still use this setting despite my recommendation is the following.
-Very small elements, also called 'invisible' elements, are not meant to be seen and thus often have important functions. Some web pages will be crippled when they are blocked, and obviously it is difficult to locate them and load them manually. For example, a common effect of invisible Flash is the message <em>Please install Flash player</em> being displayed instead of expected Flash content: this happens because an invisible Flash element whose function is to replace this message by the Flash object failed to load. The size of these control elements is usually 1x1 px, but some websites are known to use invisible elements up to 8x8 px in size.</p>
-<p>That said, you should only use this setting to quickly check if an issue on a trusted page is caused by an invisible element. If it resolves the issue, turn the setting back off and use the 'Block content manually' setting to find out the source of the culprit, and match it with the source whitelist.</p>
+<p class="question">Why would I want to allow invisible elements?</p>
+<p class="answer">You don't. For security and privacy reasons, automatically allowing invisible elements on random pages is not recommended: such elements are often used to spy on your browsing habits and can store cookies that bypass any of the browser's privacy settings. Also, it happens that elements are small at first but later grow to become full-fledged ads.</p>
+<p>If a web page does not appear to work properly, use the 'Block Flash manually' setting to determine if the problem comes from the blocking an element, and target it using the sources whitelist (see <a href="#list_invisible">list of common invisible elements</a>).</p>
 
 <p class="question">Can I use wild cards in the whitelists?</p>
 <p class="answer">All whitelist-like text fields in the settings support regular expressions. For a string to be considered as a regular expression, it must be enclosed in parentheses. These regular expressions must follow the Javascript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
 
 <h3 id="issues">Common issues</h3>
 
-<h4>Gmail autocomplete and other functions not working</h4>
+<h4>Content is still being blocked after whitelisting a page</h4>
 
-<p>I haven't been able to confirm any incompatibility between this extension and Gmail. However, several users were able to solve their problem by whitelisting <code>mail.google.com</code>.</p>
+<p>A single tab can contain several documents, each with its own URL, and the URL displayed in Safari's toolbar is that of the root document only. The locations whitelist considers the location of an element to be the URL of its document. To find out the real location of an element, tick the 'Block Flash manually' checkbox in the settings, right-click on the element's placeholder, and select 'Show Element'.</p>
 
-<h4>Content still being blocked after whitelisting a page</h4>
+<h4>Downloading Vimeo videos does not work</h4>
 
-<p>A single tab can contain several documents, each with its own URL, and the URL displayed in Safari's toolbar is that of the root document only. The location whitelist considers the location of an element to be the URL of its document. To find out the real location of an element, tick the 'Block content manually' checkbox in the settings, right-click on the element's placeholder, and select 'Show Element'.</p>
+<p>Currently, the only way to download a Vimeo video is to first load it in the browser (use the 'Copy Link' context option on the list of sources to put the video URL on the clipboard), wait for the redirection, and copy and paste the new URL to Safari's Downloads window. (The reason is that Safari's Downloads window uses a different User-Agent header for its requests, to which Vimeo answers by 404. In fact, the only user agents with which these URLs trigger a redirection seem to be Safari itself and the QuickTime framework.)</p>
 
 <h4 id="list_invisible">List of invisible elements having critical functions</h4>
 
@@ -241,6 +294,12 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 </thead>
 <tbody>
 <tr>
+    <td>mail.google.com</td>
+    <td>Upload multiple attachments simultaneously. On some systems, whitelisting this element mysteriously fixes several unrelated Gmail glitches</td>
+    <td>1x1</td>
+    <td>https://mail.google.com/mail/uploader/uploaderapi2.swf</td>
+</tr>
+<tr>
     <td>prostopleer.com &amp; others</td>
     <td>Required by SoundManager2 for Flash 9</td>
     <td>8x8</td>
@@ -249,7 +308,7 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 <tr>
     <td>github.com, soundcloud.com, www.discogs.com &amp; others</td>
     <td>Required by SoundManager2 for Flash 8</td>
-    <td>6x6 or 8x8</td>
+    <td>6x6 8x8</td>
     <td>soundmanager2.swf</td>
 </tr>
 <tr>
@@ -282,12 +341,12 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 <h2 id="changelog">Release Notes</h2>
 <p class="toplink"><a href="#top">To the top</a></p>
 
-<p id="v2.0"><b>Version 2.0</b> (coming soon)</p>
+<p id="v2.0"><b>Version 2.0</b> (January 1, 2011)</p>
 <ul>
-    <li>When several video sources are available, it is now possible to switch between them<!-- (<a href="#sources">view details</a>)--></li>
+    <li>When several video sources are available, it is now possible to switch between them (<a href="#sources">view details</a>)</li>
     <li>Various killer fixes</li>
+    <li>Revamped settings</li>
     <li>New context menu item to temporarily disable ClickToFlash</li>
-    <li>New context menu item to view the URL of the video</li>
 </ul>
 
 <p id="v1.9.2"><b>Version 1.9.2</b> (December 5, 2010)</p>
@@ -341,7 +400,7 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 
 <p id="v1.8.2"><b>Version 1.8.2</b> (October 21, 2010)</p>
 <ul>
-    <li>Fixed a typo in 1.8.1 that caused Flash not to be blocked when using the source whitelist</li>
+    <li>Fixed a typo in 1.8.1 that caused Flash not to be blocked when using the sources whitelist</li>
 </ul>
 
 <p id="v1.8.1"><b>Version 1.8.1</b> (October 20, 2010)</p>
@@ -525,7 +584,7 @@ Very small elements, also called 'invisible' elements, are not meant to be seen 
 </ul>
 
 <footer>
-<p id="footer_left">Updated on December 24, 2010</p>
+<p id="footer_left">Updated on January 1, 2011</p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 <p id="footer_middle"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoflash%2F;verbose=1">XHTML5</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoflash%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
