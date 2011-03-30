@@ -20,6 +20,9 @@
 <div id="download">
 <b>Download links</b>
 <ul>
+<li>Try <a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.2b.safariextz">ClickToPlugin 2.2 beta</a> (<a href="#changelog">release notes</a>) and please give as much feedback as possible!</li>
+</ul>
+<ul>
 <li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.1.4.safariextz">Download ClickToPlugin 2.1.4</a></li>
 <li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-2.1.4.safariextz">Télécharger ClickToPlugin 2.1.4 en français</a></li>
 <li><a href="http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.ru-1.6.2.safariextz">Скачать ClickToPlugin 1.6.2 по-русски</a></li>
@@ -77,7 +80,7 @@
 <p class="toplink"><a href="#top">To the top</a></p>
 
 <h3 id="features_blocking">Blocking plugins</h3>
-<p>ClickToPlugin prevents Safari from launching plugins automatically, resulting in faster browsing, reduced fan usage, and increased battery life. It replaces every plugin object by a placeholder element (fig.&#160;1) that can be clicked to load the embedded content. The type of content that ClickToPlugin blocks can be specified in the <a href="#whitelist_settings">settings</a>. Right-clicking on a placeholder reveals the usual contextual menu with one added item, 'Hide Plugin', which effectively removes the HTML element from the webpage. This is useful for getting rid of overlays that block access to page content. Additional contextual menu items for adding a page or element to the whitelist or unlocking all blocked elements in a document can be enabled in the <a href="#menus">settings</a>. The keyboard shortcut &#x2303;&#x2318;A can be used to load all plugins in the frontmost window.</p>
+<p>ClickToPlugin prevents Safari from launching plugins automatically, resulting in faster browsing, reduced fan usage, and increased battery life. It replaces every plugin object by a placeholder element (fig.&#160;1) that can be clicked to load the embedded content. The type of content that ClickToPlugin blocks can be specified in the <a href="#whitelist_settings">settings</a>. Right-clicking on a placeholder reveals the usual context menu with one added item, 'Hide Plugin', which effectively removes the HTML element from the webpage. This is useful for getting rid of overlays that block access to page content. Additional context menu items for adding a page or element to the whitelist or unlocking all blocked elements in a document can be enabled in the <a href="#menus">settings</a>. The keyboard shortcut &#x2303;&#x2318;A can be used to load all plugins in the frontmost tab.</p>
 
 <figure>
 <img src="CTP_Flash.png" alt="Flash placeholder"/>
@@ -197,7 +200,7 @@ Sets the initial volume of videos created by ClickToPlugin. Videos on the active
 Disabling ClickToPlugin prevents it from injecting its scripts in any new web page. The active page is reloaded, while ClickToPlugin will continue to work normally in other existing pages. Enabling ClickToPlugin has the opposite effect.</p>
 
 <p><b>Add to Whitelist</b><br/>
-A contextual menu item that reads 'Add Source to Whitelist' on placeholder elements and 'Add Location to Whitelist' elsewhere. When selected, a JavaScript pop-up box appears with the URL of the source or location that the user can trim before adding to the respective whitelist.</p>
+A context menu item that reads 'Add Source to Whitelist' on placeholder elements and 'Add Location to Whitelist' elsewhere. When selected, a JavaScript pop-up box appears with the URL of the source or location that the user can trim before adding to the respective whitelist.</p>
 
 <p><b>Load All Plugins</b><br/>
 Appears everywhere except on placeholder elements and loads all blocked elements in a document.</p>
@@ -225,7 +228,7 @@ Opens a video in the QuickTime Player application.</p>
 A plugin is considered invisible if its size is at most 8x8 pixels.</p>
 
 <p><b>Block plugins manually</b><br/>
-If ticked, a pop-up box asks the user for confirmation before blocking any element. This box displays the following information about the element: its type (Flash, Silverlight, etc.), its location, its source, its position within its document, and its size. Further, an option 'Show Element' is added to the contextual menu of placeholder elements; selecting it shows the location and source of the blocked element, as well as the blocked element itself. This is useful for getting information about invisible elements or the location of elements within iframes.</p>
+If ticked, a pop-up box asks the user for confirmation before blocking any element. This box displays the following information about the element: its type (Flash, Silverlight, etc.), its location, its source, its position within its document, and its size. Further, an option 'Show Element' is added to the context menu of placeholder elements; selecting it shows the location and source of the blocked element, as well as the blocked element itself. This is useful for getting information about invisible elements or the location of elements within iframes.</p>
 
 <p><b>sIFR text</b><br/>
 sIFR is a pre-CSS3 technology for displaying advanced typography on the web. It uses JavaScript to replace some text elements on the page by text-mimicking Flash elements. Choose 'Show text only' to disable this process and display the original HTML text.</p>
@@ -274,9 +277,6 @@ This slider controls the opacity of the placeholder elements, from invisible to 
 
 <p class="question">Does the replacement of plugins by HTML5 videos require the plugin to be installed?</p>
 <p class="answer">No. However, websites can check if your browser supports a given plugin, and change the page accordingly. For example, Vimeo, Dailymotion, and Veoh do not insert the Flash player on the page unless you have Flash, so there's nothing for ClickToPlugin to replace.</p>
-
-<p class="question">Can I use this extension together with the YouTube5 extension?</p>
-<p class="answer">Yes, but to make sure that YouTube5's custom player is used whenever possible, you must add <code>youtube.com/v/ s.ytimg.com vimeo.com/moogaloop vimeocdn.com/p/flash/mooga wn29KX6UvhD.swf</code> to the sources whitelist. The YouTube5 extension also blocks the Flash that it replaces.</p>
 
 <p class="question">Why would I want to allow invisible elements?</p>
 <p class="answer">You don't. For security and privacy reasons, automatically allowing invisible elements on random pages is not recommended: such elements are often used to spy on your browsing habits and can store cookies that bypass any of the browser's privacy settings. Also, it happens that elements are small at first but later grow to become full-fledged ads.</p>
@@ -363,6 +363,27 @@ This slider controls the opacity of the placeholder elements, from invisible to 
 
 <h2 id="changelog">Release Notes</h2>
 <p class="toplink"><a href="#top">To the top</a></p>
+
+<p id="v2.2"><b>Version 2.2</b> (coming soon)</p>
+<ul>
+    <li>The extension's settings are now on their own HTML page accessible through the context menu</li>
+    <li>Simplified plugin whitelisting system</li>
+    <li>Perfected plugin detection: takes into account the <code>data:</code> URI protocol and uses MIME type sniffing as a last resort, following WebKit's internal mechanism</li>
+    <li>New blacklists and context menu item to permanently hide plugins</li>
+    <li>Customizable keyboard and mouse shortcuts for media playback and other actions</li>
+    <li>Fixed HTML5 video aspect ratio issues using shadow DOM styling</li>
+    <li>Playlist controls are integrated to the main controls</li>
+    <li>The title of the video appears in the controls while loading</li>
+    <li>Safari's incomplete volume slider for HTML5 media elements can be used (use the WebKit nightlies for the finalized volume slider)</li>
+    <li>All localizations will now be bundled within the same extension</li>
+</ul>
+
+<!--<p id="v2.2"><b>Version 2.2</b> (??)</p>
+<ul>
+    <li>Simplified plugin whitelisting system</li>
+    <li>The plugin detection takes into account the <code>data:</code> URI protocol</li>
+    <li>Based on <a href="../clicktoflash/#v2.2">ClickToFlash 2.2</a></li>
+</ul>-->
 
 <p id="v2.1.4"><b>Version 2.1.4</b> (March 24, 2011)</p>
 <ul>
@@ -558,7 +579,7 @@ This slider controls the opacity of the placeholder elements, from invisible to 
 </ul>
 
 <footer>
-<p id="footer_left">Updated on March 24, 2011</p>
+<p id="footer_left">Updated on March 29, 2011</p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 <p id="footer_middle"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F;verbose=1">XHTML5</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
