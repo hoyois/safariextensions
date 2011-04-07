@@ -35,10 +35,10 @@ h2 {
 }
 
 #download {
+    display: inline-block;
     margin: 10px 0;
     padding: 0 1em;
     border: 1px solid black;
-    width: intrinsic;
 }
 
 #requirements ul, #contents ul {
