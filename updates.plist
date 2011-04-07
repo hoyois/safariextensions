@@ -6,123 +6,27 @@
 	<array>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.hoyois.safari.clicktoflash</string>
-			<key>Developer Identifier</key>
-			<string>GY5KR7239Q</string>
-			<key>CFBundleVersion</key>
-			<string>7</string>
-			<key>CFBundleShortVersionString</key>
-			<string>2.1.4</string>
-			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.1.4.safariextz</string>
-		</dict>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.hoyois.safari.clicktoflash.fr</string>
-			<key>Developer Identifier</key>
-			<string>GY5KR7239Q</string>
-			<key>CFBundleVersion</key>
-			<string>7</string>
-			<key>CFBundleShortVersionString</key>
-			<string>2.1.4</string>
-			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.fr-2.1.4.safariextz</string>
-		</dict>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.hoyois.safari.clicktoflash.ru</string>
-			<key>Developer Identifier</key>
-			<string>GY5KR7239Q</string>
-			<key>CFBundleVersion</key>
-			<string>1.9.2</string>
-			<key>CFBundleShortVersionString</key>
-			<string>1.9.2</string>
-			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.ru-1.9.2.safariextz</string>
-		</dict>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.hoyois.safari.clicktoflash.zh-TW</string>
-			<key>Developer Identifier</key>
-			<string>GY5KR7239Q</string>
-			<key>CFBundleVersion</key>
-			<string>7</string>
-			<key>CFBundleShortVersionString</key>
-			<string>2.1.4</string>
-			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.zh_TW-2.1.4.safariextz</string>
-		</dict>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.hoyois.safari.clicktoflash.es</string>
-			<key>Developer Identifier</key>
-			<string>GY5KR7239Q</string>
-			<key>CFBundleVersion</key>
-			<string>1.9.2</string>
-			<key>CFBundleShortVersionString</key>
-			<string>1.9.2</string>
-			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash.es-1.9.2.safariextz</string>
-		</dict>
-		<dict>
-			<key>CFBundleIdentifier</key>
 			<string>com.hoyois.safari.clicktoplugin</string>
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>7</string>
+			<string>10</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.1.4</string>
+			<string>2.2</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.1.4.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.2.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.hoyois.safari.clicktoplugin.fr</string>
+			<string>com.hoyois.safari.clicktoflash</string>
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>7</string>
+			<string>10</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.1.4</string>
+			<string>2.2</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.fr-2.1.4.safariextz</string>
-		</dict>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.hoyois.safari.clicktoplugin.ru</string>
-			<key>Developer Identifier</key>
-			<string>GY5KR7239Q</string>
-			<key>CFBundleVersion</key>
-			<string>1.6.2</string>
-			<key>CFBundleShortVersionString</key>
-			<string>1.6.2</string>
-			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.ru-1.6.2.safariextz</string>
-		</dict>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.hoyois.safari.clicktoplugin.zh-TW</string>
-			<key>Developer Identifier</key>
-			<string>GY5KR7239Q</string>
-			<key>CFBundleVersion</key>
-			<string>7</string>
-			<key>CFBundleShortVersionString</key>
-			<string>2.1.4</string>
-			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.zh_TW-2.1.4.safariextz</string>
-		</dict>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.hoyois.safari.clicktoplugin.es</string>
-			<key>Developer Identifier</key>
-			<string>GY5KR7239Q</string>
-			<key>CFBundleVersion</key>
-			<string>1.6.2</string>
-			<key>CFBundleShortVersionString</key>
-			<string>1.6.2</string>
-			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin.es-1.6.2.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.2.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -142,11 +46,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>1.1</string>
+			<string>1.2</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.1</string>
+			<string>1.2</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/VideoContext-1.1.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/VideoContext-1.2.safariextz</string>
 		</dict>
 	</array>
 </dict>

@@ -34,18 +34,21 @@ h2 {
     font-size: 80%;
 }
 
-#download ul {
-	list-style-type: none;
-    padding: 0;
+#download {
+    margin: 10px 0;
+    padding: 0 1em;
+    border: 1px solid black;
+    width: intrinsic;
 }
 
-#download ul, #requirements ul, #contents ul {
+#requirements ul, #contents ul {
     margin: 10px 0;
 }
 
 .warning {
 	font-weight: bold;
 	font-style: italic;
+	margin: 1em;
 }
 
 p.note::before {
