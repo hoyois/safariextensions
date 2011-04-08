@@ -107,13 +107,19 @@ footer {
 
 #footer_left {
 	float: left;
+	padding: 1em 0;
+	margin: 0;
 }
 
 #footer_right {
 	float: right;
+	padding: 1em 0;
+	margin: 0;
 }
 
 #footer_middle {
     text-align: center;
+    padding: 1em 0;
+	margin: 0;
 }
 
