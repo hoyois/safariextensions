@@ -261,8 +261,11 @@ This slider controls the opacity of the placeholder elements, from invisible to 
 <p class="question">Does the replacement of Flash by HTML5 videos require Flash to be installed?</p>
 <p class="answer">No. However, websites can check if your browser supports a given plugin, and change the page accordingly. For example, Vimeo, Dailymotion, and Veoh do not insert the Flash player on the page unless you have Flash, so there's nothing for ClickToFlash to replace.</p>
 
+<p class="question">Can I get rid of the 'ClickToFlash Preferences&#x2026;' context menu item?</p>
+<p class="answer">Yes: Quit Safari and type <code>defaults write com.apple.Safari ExtensionSettings-com.hoyois.safari.clicktoflash-GY5KR7239Q -dict-add settingsContext -string 'false'</code> in the Terminal. Use <code>'true'</code> to bring the item back.</p>
+
 <p class="question">Can I use this extension together with the YouTube5 extension?</p>
-<p class="answer">Yes, but to make sure that the two extensions do not conflict, you must add <code>youtube.com/v/</code>, <code>s.ytimg.com</code>, <code>vimeo.com/moogaloop</code>, <code>vimeocdn.com/p/flash/mooga</code>, and <code>@^https?://s-static\.ak\.facebook\.com/rsrc\.php/v1/yF/r/[0-9a-zA-Z_]*\.swf</code> to the sources whitelist. The YouTube5 extension also blocks the Flash that it replaces.</p>
+<p class="answer">Yes, but to make sure that the two extensions do not conflict, you must add <code>@youtube(-nocookie)?\.com/v/</code>, <code>s.ytimg.com</code>, <code>vimeo.com/moogaloop</code>, <code>vimeocdn.com/p/flash/mooga</code>, and <code>@^https?://s-static\.ak\.facebook\.com/rsrc\.php/v[1-9]/[a-zA-Z0-9]{2}/r/[0-9a-zA-Z_-]*\.swf</code> to the sources whitelist. The YouTube5 extension also blocks the Flash that it replaces.</p>
 
 <p class="question">Why would I want to allow invisible elements?</p>
 <p class="answer">You don't. For security and privacy reasons, automatically allowing invisible elements on random pages is not recommended: such elements are often used to spy on your browsing habits and can store cookies that bypass any of the browser's privacy settings. Also, it happens that elements are small at first but later grow to become full-fledged ads.</p>
@@ -272,6 +275,10 @@ This slider controls the opacity of the placeholder elements, from invisible to 
 <p class="answer">All whitelist-like text fields in the settings support regular expressions. For a string to be considered as a regular expression, it must be preceded by the <code>@</code> symbol. These regular expressions must follow the Javascript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
 
 <h3 id="issues">Common issues</h3>
+
+<h4>I can't find the extension's settings!</h4>
+
+<p>Right-click anywhere on a page but on a placeholder and the command 'ClickToFlash Preferences&#x2026;' will appear.</p>
 
 <h4>Content is still being blocked after whitelisting a page</h4>
 
@@ -629,7 +636,7 @@ This slider controls the opacity of the placeholder elements, from invisible to 
 </ul>
 
 <footer>
-<p id="footer_left">Updated on April 7, 2011</p>
+<p id="footer_left">Updated on April 9, 2011</p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 <p id="footer_middle"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoflash%2F;verbose=1">XHTML5</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoflash%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
