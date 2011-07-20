@@ -56,6 +56,11 @@ p.note::before {
 	font-weight: bold;
 }
 
+p.sub {
+    position: relative;
+    left: 2em;
+}
+
 figure {
     display: block;
 	margin: 10px 0;
