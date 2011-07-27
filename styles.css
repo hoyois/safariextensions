@@ -104,6 +104,10 @@ th, td {
     padding: 5px 10px;
 }
 
+#list_invisible + table td:last-child {
+    font-family: monospace;
+}
+
 footer {
 	border-top: 1px solid #000;
 	font-size: 80%;
