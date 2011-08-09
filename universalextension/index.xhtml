@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="author" content="Marc Hoyois"/>
+    <meta name="description" content="Stop/Reload toolbar button"/>
+    <title>Universal Safari Extension</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css"/>
+</head>
+<body>
+<header id="top">
+<h1>Universal Safari Extension</h1>
+<p class="author">by Marc Hoyois</p>
+</header>
+
+<nav>
+<a href="../">My Safari extensions</a> &gt; Universal Extension
+</nav>
+
+<div id="download">
+<p><a href="http://github.com/downloads/hoyois/safariextensions/UniversalExtension-1.0.safariextz">Download Universal Extension</a></p>
+</div>
+
+<div id="contents">
+<b>Jump to</b>
+<ul>
+    <li><a href="#examples">Examples</a></li>
+</ul>
+</div>
+
+<div id="intro">
+<p>Like a universal Turing machine, a universal extension is an extension that can reproduce the behavior of an arbitrary extension. A universal extension does not actually exist because extension bars and toolbar items cannot be created dynamically. These are however the only restrictions, and this extension is a universal extension without bars or toolbar items.</p>
+
+<p>This extension has a single setting which must be a URL to a Javascript file. This file is included as a script in the extension’s global page.</p>
+</div>
+
+<h3 id="notes">Notes</h3>
+
+<ul>
+    <li>The <code>file://</code> protocol cannot be used in an extension’s global page. To load local files, use <code>http://localhost/</code> instead.</li>
+    <li>To reload the global script after it’s been modified, simply disable and enable the extension.</li>
+    <li>The <code>safari.application</code>, <code>safari.extension</code>, and <code>safari.self</code> objects can be used in the global script.</li>
+    <li>Content scripts and style sheets can be added with the methods <code>addContentScript</code> and <code>addContentStyleSheet</code> of the <code>safari.extension</code> object.</li>
+    <li>The <code>addContentScriptFromURL</code> and <code>addContentStyleSheetsFromURL</code> methods throw an error if the URL is external to the extension. See the <a href="#script_loader">example</a> below for a workaround.</li>
+</ul>
+
+<h3 id="source">Source</h3>
+
+This is the extension’s global page:
+
+<p class="code">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script type="text/javascript"&gt;
+            if(safari.extension.settings.script) {
+                var scriptElement = document.createElement("script");
+                scriptElement.type = "text/javascript";
+                scriptElement.src = safari.extension.settings.script;
+                document.head.appendChild(scriptElement);
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</p>
+
+<h2 id="examples" class="init_list">Examples</h2>
+
+<h3 id="multiple_scripts" class="list_item">Loading multiple global scripts</h3>
+
+<p>The universal extension only loads one global script, so a first step to make it more useful is to have that script load any number of other scripts.</p>
+
+<p class="code">var base = "http://localhost/~joeshmoe/scripts/";
+
+function loadScripts() {
+    for(var i = 0; i &lt; arguments.length; i++) {
+        var scriptElement = document.createElement("script");
+        scriptElement.type = "text/javascript";
+        scriptElement.src = base + arguments[i];
+        document.head.appendChild(scriptElement);
+    }
+}
+
+loadScripts("globalScript1.js", "globalScript2.js", "globalScript3.js");</p>
+
+<h3 id="script_loader" class="list_item">Loading external scripts and style sheets</h3>
+
+<p>This global script can be used to load content scripts and style sheets from arbitrary URLs with a variety of parameters.</p>
+
+<p class="code">function addContentScripts(scripts, whitelist, blacklist, runAtEnd, defer, async) {
+    if(scripts.length === 0) return;
+    var script = "function loadScripts(){for(var i=0;i&lt;arguments.length;i++){var s=document.createElement('script');" + (async ? "s.async=true;" : "") + (defer ? "s.defer=true;" : "") + "s.type='text/javascript';s.src=arguments[i];document.documentElement.appendChild(s);}}loadScripts('" + scripts.join("','") + "');";
+    return safari.extension.addContentScript(script, whitelist, blacklist, runAtEnd);
+}
+function addContentStyleSheets(stylesheets, whitelist, blacklist) {
+    if(stylesheets.length === 0) return;
+    var script = "function loadStyleSheets(){for(var i=0;i&lt;arguments.length;i++){var s=document.createElement('link');s.rel='stylesheet';s.type='text/css';s.href=arguments[i];document.documentElement.appendChild(s);}}loadStyleSheets('" + stylesheets.join("','") + "');";
+    return safari.extension.addContentStyleSheet(script, whitelist, blacklist);
+}
+
+// The script runBeforeScript.js will run on every page before the page’s own scripts
+addContentScripts(["http://localhost/~joeshmoe/runBeforeScript.js"], [], [], false, false, false);
+
+// The scripts local.js and remote.js will run on all nonsecure pages, in this order and without delaying page loading
+addContentScripts(["http://localhost/~joeshmoe/local.js", "http://example.com/remote.js"], [], ["https://*/*"], false, true, false);
+
+// The style sheet pretty.css will be applied to all pages on the domain someuglysite.com
+addContentStyleSheets(["http://localhost/~joeshmoe/pretty.css"], ["http://someuglysite.com/*"], []);</p>
+
+<h3 id="html5_blocker" class="list_item">Blocking HTML5 media</h3>
+
+<p>The days of HTML5 advertising are still far away, but when they come it will be a simple matter to control it. This global script prevents HTML5 media elements from preloading until the “Play” button is clicked.</p>
+
+<p class="code">var whitelist = ["trustedsource.com", "anothertrustedsource.com"];
+
+function canLoad(url) {
+    for(var i = 0; i &lt; whitelist.length; i++) {
+        if(url.indexOf(whitelist[i]) !== -1) return true;
+    }
+    return false;
+}
+
+function respondToMessage(event) {
+    if(event.name === "canLoad") event.message = canLoad(event.message);
+}
+
+var script = "document.addEventListener('beforeload',handleBeforeLoadEvent,true);function handleBeforeLoadEvent(event){if(!(event.target instanceof HTMLMediaElement)||safari.self.tab.canLoad(event,event.url))return;event.target.autoplay=false;event.target.setAttribute('preload','none');}";
+
+safari.extension.addContentScript(script, [], [], false);
+safari.application.addEventListener("message", respondToMessage, false);</p>
+
+<footer>
+<p id="footer_left">Updated on August 8, 2011</p>
+<p id="footer_right"><a href="#top">To the top</a></p>
+<p id="footer_middle"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Funiversalextension%2F;verbose=1">XHTML5</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Funiversalextension%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
+</footer>
+
+</body>
+</html>

@@ -75,6 +75,25 @@ code {
     font-size: 90%;
 }
 
+.code {
+    background-color: lightgray;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: "Courier", monospace;
+    font-size: 90%;
+    padding: 1em;
+    width: intrinsic;
+}
+
+.init_list {
+    counter-reset: list;
+}
+
+.list_item::before {
+    counter-increment: list;
+    content: counter(list) ". ";
+}
+
 p.question {
     font-weight: bold;
 }
