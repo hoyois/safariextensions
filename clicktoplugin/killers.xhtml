@@ -1,0 +1,221 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="author" content="Marc Hoyois"/>
+    <meta name="description" content="Prevents plug-ins from loading automatically"/>
+    <title>ClickToPlugin HTML5 replacements</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css"/>
+</head>
+<body>
+<header id="top">
+<h1>ClickToPlugin HTML5 replacements</h1>
+<p class="author">by Marc Hoyois</p>
+</header>
+
+<nav>
+<a href="../">My Safari extensions</a> &gt; <a href="./">ClickToPlugin &amp; ClickToFlash</a> &gt; HTML5 replacements
+</nav>
+
+<div id="contents">
+<b>Jump to</b>
+<ul>
+    <li><a href="#add_killers">How to add killers</a></li>
+    <li><a href="#create_killers">How to create a killer</a></li>
+    <li><a href="#database">Get killers</a></li>
+</ul>
+</div>
+
+<div id="intro">
+<p>To replace plug-ins by HTML5, ClickToPlugin uses Javascript classes called “killers”. A killer is a machine that transforms <a href="#plugin_data">plug-in data</a> into <a href="#media_data">media data</a>. ClickToPlugin contains a number of built-in killers for popular video services, but it also has the ability to load additional killers.</p>
+</div>
+
+<h2 id="add_killers">How to add killers</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
+
+<p>This section describes how to add the killer files <code>killer1.js</code>, <code>killer2.js</code>, and <code>killer3.js</code> to ClickToPlugin in Mac OS X. In what follows <code>joesmith</code> must be replaced by your username (which is the name of the “Home” directory).</p>
+
+<h3>Step 0</h3>
+
+<p>If it is not already running, you need to start the Apache server by turning on Web Sharing in Sharing preferences (<a href="help:anchor=mchlp1760-c">learn more</a>).</p>
+
+<h3>Step 1</h3>
+
+<p>Place the three killer files in <code>~/Sites/</code> or a subdirectory thereof. For this example we will create the subdirectory <code>~/Sites/CTP/</code> and place the files there.</p>
+
+<h3>Step 2</h3>
+
+<p>In the same directory <code>~/Sites/CTP/</code>, create a text file <code>myKillers.js</code> containing the code</p>
+<p class="code">loadScripts(
+    "killers/YouTube.js",
+    "killers/Vimeo.js",
+    "killers/Dailymotion.js",
+    "killers/Facebook.js",
+    "killers/Blip.js",
+    "killers/Break.js",
+    "killers/Metacafe.js",
+    "killers/TED.js",
+    "killers/Tumblr.js",
+    "killers/Flash.js",
+    "killers/Silverlight.js",
+    "killers/QuickTime.js",
+    "killers/WindowsMedia.js",
+    "killers/DivX.js",
+    "http://localhost/~joesmith/CTP/killer1.js",
+    "http://localhost/~joesmith/CTP/killer2.js",
+    "http://localhost/~joesmith/CTP/killer3.js"
+);</p>
+
+<p>In the above list the <code>killers/*</code> files are the extension’s built-in killers. They can be removed if desired. The order of the files is the order in which the killers will be run, so it is preferrable to put the most used killers first.</p>
+
+<h3>Step 3</h3>
+
+<p>Open ClickToPlugin’s preferences and enter <code>http://localhost/~joesmith/CTP/myKillers.js</code> in the “HTML5 replacements script” text field.</p>
+
+<figure>
+<img src="Killer%20script.png" alt="HTML5 replacements script"/>
+</figure>
+
+<h3>Step 4</h3>
+
+<p>Disable and enable the extension and the new killers will be operating!</p>
+
+<h2 id="create_killers">How to create a killer</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
+
+<p>Here is a minimal killer file:</p>
+<p class="code">var killer = new Object();
+addKiller(killer);
+
+killer.canKill = function(data) {return false;};
+killer.process = function(data, callback) {};</p>
+
+<p>The first line creates the killer and the second line adds it to ClickToPlugin’s list of killers. The mandatory methods <code>canKill</code> and <code>process</code> are described below.</p>
+
+<p>Here is what an actual killer file looks like:</p>
+<p class="code">var killer = new Object();
+addKiller(killer);
+
+killer.canKill = function(data) {
+    if(data.plugin !== "Flash") return false;
+    return data.location.indexOf("http://hoyois.github.com/") !== -1;
+};
+
+killer.process = function(data, callback) {
+    var flashvars = parseFlashVariables(data.params);
+    
+    var videoURL = decodeURIComponent(flashvars.mp4Source);
+    if(!videoURL) return;
+    var posterURL = decodeURIComponent(flashvars.previewImage);
+    
+    var mediaData = {
+        "playlist": [{"poster": posterURL, "sources": [{"url": videoURL, "isNative": true}]}]
+    };
+    callback(mediaData);
+};</p>
+
+<p>This killer will process all Flash objects on this domain and offer HTML5 replacements for those that have the <code>mp4Source</code> Flash variable.</p>
+
+<p>The <a href="https://github.com/hoyois/clicktoflash/tree/click-to-plugin/ClickToPlugin.safariextension/killers">built-in killers</a> provide further examples with varying degrees of complexity.</p>
+
+<h3>The <code>canKill</code> method</h3>
+
+<p>The <code>canKill</code> method has a <a href="#plugin_data">plug-in data object</a> as argument and must return a boolean. This function should be kept as simple as possible, since it will be executed for every blocked plug-in object. If it returns <code>true</code>, ClickToPlugin stops evaluating the <code>canKill</code> methods of other killers and runs the <code>process</code> method of this killer. Otherwise the plug-in data object is passed to the next killer’s <code>canKill</code> method. In particular, the <code>canKill</code> method should not modify its argument if it does not return <code>true</code>.</p>
+
+<h3>The <code>process</code> method</h3>
+
+<p>The <code>process</code> method has a <a href="#plugin_data">plug-in data object</a> and a function <code>callback</code> as arguments and does not return anything. It creates a <a href="#media_data">media data object</a> <code>mediaData</code> and calls <code>callback(mediaData);</code> to send the data back to ClickToPlugin. This call needs not take place in the body of the <code>process</code> method itself: for example, if the killer makes an HTTP request, the <code>callback</code> function will be called in the <code>onload</code> handler of the XMLHttpRequest object.</p>
+
+<h3 id="plugin_data">Plug-in data objects</h3>
+
+<p>The <em>same</em> object is passed as first argument to the <code>canKill</code> and <code>process</code> methods. It has the following properties:</p>
+<ul>
+    <li><code>plugin</code> is a string containing the name of the blocked plug-in. This string also appears on the placeholder of the blocked plug-in.</li>
+    <li><code>src</code> is a string containing the source of the blocked plug-in as absolute URL. For the Flash plug-in, this is a SWF file, for the Silverlight plug-in an XAP file, etc.</li>
+    <li><code>location</code> is a string containing the address of the blocked plug-in’s document as an absolute URL.</li>
+    <li><code>title</code> is a string containing the <code>title</code> of the blocked plug-in’s document.</li>
+    <li><code>baseURL</code> is a string containing the base URL of the blocked plug-in’s document.</li>
+    <li><code>params</code> is a string. For Flash objects it is the value of the <code>flashvars</code> parameter, and for Silverlight objects of the <code>initparams</code> parameter.</li>
+</ul>
+
+<h3 id="media_data">Media data objects</h3>
+
+<p>A media data object contains data to be used by ClickToPlugin’s media player. The following minimal media data object will result in an HTML5 video element with <code>src</code> attribute set to <code>videoURL</code>:</p>
+<p class="code">var mediaData = {
+    "playlist": [{"sources": [{"url": videoURL}]}]
+};</p>
+
+<p>The only mandatory property of a media data object is <code>playlist</code>, which is an array of media track objects.</p>
+
+<p>Each media track object can have the following properties:</p>
+<ul>
+    <li><code>sources</code> is an array of media source objects (mandatory);</li>
+    <li><code>poster</code> is a URL to an image file to be used as poster image for the video element;</li>
+    <li><code>title</code> is the title of the track;</li>
+    <li><code>siteInfo</code> is an object that makes the “View on Site” command appear in the shortcut menu. It has two mandatory properties:</li>
+    <ul>
+        <li><code>name</code> is the name of the site displayed in the shortcut menu, e.g. <code>"YouTube"</code>;</li>
+        <li><code>url</code> is the absolute URL to open when the “View on Site” command is used.</li>
+    </ul>
+</ul>
+
+<p>Each media source object can have the following properties:</p>
+<ul>
+    <li><code>url</code> is a URL to a video file (mandatory);</li>
+    <li><code>format</code> is the string that will appear in the source selector (it should be set if there are more than one source);</li>
+    <li><code>isNative</code> is a boolean which should be set to <code>true</code> only if the video file can be played natively by QuickTime X;</li>
+    <li><code>resolution</code> is an integer approximating the native height in pixels of the video;</li>
+    <li><code>mediaType</code> is either <code>"audio"</code> or <code>"video"</code>, the latter being the default value.</li>
+</ul>
+
+<h3 id="available_methods">Available functions</h3>
+
+<p>The following functions can be used in killer files.</p>
+<ul>
+    <li><code>makeAbsoluteURL(url, base)</code> returns the resolution of the URL <code>url</code> with respect to <code>base</code>.</li>
+    <li><code>unescapeHTML(text)</code> replaces HTML entities in <code>text</code> by the characters they represent and returns the result.</li>
+    <li><code>unescapeUnicode(text)</code> replaces any sequence of the form <code>\uxxxx</code> in <code>text</code> by the character with code <code>xxxx</code> and returns the result.</li>
+    <li><code>parseFlashVariables(flashvars)</code> returns a Flash object’s <code>flashvars</code> as a key–value object.</li>
+    <li><code>parseSLVariables(initparams)</code> returns a Silverlight object’s <code>initparams</code> as a key–value object.</li>
+    <li><code>getMediaInfo(url)</code> returns an object with two properties, based solely on the <code>url</code>’s extension:</li>
+    <ul>
+        <li><code>type</code> is either <code>"audio"</code> or <code>"video"</code>;</li>
+        <li><code>isNative</code> is a boolean.</li>
+    </ul>
+    <li><code>getMIMEType(resourceURL, handleMIMEType)</code> runs the function <code>handleMIMEType</code> with the MIME type of the resource <code>resourceURL</code> as argument.</li>
+    <li><code>parseXSPFPlaylist(playlistURL, baseURL, posterURL, startIndex, handleMediaData)</code> runs the function <code>handleMediaData</code> with argument a <a href="#media_data">media data object</a> obtained from the XSPF playlist file <code>playlistURL</code>.</li>
+</ul>
+
+<h2 id="database">Get killers</h2>
+<p class="toplink"><a href="#top">To the top</a></p>
+
+<p>To install a killer, download the file and follow <a href="#add_killers">these instructions</a>.</p>
+
+<table>
+<thead>
+<tr>
+    <th>Killer</th>
+    <th>Description</th>
+    <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>Broadcast Interactive Media</td>
+    <td>Description</td>
+    <td><a href="">Download</a></td>
+</tr>
+<tr>
+    <td>Megavideo</td>
+    <td>Description</td>
+    <td><a href="">Download</a></td>
+</tr>
+</tbody>
+</table>
+
+<footer>
+<p id="footer_left">Updated on August 3, 2011</p>
+<p id="footer_right"><a href="#top">To the top</a></p>
+<p id="footer_middle"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2Fkillers.xhtml;verbose=1">XHTML5</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2Fkillers.xhtml&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
+</footer>
+
+</body>
+</html>
