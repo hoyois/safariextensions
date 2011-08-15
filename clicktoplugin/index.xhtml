@@ -1,92 +1,103 @@
-<!DOCTYPE html>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="author" content="Marc Hoyois"/>
-    <meta name="description" content="Prevents plug-ins from loading automatically"/>
-    <title>ClickToPlugin/ClickToFlash Safari extensions</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css"/>
+	<meta name="author" content="Marc Hoyois"/>
+	<meta name="description" content="Prevents plug-ins from loading automatically"/>
+	<title>ClickToPlugin &amp; ClickToFlash Safari extensions</title>
+	<link rel="stylesheet" type="text/css" href="../styles.css"/>
 </head>
 <body>
 <header id="top">
-<h1>ClickToPlugin/ClickToFlash Safari extensions</h1>
-<p class="author">by Marc Hoyois</p>
+<h1>ClickToPlugin &amp; ClickToFlash Safari extensions</h1>
+<nav>
+	<a href="../">My Safari extensions</a> &gt; ClickToPlugin &amp; ClickToFlash
+</nav>
 </header>
 
-<nav>
-<a href="../">My Safari extensions</a> &gt; ClickToPlugin/ClickToFlash
-</nav>
-
-<div id="download">
-<p><a href="https://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.3.3.safariextz">Download ClickToPlugin 2.3.3</a><br/>
-<a href="https://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.3.3.safariextz">Download ClickToFlash 2.3.3</a></p>
-<!-- <p><b>Included localizations:</b> English, French, Spanish, Japanese, Simplified Chinese, Traditional Chinese</p> -->
-<p>Previous versions can be downloaded from <a href="https://github.com/hoyois/safariextensions/downloads">GitHub</a>.</p>
-</div>
-
-<div id="requirements">
-<b>Requirements</b>
+<div class="links">
+<b>Resources</b>
 <ul>
-    <li><a href="http://support.apple.com/kb/DL1070">Safari 5.1</a> or higher on Lion, Snow Leopard, or Windows</li>
-    <li><a href="http://support.apple.com/kb/DL1422">Safari 5.0.6</a> or higher on Leopard</li>
-    <li>On Windows, QuickTime is required for HTML5 video</li>
+	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.4.safariextz">Download ClickToPlugin 2.4</a></li>
+	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.4.safariextz">Download ClickToFlash 2.4</a></li>
+	<!-- <li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.2.7.safariextz">Download ClickToPlugin 2.2.7</a> (for Safari 5.0.1 to 5.0.5)</li> -->
+	<li><a href="https://github.com/hoyois/safariextensions/downloads">Browse all versions</a></li>
+	<li><a href="https://github.com/hoyois/clicktoplugin">Browse source</a></li>
 </ul>
 </div>
 
-<div id="contents">
-<b>Jump to</b>
+<div class="links">
+<b>Related pages</b>
 <ul>
-    <li><a href="#features">Overview</a></li>
-    <li><a href="#settings">Settings</a></li>
-    <li><a href="#faq_issues">FAQ &amp; Common Issues</a></li>
-    <li><a href="#changelog">Release Notes</a></li>
+	<li><a href="support.xhtml">ClickToPlugin support</a> – FAQ, fixes for common issues, and known bugs</li>
+	<li><a href="killers.xhtml">ClickToPlugin HTML5 replacements</a> – Less plug-ins, more HTML!</li>
+</ul>
+</div>
+
+<div class="links">
+<b>Contents</b>
+<ul>
+	<li><a href="#features">Overview of features</a></li>
+	<li><a href="#settings">Settings</a></li>
+	<li><a href="#changelog">Release Notes</a></li>
 </ul>
 </div>
 
 <div id="intro">
-<p><b>ClickToPlugin</b> is a highly customizable extension that prevents Safari from launching plug-ins automatically, resulting in faster browsing, reduced fan usage, and increased battery life. It replaces every plug-in object by an unobtrusive placeholder that can be clicked to load the embedded content. Further, it can replace many plug-in-based media players by Safari’s native HTML5 media player. <b>ClickToFlash</b> is a restriction of ClickToPlugin that only deals with Flash content.</p>
+<p><strong>ClickToPlugin</strong> is a lightweight and highly customizable extension that prevents Safari from launching plug-ins automatically, resulting in faster browsing, reduced fan usage, and increased battery life. It replaces every plug-in object by an unobtrusive placeholder that can be clicked to load the embedded content. Further, it can replace many plug-in-based media players by Safari’s native HTML5 media player. <strong>ClickToFlash</strong> is a restriction of ClickToPlugin that only deals with Flash content.</p>
 
-<p>Feel free to <a href="mailto:marc%20dot%20hoyois%20@t%20gmail%20dot%20com?subject=%5BCTP%5D%20Your%20extension%20rocks,%20but...">request features</a> and please <a href="mailto:marc%20dot%20hoyois%20@t%20gmail%20dot%20com?subject=%5BCTP%5D%20This%20piece%20of%20garbage%20doesn%27t%20work%21">report bugs</a>. <b>However, please read the <a href="#faq_issues">FAQ &amp; Common Issues</a> section carefully before sending me an email.</b></p>
+<p>ClickToPlugin is currently localized in English, French, Spanish, Traditional Chinese, Simplified Chinese, and Japanese.</p>
 
-<p>To unpack the source to the current directory, run <code>xar -f /path/to/ClickToPlugin.safariextz -x</code>. You can also <a href="https://github.com/hoyois/clicktoflash/tree/click-to-plugin">browse the latest source</a> on GitHub.</p>
+<p id="contact">Feel free to <a href="mailto:marc%20dot%20hoyois%20@t%20gmail%20dot%20com?subject=%5BCTP%5D%20Your%20extension%20rocks,%20but%E2%80%A6">request features</a> and please <a href="mailto:marc%20dot%20hoyois%20@t%20gmail%20dot%20com?subject=%5BCTP%5D%20This%20piece%20of%20garbage%20doesn%E2%80%99t%20work%21">report bugs</a>. <strong>However, please read the <a href="support.xhtml">support page</a> carefully before sending me an email!</strong></p>
 </div>
 
-<h3 id="acknowledgements">Acknowledgements</h3>
-<p>This extension owes a lot to several people.</p>
+<h3 id="requirements">Requirements</h3>
+
 <ul>
-    <li>It began as an attempt to improve <a href="http://github.com/mattball/ClickToFlash-safari-extension">this previous ClickToFlash extension</a> by Matt Ball. It has come a long way since then and has been partially rewritten several times, but the awesome CSS of the placeholders is still Matt’s.</li>
-    <li>Both this extension and Matt’s original extension were inspired by the popular <a href="http://www.clicktoflash.com/">ClickToFlash plug-in</a> by Jonathan Rentzsch.</li>
-    <li>I learned from Félix Cloutier (developer of <a href="http://safari.laissemoichercherca.com/plugincustoms">Plugin Customs</a>) how to detect Java applets.</li>
-    <li>I learned from Rodger Combs’ <a href="http://combsconnections.tk/extensions/">Plugin Blocker</a> extension about AJAX requests and how to use them to fetch the URLs of videos on Vimeo and Veoh.</li>
-    <li>The extension’s icon was designed by <a href="http://about.me/astamoore">Ast A. Moore</a>.</li>
-    <li>The CSS of the source selector was devised by Robert Lange.</li>
+	<li><a href="http://support.apple.com/kb/DL1070">Safari 5.1</a> or higher on Lion, Snow Leopard, or Windows</li>
+	<li><a href="http://support.apple.com/kb/DL1422">Safari 5.0.6</a> or higher on Leopard</li>
+	<li>On Windows, QuickTime is required for HTML5 video</li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<p>This extension owes its existence and awesomeness to more than one individual. I would like to give thanks to</p>
+<ul>
+	<li>Jonathan Rentzsch, the creator of the popular <a href="http://www.clicktoflash.com/">ClickToFlash plug-in</a> which started it all;</li>
+	<li>Matt Ball, the developer of <a href="https://github.com/mattball/ClickToFlash-safari-extension">this previous ClickToFlash extension</a> which served as this extension’s starting point (in particular, the awesome CSS of the placeholders is Matt’s work);</li>
+	<li><a href="http://about.me/astamoore">Ast A. Moore</a>, who designed the extension’s icon and with whom I had many useful conversations;</li>
+	<li>Robert Lange, who designed the <a href="#source_selection">source selector</a>;</li>
+	<li>Félix Cloutier, developer of the <a href="http://safari.laissemoichercherca.com/plugincustoms">Plugin Customs</a> extension, from whom I learned how to detect Java applets;</li>
+	<li>Rodger Combs, developer of the <a href="http://combsconnections.tk/extensions/">Plugin Blocker</a> extension, from which I learned about XHRs and how to use them to fetch the URLs of videos on Vimeo and Veoh.</li>
 </ul>
 
 <p>Further, thanks should be given to</p>
 <ul>
-    <li><a href="http://www.aoneonline.net/">aONe</a> for the Spanish localization,</li>
-    <li>Eric Woo for the Traditional Chinese, Simplified Chinese, and Japanese localizations.</li>
+	<li><a href="http://www.aoneonline.net/">aONe</a> for the Spanish localization;</li>
+	<li>Eric Woo for the Traditional Chinese, Simplified Chinese, and Japanese localizations.</li>
 </ul>
 
-<h2 id="features">Overview</h2>
-<p class="toplink"><a href="#top">To the top</a></p>
+<section id="features">
+<header>
+<h2>Overview of features</h2>
+<nav><a href="#top">To the top</a></nav>
+</header>
 
 <h3 id="features_blocking">Blocking plug-ins</h3>
-<p>ClickToPlugin prevents Safari from launching plug-ins and replaces every plug-in object by a placeholder labeled by the name of the blocked plug-in (fig.&#160;1). Clicking this placeholder loads the original plug-in object. Which plug-ins are blocked can be specified in the <a href="#plug-ins">preferences</a>. In addition, ClickToPlugin features several <a href="#control_lists">control lists</a> to specify objects that should never be blocked or that should be hidden from view instantly. Check the <a href="#settings">Settings</a> section on this page for complete details on customizing ClickToPlugin.</p>
+<p>ClickToPlugin prevents Safari from launching plug-ins and replaces every plug-in object by a placeholder labeled by the name of the blocked plug-in (fig. 1). Clicking this placeholder loads the original plug-in object. Which plug-ins are blocked can be specified in the <a href="#plug-ins">preferences</a>. In addition, ClickToPlugin features several <a href="#control_lists">control lists</a> to specify objects that should never be blocked or that should be hidden from view instantly. Check the <a href="#settings">Settings</a> section for complete details on customizing ClickToPlugin.</p>
 
 <figure>
 <img src="Flash.png" alt="Flash placeholder"/>
 <img src="Silverlight.png" alt="Silverlight placeholder"/>
 <img src="Java.png" alt="Java placeholder"/>
 <img src="QuickTime.png" alt="QuickTime placeholder"/>
-<img src="Flip4Mac.png" alt="Flip4Mac placeholder"/>
+<img src="Shockwave.png" alt="Shockwave placeholder"/>
 <figcaption>Figure 1: Examples of placeholders</figcaption>
 </figure>
 
 <p class="note">ClickToPlugin does not block <code>&lt;applet&gt;</code> elements. These elements are used to embed Java applets into web pages and launch a Java plug-in. The reason is that they <a href="https://bugs.webkit.org/show_bug.cgi?id=44023">cannot</a> be blocked.</p>
 
 <h3 id="features_replacing">Replacing plug-ins by HTML5</h3>
-<p>ClickToPlugin is able to replace certain blocked plug-in objects by HTML5 media elements. The label of the placeholder is then changed accordingly (fig.&#160;2), and a preview image of the media is shown when available. Clicking on such a placeholder loads Safari’s native media player (fig.&#160;3).</p>
+<p>ClickToPlugin has <a href="killers.xhtml">extensible plug-in-to-HTML5</a> capabilities. When ClickToPlugin is able to replace a plug-in objects by an HTML5 media element, the label of the placeholder is changed accordingly (fig. 2), and a preview image of the media is shown when available. Clicking such a placeholder loads Safari’s native media player (fig. 3).</p>
 
 <figure>
 <img src="H.264.png" alt="Video placeholder"/>
@@ -99,13 +110,13 @@
 <figcaption>Figure 3: Safari’s media player</figcaption>
 </figure>
 
-<p>The original element can still be loaded by right-clicking on the placeholder and choosing “Load Plug-in”, by right-clicking the media player and choosing “Restore Plug-in”, or by using the <a href="#source_selection">source selector</a>.</p>
+<p>The original plug-in object can still be loaded by right-clicking the placeholder and choosing “Load Plug-in”, by right-clicking the media player and choosing “Restore Plug-in”, or by using the <a href="#source_selection">source selector</a>.</p>
 
-<p>ClickToPlugin can create HTML5 versions of most videos (both on-site and embedded) from the following web sites: Blip.tv, Break, Dailymotion, Facebook, Megavideo, Metacafe, TED, Vimeo, and YouTube. ClickToPlugin can also find audio/video replacements to several generic Flash and Silverlight players, and use existing <code>&lt;audio&gt;</code>/<code>&lt;video&gt;</code> fallback content. In addition, it can replace QuickTime, Windows Media, or DivX plug-in objects by HTML5 media elements.</p>
+<p>With the default configuration, ClickToPlugin can create HTML5 versions of most videos (both on-site and embedded) from the following websites: Blip.tv, Break, Dailymotion, Facebook, Metacafe, TED, Vimeo, and YouTube. It can also find audio/video replacements to several generic Flash and Silverlight players, and use existing <code>&lt;audio&gt;</code>/<code>&lt;video&gt;</code> fallback content. Finally, it can replace QuickTime, Windows Media, and DivX plug-in objects by HTML5 media elements.</p>
 
 <h4 id="source_selection">Source selection</h4>
 
-<p>A list of all available media sources (for example differing in quality) appears when hovering in the top left corner of a media placeholder (fig.&#160;4 left) or the media player (fig.&#160;4 center). On a media placeholder, clicking on a source loads that source in the media player. In the media player, clicking on a source loads that source and jumps to the current playback time if the media is seekable. When right-clicking on a source, the “Download Video” and “View in QuickTime Player” commands apply to that particular source.</p>
+<p>A list of all available media sources (for example differing in quality) appears when hovering in the top left corner of a media placeholder (fig. 4 left) or the media player (fig. 4 center). On a media placeholder, clicking a source loads that source in the media player. In the media player, clicking a source loads that source and jumps to the current playback time if the media is seekable. When right-clicking a source, the “Download Video” and “View in QuickTime Player” commands apply to that particular source.</p>
 
 <figure>
 <img src="Sources.png" alt="Source selector on placeholder"/>
@@ -114,25 +125,68 @@
 <figcaption>Figure 4: The source selector</figcaption>
 </figure>
 
-<p>When sources are available to play with the HTML5 player but the settings prevent any of them from being used by default, a star appears on the placeholder’s badge to indicate that alternative media sources are available  (fig.&#160;4 right).</p>
+<p>When sources are available to play with the HTML5 player but the settings prevent any of them from being used by default, an asterisk appears on the placeholder’s badge to indicate that alternative media sources are available (fig. 4 right).</p>
 
 <h4 id="playlists">Playlists</h4>
 
-<p>ClickToPlugin can sometimes load whole playlists into the media player. This feature is available for YouTube and some generic Flash players. When a playlist is used, additional controls appear to navigate the playlist (fig.&#160;5).</p>
+<p>ClickToPlugin can sometimes load whole playlists into the media player. This feature is available for YouTube and some generic Flash players. When a playlist is used, additional controls appear to navigate the playlist (fig. 5).</p>
 
 <figure>
 <img src="Playlist%20controls.png" alt="Playlist controls"/>
 <figcaption>Figure 5: Playlist controls</figcaption>
 </figure>
+</section>
 
-<h2 id="settings">Settings</h2>
-<p class="toplink"><a href="#top">To the top</a></p>
+<section id="settings">
+<header>
+<h2>Settings</h2>
+<nav><a href="#top">To the top</a></nav>
+</header>
 
-<p>ClickToPlugin uses a custom interface for its preferences. It can be accessed using either an optional <a href="#menus">shortcut menu item</a> or a customizable <a href="#keyboard_shortcuts">keyboard shortcut</a>. The preference window overlays the current page, except if the top document is an HTML4 frameset document, in which case it opens in a new tab instead.</p>
+<div class="contents">
+<ul>
+	<li><a href="#general">General</a></li>
+	<li><a href="#plug-ins">Plug-ins</a></li>
+	<li><a href="#control_lists">Control lists</a></li>
+	<li><a href="#media_player">Media player</a></li>
+	<li><a href="#shortcut_menu">Shortcut menu</a></li>
+	<li><a href="#keyboard_shortcuts">Keyboard shortcuts</a></li>
+</ul>
+</div>
 
-<p>When the preference window is standing on top of a web page, you can dismiss it by clicking outside it (this click does not affect the underlying web page), by using the same keyboard shortcut that opens the preference window, or by pressing &#x2318;W (Command-W).</p>
+<p>ClickToPlugin uses a custom interface for its preferences. It can be accessed using either an optional <a href="#shortcut_menu">shortcut menu item</a> or a customizable <a href="#keyboard_shortcuts">keyboard shortcut</a>. The preference window overlays the current page, except if the top document is an HTML4 frameset document, in which case it opens in a new tab instead.</p>
 
-<p>A change of settings under the “Shortcut menu” tab takes effect instantly, and a change of settings under the “Plug-ins”, “Control lists”, or “HTML5 replacements” tabs is applied to any new plug-in object that Safari encounters. Changing any other setting has no effect on existing pages.</p>
+<p>When the preference window is standing on top of a web page, you can dismiss it by clicking outside it (this click does not affect the underlying web page), by using the same keyboard shortcut that opens the preference window, or by pressing <kbd>⌘W</kbd> (Command-W).</p>
+
+<h3 id="general">General</h3>
+
+<figure>
+<img src="General.png" alt="General tab"/>
+</figure>
+
+<p><b>Placeholder opacity</b><br/>
+This slider controls the opacity of the placeholder elements, from invisible to opaque.</p>
+
+<p><b>Show plug-in source as tooltip</b><br/>
+If checked, the source of the blocked plug-in object appears as a tooltip when hovering its placeholder.</p>
+
+<p><b>Plug-in to HTML5 converters</b><br/>
+A list of scripts to be included in the extension’s global page. The default scripts load the built-in killers. Changes to this setting only apply after the extension is reloaded.</p>
+
+<p><b>Use HTML5 media fallbacks</b><br/>
+<dfn>Fallback content</dfn> is HTML code within an <code>&lt;object&gt;</code> tag designed to be used by the browser in case it lacks a plug-in to handle the object. If checked, ClickToPlugin uses a special killer that looks for <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> fallback content.</p>
+
+<p><b>Use a download manager</b><br/>
+If checked, the “Download Video” command sends the video file to a download manager. This works with Folx, iGetter, Speed Download, and possibly more.</p>
+
+<p><b>sIFR text policy</b> [Show text only | Treat as regular Flash | Load automatically]<br/>
+sIFR is a pre-CSS3 technology for displaying advanced typography on the web. It uses JavaScript to replace some text elements on the page by text-mimicking Flash objects. Choose “Show text only” to disable this process and display the original HTML text.</p>
+
+<p><b>Allow invisible plug-ins</b><br/>
+If checked, plug-in objects whose height and width do not exceed 8 pixels will be loaded automatically.</p>
+
+<p><b>Block plug-ins manually</b><br/>
+If checked, a dialog asks for confirmation before blocking any plug-in object. This dialog contains the following information about the object: its type (Flash, Silverlight, etc.), its location, its source, its position within its document, and its size. Further, a command “Get Plug-in Info” is added to the shortcut menu of placeholders.</p>
 
 <h3 id="plug-ins">Plug-ins</h3>
 
@@ -140,7 +194,7 @@
 <img src="Plug-ins.png" alt="Plug-ins tab"/>
 </figure>
 
-<p>In this tab you can specify which plug-ins are not blocked by ClickToPlugin. Instances of allowed plug-ins behave as they would in the absence of ClickToPlugin.</p>
+<p>In this tab you can specify which plug-ins are not blocked by ClickToPlugin.</p>
 
 <h3 id="control_lists">Control lists</h3>
 
@@ -148,44 +202,29 @@
 <img src="Control%20lists.png" alt="Control lists tab"/>
 </figure>
 
-<p>A line in a control list <em>matches</em> a URL if either</p>
+<p>A line in a control list <dfn>matches</dfn> a URL if either</p>
 <ul>
-    <li>it does not start with <code>@</code> and is a substring of the given URL, or</li>
-    <li>it starts with <code>@</code> and the rest of the line is a valid JavaScript regular expression that matches the given URL.</li>
+	<li>it does not start with <code>@</code> and is a substring of the given URL, or</li>
+	<li>it starts with <code>@</code> and the rest of the line is a valid JavaScript regular expression that matches the given URL.</li>
 </ul>
 
-<p>The first two control lists are the <em>whitelists</em> and the latter two the <em>blacklists</em>. A pair of lists <em>matches</em> a given plug-in object if either</p>
+<p>The first two control lists are the <dfn>whitelists</dfn> and the latter two the <dfn>blacklists</dfn>. A pair of lists <dfn>matches</dfn> a given plug-in object if either</p>
 <ul>
-    <li>some line in the first list matches the absolute URL of the given object’s document, or</li>
-    <li>some line in the second list matches the absolute URL of the resource to be loaded by the the given object.</li>
+	<li>some line in the first list matches the absolute URL of the given object’s document, or</li>
+	<li>some line in the second list matches the absolute URL of the resource to be loaded by the the given object.</li>
 </ul>
-
 
 <p>When an instance of a plug-in that is not selected under the “Plug-ins” tab is about to be loaded in a document, ClickToPlugin blocks it unless either</p>
 <ul>
-    <li>the first “Negate lists” box is unchecked and the whitelists match the given object, or</li>
-    <li>the first “Negate lists” box is checked and the whitelists do not match the given object.</li>
+	<li>the first “Invert lists” box is unchecked and the whitelists match the given object, or</li>
+	<li>the first “Invert lists” box is checked and the whitelists do not match the given object.</li>
 </ul>
 
 <p>If a plug-in object is blocked, then ClickToPlugin further removes it from the document if either</p>
 <ul>
-    <li>the second “Negate lists” box is unchecked and the blacklists match the given object, or</li>
-    <li>the second “Negate lists” box is checked and the blacklists do not match the given object.</li>
+	<li>the second “Invert lists” box is unchecked and the blacklists match the given object, or</li>
+	<li>the second “Invert lists” box is checked and the blacklists do not match the given object.</li>
 </ul>
-
-<h3 id="html5_replacements">HTML5 replacements</h3>
-
-<figure>
-<img src="HTML5%20replacements.png" alt="HTML5 replacements tab"/>
-</figure>
-
-<p>When a plug-in object has been blocked and not removed, ClickToPlugin attempts to replace the original object by an HTML5 media element. To do so, ClickToPlugin has a number of classes called “killers” at its disposal. Each killer can detect if it can deal with a given plug-in object, and if so, it gathers all the necessary data for ClickToPlugin to use (the URLs of available sources, their formats, preview images, and so on). In this tab you can specify which killers are operating.</p>
-
-<p><b>Use HTML5 fallbacks</b><br/>
-<em>Fallback content</em> is HTML code within an <code>&lt;object&gt;</code> tag designed to be used by the browser in case it lacks a plug-in to handle the object. If checked, ClickToPlugin uses a special killer that looks for <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> fallback content.</p>
-
-<p><b>Use playlists</b><br/>
-If checked, killers gather <a href="#playlists">playlist</a> data when available.</p>
 
 <h3 id="media_player">Media player</h3>
 
@@ -193,23 +232,21 @@ If checked, killers gather <a href="#playlists">playlist</a> data when available
 <img src="Media%20player.png" alt="Media player tab"/>
 </figure>
 
-<p>Once a killer has gathered alternative media data for a plug-in object, it is transmitted to ClickToPlugin’s HTML5 media player.</p>
-
-<p><b>Default media player</b> [HTML5; QuickTime Player; Plug-in]<br/>
-Choose which media player to load when clicking on a placeholder. Nondefault players can be loaded through the <a href="#source_selection">source selector</a>.</p>
+<p><b>Default media player</b> [HTML5 | QuickTime Player | Plug-in]<br/>
+Choose which media player to load when clicking a placeholder. Nondefault players can be loaded through the <a href="#source_selection">source selector</a>.</p>
 
 <p>The next two settings control ClickToPlugin’s choice of default source to be used when the placeholder is clicked. Other sources can only be loaded from the <a href="#source_selection">source selector</a>.</p>
 
-<p><b>Default resolution</b> [360p; 480p; 720p; 1080p; 4K]<br/>
+<p><b>Default resolution</b> [360p | 480p | 720p | 1080p | 4K]<br/>
 An upper bound on the resolutions of the videos that ClickToPlugin uses for default.</p>
 
-<p><b>Nonnative formats policy</b> [Never use as default; Use only as a last resort; Use freely]<br/>
+<p><b>Nonnative formats policy</b> [Never use as default | Use only as a last resort | Use freely]<br/>
 Prescribe whether ClickToPlugin considers media files that will use third-party QuickTime components to play. If “Use only as a last resort” is selected, ClickToPlugin does not choose such a source for default unless there are no natively playable source available. If “Use freely” is selected, ClickToPlugin uses the highest-quality source regardless of its format.</p>
 
 <p><b>Load media player automatically</b><br/>
-If checked, ClickToPlugin automatically replaces blocked elements by HTML5 media elements when available, without waiting for the user to click on a placeholder.</p>
+If checked, ClickToPlugin automatically replaces blocked elements by HTML5 media elements when available, without waiting for the user to click a placeholder.</p>
 
-<p><b>Initial behavior</b> [Do not buffer; Start buffering; Start buffering and play automatically]<br/>
+<p><b>Initial behavior</b> [Do not buffer | Start buffering | Start buffering and play automatically]<br/>
 Choose whether ClickToPlugin creates media elements with the <code>preload</code> attribute set to <code>none</code>, to <code>auto</code>, or with the <code>autoplay</code> attribute. With the “Do not buffer” option, the video only starts buffering when the “Play” button is clicked.</p>
 
 <p><b>Show preview image</b><br/>
@@ -218,8 +255,11 @@ If checked, a preview image of the video is shown on the placeholder.</p>
 <p><b>Show video title as tooltip</b><br/>
 If checked, the title of the video appears as a tooltip when hovering the placeholder.</p>
 
+<p><b>Hide “Rewind” button</b><br/>
+If checked, the “Rewind” button in the default HTML5 media controls is removed.</p>
+
 <p><b>Show list of available sources</b><br/>
-Tick this to be able to use the <a href="#source_selection">source selector</a>.</p>
+Check this to be able to use the <a href="#source_selection">source selector</a>.</p>
 
 <p class="sub"><b>Include plug-in</b><br/>
 Clicking the name of the plug-in in the source selector restores the blocked plug-in object.</p>
@@ -227,22 +267,19 @@ Clicking the name of the plug-in in the source selector restores the blocked plu
 <p class="sub"><b>Include QuickTime Player</b><br/>
 Clicking “QuickTime Player” in the source selector opens the current track in QuickTime Player.</p>
 
-<p><b>Hide “Rewind” button</b><br/>
-If checked, the “Rewind” button in the default HTML5 media controls is removed.</p>
-
 <p><b>Sound volume</b><br/>
 Sets the initial volume of media elements created by ClickToPlugin.</p>
 
 <p><b>Autoplay on these sites</b><br/>
 If a line in this list matches a document’s absolute URL, ClickToPlugin behaves in this document as if the “Load media player automatically” box were checked and the “Initial behavior” pop-up button set to “Start buffering and play automatically”.</p>
 
-<h3 id="menus">Shortcut menu</h3>
+<h3 id="shortcut_menu">Shortcut menu</h3>
 
 <figure>
 <img src="Shortcut%20menu.png" alt="Shortcut menu tab"/>
 </figure>
 
-<p>In this tab you can choose which commands can appear in the shortcut menu (or contextual menu). Even if selected, a command does not appear in the shortcut menu if it cannot be used at that time. Moreover, when right-clicking on a placeholder, only the commands that apply specifically to the targeted element appear.</p>
+<p>In this tab you can choose which commands can appear in the shortcut menu (or contextual menu). Even if selected, a command does not appear in the shortcut menu if it cannot be used at that time. Moreover, when right-clicking a placeholder, only the commands that apply specifically to the targeted element appear.</p>
 
 <p><b>Always Allow</b><br/>
 This command reads “Always Allow” on placeholders and and “Allow Plug-ins on Domain” elsewhere. Choosing it in the first case adds the hierarchical part of the blocked object’s resource URL to the sources whitelist, while in the second case it adds the domain of the current document to the locations whitelist. In both cases the new whitelists are applied at once.</p>
@@ -261,20 +298,17 @@ A plug-in object is considered invisible if its height and width do not exceed t
 <p><b>Download Video</b><br/>
 Downloads the current track.</p>
 
-<p class="sub"><b>Use a download manager</b><br/>
-If checked, the “Download Video” command sends the video file to a download manager. This works with Folx, iGetter, Speed Download, and possibly more.</p>
-
 <p><b>View in QuickTime Player</b><br/>
 Opens the current track in the QuickTime Player application.</p>
 
 <p><b>View on Site</b><br/>
-Opens the video’s dedicated web page in a new tab (applies to embedded Blip.tv, Break, Dailymotion, Facebook, Megavideo, Metacafe, TED, Vimeo, and YouTube videos).</p>
+Opens the video’s dedicated web page in a new tab. With the default killers, this command applies to embedded Blip.tv, Break, Dailymotion, Facebook, Metacafe, TED, Vimeo, and YouTube videos.</p>
 
 <p><b>ClickToPlugin Preferences</b><br/>
 This command brings up the preference window. It can only be disabled if a <a href="#keyboard_shortcuts">keyboard shortcut</a> is set for the same action.</p>
 
 <p><b>Disable/Enable ClickToPlugin</b><br/>
-Disabling ClickToPlugin prevents it from injecting its scripts in any new web page. The active page is reloaded, while ClickToPlugin continues to work normally in other existing pages. Enabling ClickToPlugin has the opposite effect.</p>
+After disabling ClickToPlugin using this command, new pages are unaffected by ClickToPlugin. The active tab is reloaded, while ClickToPlugin continues to work normally in other existing tabs. Enabling ClickToPlugin has the opposite effect.</p>
 
 <h3 id="keyboard_shortcuts">Keyboard shortcuts</h3>
 
@@ -282,538 +316,371 @@ Disabling ClickToPlugin prevents it from injecting its scripts in any new web pa
 <img src="Keyboard%20shortcuts.png" alt="Keyboard shortcuts tab"/>
 </figure>
 
-<p>To set a keyboard shortcut, click in the text field and type the desired shortcut. The four modifier keys &#x21e7; (Shift), &#x2303; (Control), &#x2325; (Option), and &#x2318; (Command) can be used. To set a mouse shortcut, hover the mouse pointer over the gray square to the right of the text field, and perform the desired mouse action. The left button, middle button, and mouse wheel can be used, possibly with modifier keys.</p>
+<p>To set a keyboard shortcut, click in the text field and type the desired shortcut. The four modifier keys <kbd>⇧</kbd> (Shift), <kbd>⌃</kbd> (Control), <kbd>⌥</kbd> (Option), and <kbd>⌘</kbd> (Command) can be used. To set a mouse shortcut, hover the mouse pointer over the square to the right of the text field, and perform the desired mouse action. The left button, middle button, and mouse wheel can be used, possibly with modifier keys.</p>
 
 <p>Clearing a shortcut prevents ClickToPlugin from registering a listener to this shortcut.</p>
 
-<p class="note">Alphanumeric keyboard shortcuts and mouse shortcuts do not work while watching a video fullscreen. If applicable, the “Enter fullscreen” shortcut can be used to exit fullscreen. The &#x238b; (Escape) key can also be used to exit fullscreen.</p>
+<p class="note">Alphanumeric keyboard shortcuts and mouse shortcuts do not work while watching a video fullscreen. If applicable, the “Enter fullscreen” shortcut can be used to exit fullscreen. The <kbd>⎋</kbd> (Escape) key can also be used to exit fullscreen.</p>
+</section>
 
-<h3 id="miscellaneous">Miscellaneous</h3>
+<section id="changelog">
+<header>
+<h2>Release Notes</h2>
+<nav><a href="#top">To the top</a></nav>
+</header>
 
-<figure>
-<img src="Miscellaneous.png" alt="Miscellaneous tab"/>
-</figure>
-
-<p><b>Placeholder opacity</b><br/>
-This slider controls the opacity of the placeholder elements, from invisible to opaque.</p>
-
-<p><b>Show plug-in source as tooltip</b><br/>
-If checked, the source of the blocked plug-in object appears as a tooltip when hovering its placeholder.</p>
-
-<p><b>sIFR text policy</b> [Show text only; Treat as regular Flash; Load automatically]<br/>
-sIFR is a pre-CSS3 technology for displaying advanced typography on the web. It uses JavaScript to replace some text elements on the page by text-mimicking Flash objects. Choose “Show text only” to disable this process and display the original HTML text.</p>
-
-<p><b>Invisibility threshold</b><br/>
-This value is used by the “Load Invisible Plug-ins” command in the shortcut menu and the “Allow invisible plug-ins” setting.</p>
-
-<p><b>Allow invisible plug-ins</b><br/>
-A plug-in is considered invisible if its height and width do not exceed the invisibility threshold.</p>
-
-<p><b>Block plug-ins manually</b><br/>
-If checked, a dialog asks for confirmation before blocking any plug-in object. This dialog contains the following information about the object: its type (Flash, Silverlight, etc.), its location, its source, its position within its document, and its size. Further, a command “Get Plug-in Info” is added to the shortcut menu of placeholders; choosing it shows the location and source of the blocked object, as well as its HTML code. This is useful for getting information about invisible elements or the location of elements within iframes.</p>
-
-<h2 id="faq_issues">FAQ &amp; Common Issues</h2>
-<p class="toplink"><a href="#top">To the top</a></p>
-
-<h3 id="faq">FAQ</h3>
-
-<p class="question">Can I use this extension together with the ClickToFlash plug-in?</p>
-<p class="answer">No. If you use the extension, you should uninstall the plug-in completely, or add <code>com.apple.Safari</code> to its application whitelist.</p>
-
-<p class="question">Does the replacement of plug-ins by HTML5 videos require the plug-in to be installed?</p>
-<p class="answer">No. However, websites can check if your browser supports a given plug-in, and change the page accordingly. For example, Vimeo and Dailymotion do not insert the Flash player on the page unless you have Flash, so there’s nothing for ClickToPlugin to replace.</p>
-
-<p class="question">Can I use this extension together with the YouTube5 extension?</p>
-<p class="answer">Yes, but to make sure that the two extensions do not conflict, you must add the following to the sources whitelist:</p>
+<p id="v2.4"><b>Version 2.4</b> (August 14, 2011)</p>
 <ul>
-    <li><code>s.ytimg.com</code> and <code>@youtube(-nocookie)?\.com/v/</code> for YouTube videos,</li>
-    <li><code>vimeocdn.com/p/flash/mooga</code> and <code>vimeo.com/moogaloop</code> for Vimeo videos, and</li>
-    <li><code>@^https?://s-static\.ak\.facebook\.com/rsrc\.php/v[1-9]/[a-zA-Z0-9]{2}/r/[a-zA-Z0-9_-]*\.swf</code> for on-site Facebook videos.</li>
+	<li>It is now possible to <a href="killers.xhtml#add_killers">add killers</a> to the extension (some new killers are available in the <a href="killers.xhtml#database">killers database</a>)</li>
+	<li>Improved killers</li>
+	<li>Cosmetic improvements to the preference window</li>
 </ul>
-<p>The YouTube5 extension also blocks the Flash that it replaces.</p>
 
-<p class="question">Why would I want to allow invisible elements?</p>
-<p class="answer">You don’t. For security and privacy reasons, automatically allowing invisible elements on random pages is not recommended: such elements are often used to spy on your browsing habits and can store cookies that bypass any of the browser’s privacy settings. Also, it happens that elements are small at first but later grow to become full-fledged ads.</p>
-<p>If a web page does not appear to work properly, use the “Block plug-ins manually” setting to determine if the problem comes from the blocking of an element, and target it using the sources whitelist (see <a href="#list_invisible">list of common invisible elements</a>).</p>
-
-<p class="question">Can I use wild cards in the whitelists?</p>
-<p class="answer">All whitelist-like text fields in the preferences support regular expressions. For a string to be considered as a regular expression, it must be preceded by the <code>@</code> symbol. These regular expressions must follow the JavaScript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
-
-<p class="question" id="applet_blocking">Why did you remove blocking of Java <code>&lt;applet&gt;</code>s in version 1.4.7?</p>
-<p class="answer">Before 1.4.7, the extension was listening to mutation events, which is known to affect performance significantly. Primarily for this reason, the DOM level 3 specification <a href="http://www.w3.org/TR/DOM-Level-3-Events/#_34">deprecates</a> the use of those events, and the WebKit team even <a href="https://bugs.webkit.org/show_bug.cgi?id=8191">decided</a> not to implement one of them, preferring to wait for better solutions. Mutation events were in particular used to detect <code>&lt;applet&gt;</code> elements. However,</p>
+<!-- <p id="v2.2.7" class="branch_5_0_5"><b>Version 2.2.7</b> (August 14, 2011)</p>
 <ul>
-    <li>the blocking of <code>&lt;applet&gt;</code>s was fake anyway: the Java plug-in would still launch and often make the beach ball appear,</li>
-    <li>the extension still blocks Java <code>&lt;object&gt;</code>s, and</li>
-    <li>the <code>&lt;applet&gt;</code> tag should slowly disappear as it is deprecated in HTML4 and invalid in HTML5.</li>
-</ul>
-<p>True blocking of <code>&lt;applet&gt;</code> elements will be introduced as soon as it is actually possible, namely when <a href="https://bugs.webkit.org/show_bug.cgi?id=44023">this WebKit bug</a> is addressed.</p>
-
-<p class="question">Can you move the extension’s preferences back to the dedicated area in Safari’s Preferences?</p>
-<p class="answer">Not until all of the following are possible within that dedicated area: language localization; displaying the list of installed plug-ins; customizable keyboard shortcuts; multiline text areas.</p>
-
-<h3 id="issues">Common issues</h3>
-
-<h4 id="settings_access">I can’t access the extension’s preferences!</h4>
-
-<p>Right-click anywhere on a page but on a placeholder and the command “ClickToPlugin Preferences&#x2026;” will appear. If it does not, use the keyboard shortcut &#x2325;, (Option-Comma), making sure that the current web page has focus.</p>
-<p>If you have modified this default keyboard shortcut and cannot remember the new shortcut, quit Safari and restore the shortcut menu item using the following Terminal command: <code>defaults write com.apple.Safari ExtensionSettings-com.hoyois.safari.clicktoplugin-GY5KR7239Q -dict-add settingsContext -string 'true'</code>.</p>
-
-<h4>Content is still being blocked after whitelisting a page</h4>
-
-<p>A single tab can contain several documents, each with its own URL, and the URL displayed in Safari’s toolbar is that of the root document only. The control lists consider the location of an element to be the URL of its document. To find out the location of an element, select the “Block plug-ins manually” checkbox in the preferences, right-click on the element’s placeholder, and choose “Get Plug-in Info”.</p>
-
-<h4 id="webkit_bugs">WebKit bugs</h4>
-
-<p>This is a list of known bugs in Safari or the WebKit nightly builds that currently affect parts of the extension.</p>
-
-<table>
-<thead>
-<tr>
-    <th>Description</th>
-    <th>Report</th>
-    <th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>The Java plug-in cannot be blocked when embedded via an <code>&lt;applet&gt;</code> element.</td>
-    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=44023">#44023</a></td>
-    <td>Impossible to work around</td>
-</tr>
-<tr>
-    <td>The presence of an empty <code>beforeload</code> event handler breaks some image zooming scripts.</td>
-    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=45586">#45586</a></td>
-    <td>Impossible to work around</td>
-</tr>
-<tr>
-    <td>The presence of a <code>beforeload</code> event handler with some content can make Safari crash when handling certain plug-ins. This affects SharePoint websites and LogMeIn.</td>
-    <td></td>
-    <td>No workaround found</td>
-</tr>
-<tr>
-    <td>Pages restored from cache cannot receive messages from the extension’s global page. On such a page several shortcut menu commands will not work.</td>
-    <td><a href="http://openradar.appspot.com/radar?id=1176403">rdar://8507066</a></td>
-    <td>Waiting for fix</td>
-</tr>
-<tr>
-    <td>The computer and the computer’s display will go to sleep while an HTML5 video is being watched in fullscreen mode.</td>
-    <td><a href="http://openradar.appspot.com/radar?id=1176404">rdar://8443197</a></td>
-    <td>Waiting for fix</td>
-</tr>
-<tr>
-    <td>Subpixel antialiasing is disabled in hardware accelerated layers. This affects in particular elements with CSS opacity transitions overlapping playing video elements, such as ClickToPlugin’s source selector.</td>
-    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=23364">#23364</a></td>
-    <td>Won’t fix</td>
-</tr>
-</tbody>
-</table>
-
-<h4 id="list_invisible">List of invisible elements having critical functions</h4>
-
-<table>
-<thead>
-<tr>
-    <th>Domains</th>
-    <th>Function of invisible element</th>
-    <th>Size</th>
-    <th>Source match</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>prostopleer.com, soundcloud.com, www.discogs.com &amp; others</td>
-    <td>Required by SoundManager2</td>
-    <td>6x6 8x8</td>
-    <td>@soundmanager2[^/]*\.swf</td>
-</tr>
-<tr>
-    <td>www.amazon.com</td>
-    <td>Amazon music samples</td>
-    <td>1x1</td>
-    <td>g-ecx.images-amazon.com</td>
-</tr>
-<tr>
-    <td>www.bbc.co.uk</td>
-    <td>Loads video players on some news pages</td>
-    <td>1x1</td>
-    <td>emp_proxy.swf</td>
-</tr>
-<tr>
-    <td>www.hulu.com</td>
-    <td>Loads the main video player</td>
-    <td>1x1</td>
-    <td>www.hulu.com/loadplayer.swf</td>
-</tr>
-<tr>
-    <td>www.rdio.com</td>
-    <td>Loads the main content</td>
-    <td>1x1</td>
-    <td>www.rdio.com/media/flash/player.swf</td>
-</tr>
-<tr>
-    <td>mail.google.com</td>
-    <td>Upload several attachments simultaneously</td>
-    <td>1x1</td>
-    <td>mail.google.com/mail/uploader/uploaderapi2.swf</td>
-</tr>
-<tr>
-    <td>mail.yahoo.com</td>
-    <td>Upload attachments</td>
-    <td>1x1</td>
-    <td>mail.yahoo.com/neo/assets/swf/uploader.swf</td>
-</tr>
-<tr>
-    <td>various</td>
-    <td>Required by Yahoo! Media Player</td>
-    <td>1x1</td>
-    <td>flashsound.swf</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="changelog">Release Notes</h2>
-<p class="toplink"><a href="#top">To the top</a></p>
+	<li>Includes updated killers from <a href="#v2.4">version 2.4</a>.</li>
+</ul> -->
 
 <p id="v2.3.3"><b>Version 2.3.3</b> (August 3, 2011)</p>
 <ul>
-    <li>Fixed YouTube HTML5 replacements</li>
-    <li>Spanish localization by <a href="http://www.aoneonline.net/">aONe</a></li>
-    <li>Traditional Chinese, Simplified Chinese, and Japanese localizations by Eric Woo</li>
+	<li>Fixed YouTube HTML5 replacements</li>
+	<li>Spanish localization by <a href="http://www.aoneonline.net/">aONe</a></li>
+	<li>Traditional Chinese, Simplified Chinese, and Japanese localizations by Eric Woo</li>
 </ul>
-
 
 <p id="v2.3.2"><b>Version 2.3.2</b> (July 26, 2011)</p>
 <ul>
-    <li>The commands to add a domain to a control list are now hidden if the current page is already matched</li>
-    <li>Fixed: the keyboard shortcut to bring up the preferences would not work in some iframes</li>
-    <li>Fixed titles of Blip.tv videos</li>
-    <li>Minor cosmetic improvements to the preference pane</li>
+	<li>The commands to add a domain to a control list are now hidden if the current page is already matched</li>
+	<li>Fixed: the keyboard shortcut to bring up the preferences would not work in some iframes</li>
+	<li>Fixed titles of Blip.tv videos</li>
+	<li>Minor cosmetic improvements to the preference window</li>
 </ul>
 
 <p id="v2.3.1"><b>Version 2.3.1</b> (July 20, 2011)</p>
 <ul>
-    <li>Fixed: <code>&lt;object&gt;</code> tags with a <code>classid</code> attribute are not blocked anymore since Safari ignores them</li>
-    <li>New option to download videos using a download manager</li>
+	<li>Fixed: <code>&lt;object&gt;</code> tags with a <code>classid</code> attribute are not blocked anymore since Safari ignores them</li>
+	<li>New option to download videos using a download manager</li>
 </ul>
 
 <p id="v2.3"><b>Version 2.3</b> (July 18, 2011)</p>
 <ul>
-    <li>HTML5 replacements for TED videos</li>
-    <li>HTML5 playlists now use native controls</li>
-    <li>Fixed fullscreen video controls in Safari 5.1</li>
-    <li>Fixes for YouTube, Dailymotion, and Blip.tv killers</li>
+	<li>HTML5 replacements for TED videos</li>
+	<li>HTML5 playlists now use native controls</li>
+	<li>Fixed fullscreen video controls in Safari 5.1</li>
+	<li>Fixes for YouTube, Dailymotion, and Blip.tv killers</li>
 </ul>
 
 <p id="v2.2.6"><b>Version 2.2.6</b> (May 28, 2011)</p>
 <ul>
-    <li>Fixes for YouTube, Dailymotion, Facebook, Blip.tv, and Megavideo killers</li>
-    <li>Removed Veoh killer since Perian 1.2.2 dropped support for the required video format</li>
-    <li>Keyboard shortcut for whitelisting</li>
+	<li>Fixes for YouTube, Dailymotion, Facebook, Blip.tv, and Megavideo killers</li>
+	<li>Removed Veoh killer since Perian 1.2.2 dropped support for the required video format</li>
+	<li>Keyboard shortcut for whitelisting</li>
 </ul>
 
 <p id="v2.2.5"><b>Version 2.2.5</b> (April 17, 2011)</p>
 <ul>
-    <li>Replaces more Facebook videos</li>
-    <li>Fixed: whitelisted plug-ins could change from session to session (thanks Valerio Garzo!)</li>
-    <li>Worked around a bug in the WebKit nightly builds that made the whitelists uneditable (thanks Manuel Schülke!)</li>
+	<li>Replaces more Facebook videos</li>
+	<li>Fixed: whitelisted plug-ins could change from session to session (thanks Valerio Garzo!)</li>
+	<li>Worked around a bug in the WebKit nightly builds that made the whitelists uneditable (thanks Manuel Schülke!)</li>
 </ul>
 
 <p id="v2.2.4"><b>Version 2.2.4</b> (April 13, 2011)</p>
 <ul>
-    <li>Updating from &lt; 2.2 to 2.2.3 with nonempty whitelists would make the preference window inaccessible</li>
+	<li>Updating from &lt; 2.2 to 2.2.3 with nonempty whitelists would make the preference window inaccessible</li>
 </ul>
 
 <p id="v2.2.3"><b>Version 2.2.3</b> (April 12, 2011)</p>
 <ul>
-    <li>Support for embedded Facebook videos</li>
-    <li>Adapted Blip.tv HTML5 replacements to site changes</li>
-    <li>The hidden setting for the “ClickToPlugin Preferences” shortcut menu item can now be set in the preference window</li>
-    <li>Restored the “Initial behavior” setting for the HTML5 media player</li>
-    <li>The preference window works on HTML4 frameset documents by opening in a new tab</li>
-    <li>The preference window is scrollable if it overflows the enclosing window</li>
-    <li>Some parts of the extension would not work as expected on documents with MIME type <code>application/xhtml+xml</code></li>
-    <li>The preference window would become inaccessible when previously whitelisted plug-ins were uninstalled</li>
-    <li>MIDI audio files, not playable in QuickTime X, are not considered for HTML5 replacements anymore (thanks Ed Floden!)</li>
+	<li>Support for embedded Facebook videos</li>
+	<li>Adapted Blip.tv HTML5 replacements to site changes</li>
+	<li>The hidden setting for the “ClickToPlugin Preferences” shortcut menu item can now be set in the preference window</li>
+	<li>Restored the “Initial behavior” setting for the HTML5 media player</li>
+	<li>The preference window works on HTML4 frameset documents by opening in a new tab</li>
+	<li>The preference window is scrollable if it overflows the enclosing window</li>
+	<li>Some parts of the extension would not work as expected on documents with MIME type <code>application/xhtml+xml</code></li>
+	<li>The preference window would become inaccessible when previously whitelisted plug-ins were uninstalled</li>
+	<li>MIDI audio files, not playable in QuickTime X, are not considered for HTML5 replacements anymore (thanks Ed Floden!)</li>
 </ul>
 
 <p id="v2.2.2"><b>Version 2.2.2</b> (April 7, 2011)</p>
 <ul>
-    <li>Fixed an issue that could cause the release notes to pop up on every launch (thanks Matt Neuburg!)</li>
+	<li>Fixed an issue that could cause the release notes to pop up on every launch (thanks Matt Neuburg!)</li>
 </ul>
 
 <p id="v2.2.1"><b>Version 2.2.1</b> (April 7, 2011)</p>
 <ul>
-    <li>Fix for Facebook’s ever changing video player URL</li>
+	<li>Fix for Facebook’s ever changing video player URL</li>
 </ul>
 
 <p id="v2.2"><b>Version 2.2</b> (April 6, 2011)</p>
 <ul>
-    <li>The extension’s preferences are now on their own HTML page accessible through the shortcut menu</li>
-    <li>Simplified plug-in whitelisting system</li>
-    <li>Perfected plug-in detection system takes into account the <code>data:</code> URI protocol and uses MIME type sniffing as a last resort, following WebKit’s internal mechanism</li>
-    <li>New blacklists to permanently hide plug-ins</li>
-    <li>Customizable keyboard and mouse shortcuts for media playback and other actions</li>
-    <li>HTML5 replacements for Facebook videos</li>
-    <li>Revamped playlist controls</li>
-    <li>Safari’s incomplete volume slider for HTML5 media elements can be used (you can see the finalized slider in the WebKit nightlies)</li>
-    <li>The title of the video can be shown in the controls</li>
-    <li>The HTML structure of the placeholder elements has been simplified using CSS3 flex boxes</li>
-    <li>Complete CSS overhaul</li>
-    <li>All localizations will now be bundled within the same extension</li>
-    <li>Fixed HTML5 video aspect ratio issues using shadow DOM styling</li>
-    <li>Fixed Megavideo and Veoh HTML5 replacements</li>
-    <li>The “Show text only” sIFR setting could cause web pages to display incorrectly</li>
+	<li>The extension’s preferences are now on their own HTML page accessible through the shortcut menu</li>
+	<li>Simplified plug-in whitelisting system</li>
+	<li>Perfected plug-in detection system: takes into account the <code>data:</code> URI protocol and uses MIME type sniffing as a last resort, following WebKit’s internal mechanism</li>
+	<li>New blacklists to permanently hide plug-ins</li>
+	<li>Customizable keyboard and mouse shortcuts for media playback and other actions</li>
+	<li>HTML5 replacements for Facebook videos</li>
+	<li>Revamped playlist controls</li>
+	<li>Safari’s incomplete volume slider for HTML5 media elements can be used (you can see the finalized slider in the WebKit nightlies)</li>
+	<li>The title of the video can be shown in the controls</li>
+	<li>The HTML structure of the placeholder elements has been simplified using CSS3 flex boxes</li>
+	<li>Complete CSS overhaul</li>
+	<li>All localizations will now be bundled within the same extension</li>
+	<li>Fixed HTML5 video aspect ratio issues using shadow DOM styling</li>
+	<li>Fixed Megavideo and Veoh HTML5 replacements</li>
+	<li>The “Show text only” sIFR setting could cause web pages to display incorrectly</li>
 </ul>
 
 <p id="v2.1.4"><b>Version 2.1.4</b> (March 24, 2011)</p>
 <ul>
-    <li>Fixed loading of embedded YouTube videos</li>
+	<li>Fixed loading of embedded YouTube videos</li>
 </ul>
 
 <p id="v2.1.3"><b>Version 2.1.3</b> (March 6, 2011)</p>
 <ul>
-    <li>Support for YouTube’s /e/ embeds</li>
-    <li>Revamped killer for generic Flash players</li>
-    <li>Can download a video by Option-clicking in the source selector</li>
+	<li>Support for YouTube’s /e/ embeds</li>
+	<li>Revamped killer for generic Flash players</li>
+	<li>Can download a video by Option-clicking in the source selector</li>
 </ul>
 
 <p id="v2.1.2"><b>Version 2.1.2</b> (January 31, 2011)</p>
 <ul>
-    <li>Fixed incorrect CSS that caused the labels to render incorrectly in recent versions of WebKit (thanks Jon Shier!)</li>
+	<li>Fixed incorrect CSS that caused the labels to render incorrectly in recent versions of WebKit (thanks Jon Shier!)</li>
 </ul>
 
 <p id="v2.1.1"><b>Version 2.1.1</b> (January 30, 2011)</p>
 <ul>
-    <li>Fixed Vimeo replacements</li>
-    <li>Support for Vimeo’s 1080p</li>
-    <li>New keyboard shortcut &#x2303;&#x2318;A to load all Flash in the frontmost window</li>
+	<li>Fixed Vimeo replacements</li>
+	<li>Support for Vimeo’s 1080p</li>
+	<li>New keyboard shortcut <kbd>⌃⌘A</kbd> to load all Flash in the frontmost window</li>
 </ul>
 
 <p id="v2.1"><b>Version 2.1</b> (January 2, 2011)</p>
 <ul>
-    <li>Much improved CSS for the source selector (thanks Roberto!)</li>
-    <li>The “Show preview image” setting is now hidden</li>
+	<li>Much improved CSS for the source selector (thanks Roberto!)</li>
+	<li>The “Show preview image” setting is now hidden</li>
 </ul>
 
 <p id="v2.0"><b>Version 2.0</b> (January 1, 2011)</p>
 <ul>
-    <li>Revamped whitelisting system for plug-ins</li>
-    <li>When several video sources are available, it is now possible to switch between them (<a href="#source_selection">view details</a>)</li>
-    <li>Various killer fixes</li>
-    <li>Revamped settings</li>
-    <li>New shortcut menu item to temporarily disable ClickToPlugin</li>
+	<li>Revamped whitelisting system for plug-ins</li>
+	<li>When several video sources are available, it is now possible to switch between them (<a href="#source_selection">view details</a>)</li>
+	<li>Various killer fixes</li>
+	<li>Revamped settings</li>
+	<li>New shortcut menu item to temporarily disable ClickToPlugin</li>
 </ul>
 
 <p id="v1.6.2"><b>Version 1.6.2</b> (December 5, 2010)</p>
 <ul>
-    <li>Broadcast Interactive Media and Megavideo killers</li>
-    <li>Fixed: Flash videos on collegehumor.com could be incorrectly replaced by Vimeo videos (thanks Josh Rafofsky!)</li>
+	<li>Broadcast Interactive Media and Megavideo killers</li>
+	<li>Fixed: Flash videos on collegehumor.com could be incorrectly replaced by Vimeo videos (thanks Josh Rafofsky!)</li>
 </ul>
 
 <p id="v1.6.1"><b>Version 1.6.1</b> (November 26, 2010)</p>
 <ul>
-    <li>Fixed: YouTube’s iframe embeds were not replaced anymore (thanks Michael Wren!)</li>
+	<li>Fixed: YouTube’s iframe embeds were not replaced anymore (thanks Michael Wren!)</li>
 </ul>
 
 <p id="v1.6"><b>Version 1.6</b> (November 25, 2010)</p>
 <ul>
-    <li>New killers: Blip.tv, Break, Metacafe, Tumblr, and more!</li>
+	<li>New killers: Blip.tv, Break, Metacafe, Tumblr, and more!</li>
 </ul>
 
 <p id="v1.5.7"><b>Version 1.5.7</b> (November 21, 2010)</p>
 <ul>
-    <li>Worked around a bug in Safari 5.0.3 that broke video replacements when Flash was not installed</li>
+	<li>Worked around a bug in Safari 5.0.3 that broke video replacements when Flash was not installed</li>
 </ul>
 
 <p id="v1.5.6"><b>Version 1.5.6</b> (November 7, 2010)</p>
 <ul>
-    <li>Fixed a placeholder layout issue affecting notably Google Street View (thanks Joe Strzemp!)</li>
-    <li>Fixed a typo affecting replacement of some embedded Vimeo videos</li>
+	<li>Fixed a placeholder layout issue affecting notably Google Street View (thanks Joe Strzemp!)</li>
+	<li>Fixed a typo affecting replacement of some embedded Vimeo videos</li>
 </ul>
 
 <p id="v1.5.5"><b>Version 1.5.5</b> (November 6, 2010)</p>
 <ul>
-    <li>Some previously unreplaced Vimeo videos are now available in HTML5</li>
-    <li>All event listeners are registered using the addEventListener method, to avoid conflicts with other scripts (thanks Josh Rafofsky!)</li>
+	<li>Some previously unreplaced Vimeo videos are now available in HTML5</li>
+	<li>All event listeners are registered using the addEventListener method, to avoid conflicts with other scripts (thanks Josh Rafofsky!)</li>
 </ul>
 
 <p id="v1.5.4"><b>Version 1.5.4</b> (October 31, 2010)</p>
 <ul>
-    <li>Fixed a bug that caused videos to download needlessly in the background when there were several Vimeo videos on a page (thanks Pedro!)</li>
+	<li>Fixed a bug that caused videos to download needlessly in the background when there were several Vimeo videos on a page (thanks Pedro!)</li>
 </ul>
 
 <p id="v1.5.3"><b>Version 1.5.3</b> (October 29, 2010)</p>
 <ul>
-    <li>Fixed a bug introduced in 1.8.3 that could cause whitelisted elements to be blocked</li>
+	<li>Fixed a bug introduced in 1.8.3 that could cause whitelisted elements to be blocked</li>
 </ul>
 
 <p id="v1.5.2"><b>Version 1.5.2</b> (October 26, 2010)</p>
 <ul>
-    <li>Added “Load Invisible Flash” shortcut menu item</li>
-    <li>Fixed a bug that could cause video elements to have size 0x0</li>
+	<li>Added “Load Invisible Flash” shortcut menu item</li>
+	<li>Fixed a bug that could cause video elements to have size 0×0</li>
 </ul>
 
 <p id="v1.5.1"><b>Version 1.5.1</b> (October 20, 2010)</p>
 <ul>
-    <li>Better plug-in detection based on WebKit’s internal mechanism</li>
-    <li>Fixed a bug that could cause the “Load All Flash” function to remove blocked elements</li>
-    <li>Fixed incorrect rendering of placeholder elements of size &#x2264;1px that could break pixel-perfect layouts</li>
-    <li>Video replacement support for the SWFObject Flash player</li>
+	<li>Better plug-in detection based on WebKit’s internal mechanism</li>
+	<li>Fixed a bug that could cause the “Load All Flash” function to remove blocked elements</li>
+	<li>Fixed incorrect rendering of placeholder elements of size ≤ 1px that could break pixel-perfect layouts</li>
+	<li>Video replacement support for the SWFObject Flash player</li>
 </ul>
 
 <p id="v1.5"><b>Version 1.5</b> (October 1, 2010)</p>
 <ul>
-    <li>Video files downloaded from YouTube are named by the title of the video</li>
-    <li>Removed download links in favor of an optional shortcut menu item (enabled by default)</li>
-    <li>Bumped version number because it was getting out of control!</li>
+	<li>Video files downloaded from YouTube are named by the title of the video</li>
+	<li>Removed download links in favor of an optional shortcut menu item (enabled by default)</li>
+	<li>Bumped version number because it was getting out of control!</li>
 </ul>
 
 <p id="v1.4.9"><b>Version 1.4.9</b> (September 30, 2010)</p>
 <ul>
-    <li>Fixed loading of long playlists with missing tracks</li>
+	<li>Fixed loading of long playlists with missing tracks</li>
 </ul>
 
 <p id="v1.4.8"><b>Version 1.4.8</b> (September 29, 2010)</p>
 <ul>
-    <li>Clicking on a download link downloads the video directly</li>
-    <li>Displays the blocked element’s source as a tooltip when hovering a placeholder</li>
-    <li>Placeholders inherit CSS box model and positioning properties of the blocked element to preserve page layout</li>
-    <li>Fixed progressive loading of playlists</li>
+	<li>Clicking a download link downloads the video directly</li>
+	<li>Displays the blocked element’s source as a tooltip when hovering a placeholder</li>
+	<li>Placeholders inherit CSS box model and positioning properties of the blocked element to preserve page layout</li>
+	<li>Fixed progressive loading of playlists</li>
 </ul>
 
 <p id="v1.4.7"><b>Version 1.4.7</b> (September 21, 2010)</p>
 <ul>
-    <li>Does not block <code>&lt;applet&gt;</code> elements anymore (read <a href="#applet_blocking">why</a>)</li>
-    <li>Eradicated all listeners to mutation events from the extension</li>
-    <li>Fixed broken CSS introduced in 1.7.6</li>
+	<li>Does not block <code>&lt;applet&gt;</code> elements anymore</li>
+	<li>Eradicated all listeners to mutation events from the extension</li>
+	<li>Fixed broken CSS introduced in 1.7.6</li>
 </ul>
 
 <p id="v1.4.6"><b>Version 1.4.6</b> (September 16, 2010)</p>
 <ul>
-    <li>Whitelists now use spaces as separators (they are automatically updated)</li>
-    <li>More successful video replacements for generic Flash players</li>
-    <li>Does not replace streaming YouTube videos by nonfunctional video elements anymore</li>
-    <li>Improved performance and correctness of whitelist parsing</li>
-    <li>Fixed Flash not being loadable on some websites that use placeholders for their Flash objects and listen to click events from parent elements</li>
+	<li>Whitelists now use spaces as separators (they are automatically updated)</li>
+	<li>More successful video replacements for generic Flash players</li>
+	<li>Does not replace streaming YouTube videos by nonfunctional video elements anymore</li>
+	<li>Improved performance and correctness of whitelist parsing</li>
+	<li>Fixed Flash not being loadable on some websites that use placeholders for their Flash objects and listen to click events from parent elements</li>
 </ul>
 
 <p id="v1.4.5"><b>Version 1.4.5</b> (September 10, 2010)</p>
 <ul>
-    <li>Fixed a bug introduced in 1.7.4 that could create several placeholder elements for the same blocked element</li>
+	<li>Fixed a bug introduced in 1.7.4 that could create several placeholder elements for the same blocked element</li>
 </ul>
 
 <p id="v1.4.4"><b>Version 1.4.4</b> (September 9, 2010)</p>
 <ul>
-    <li>Fixed Flash elements not showing up or not behaving properly when restored, in particular in those instances where the original ClickToFlash plugin works but this extension did not</li>
-    <li>CSS has been completely rewritten to be more effective</li>
-    <li>Worked around a bug in Safari that changed the aspect ratio of the video element when using full-page zoom (thanks Adrian Luff!)</li>
-    <li>Fixed: some embedded Vimeo videos were not being replaced</li>
+	<li>Fixed Flash elements not showing up or not behaving properly when restored, in particular in those instances where the original ClickToFlash plugin works but this extension did not</li>
+	<li>CSS has been completely rewritten to be more effective</li>
+	<li>Worked around a bug in Safari that changed the aspect ratio of the video element when using full-page zoom (thanks Adrian Luff!)</li>
+	<li>Fixed: some embedded Vimeo videos were not being replaced</li>
 </ul>
 
 <p id="v1.4.3"><b>Version 1.4.3</b> (September 6, 2010)</p>
 <ul>
-    <li>Fixed a typo affecting source blacklisting (thanks Marc Saurfelt!)</li>
-    <li>Improved CSS to better override author stylesheets</li>
+	<li>Fixed a typo affecting source blacklisting (thanks Marc Saurfelt!)</li>
+	<li>Improved CSS to better override author stylesheets</li>
 </ul>
 
 <p id="v1.4.2"><b>Version 1.4.2</b> (September 5, 2010)</p>
 <ul>
-    <li>Fixed: CSS of download links was broken in 1.4.1</li>
+	<li>Fixed: CSS of download links was broken in 1.4.1</li>
 </ul>
 
 <p id="v1.4.1"><b>Version 1.4.1</b> (September 5, 2010)</p>
 <ul>
-    <li>Fixed handling of QuickTime objects calling QuickTime Player (regression introduced in 1.4)</li>
+	<li>Fixed handling of QuickTime objects calling QuickTime Player (regression introduced in 1.4)</li>
 </ul>
 
 <p id="v1.4"><b>Version 1.4</b> (September 4, 2010)</p>
 <ul>
-    <li>Improved plug-in detection</li>
-    <li>Preview images on video placeholders</li>
-    <li>Direct link to the video at the bottom of video placeholders</li>
-    <li>The setting to load the video player automatically is now a whitelist</li>
-    <li>Lighter placeholders</li>
-    <li>Improved CSS of video elements (controls stay at the bottom)</li>
-    <li>Adding a location or source to the whitelist loads the targeted content at once</li>
-    <li>Support for YouTube’s future on-site player</li>
-    <li>Support for Vimeo’s new universal player</li>
-    <li>Higher-quality poster images for Dailymotion videos</li>
-    <li>Fixed Vimeo’s SD video URLs: they now correctly points to the 360p version in all cases</li>
-    <li>Fixed relative URL resolution</li>
-    <li>Fixed a vulnerability that would allow invalid HTML to bypass ClickToPlugin’s blocking</li>
+	<li>Improved plug-in detection</li>
+	<li>Preview images on video placeholders</li>
+	<li>Direct link to the video at the bottom of video placeholders</li>
+	<li>The setting to load the video player automatically is now a whitelist</li>
+	<li>Lighter placeholders</li>
+	<li>Improved CSS of video elements (controls stay at the bottom)</li>
+	<li>Adding a location or source to the whitelist loads the targeted content at once</li>
+	<li>Support for YouTube’s future on-site player</li>
+	<li>Support for Vimeo’s new universal player</li>
+	<li>Higher-quality poster images for Dailymotion videos</li>
+	<li>Fixed Vimeo’s SD video URLs: they now correctly points to the 360p version in all cases</li>
+	<li>Fixed relative URL resolution</li>
+	<li>Fixed a vulnerability that would allow invalid HTML to bypass ClickToPlugin’s blocking</li>
 </ul>
 
 <p id="v1.3.3"><b>Version 1.3.3</b> (August 20, 2010)</p>
 <ul>
-    <li>To download a video directly, move the mouse cursor up from the play/pause button to reveal a link</li>
-    <li>Added a slider to control the opacity of the placeholder elements</li>
-    <li>Most shortcut menu items are now optional</li>
-    <li>Added “View in QuickTime Player” shortcut menu item</li>
-    <li>Tweaked the CSS so that inline objects remain inline (thanks Roberto!)</li>
+	<li>To download a video directly, move the mouse cursor up from the play/pause button to reveal a link</li>
+	<li>Added a slider to control the opacity of the placeholder elements</li>
+	<li>Most shortcut menu items are now optional</li>
+	<li>Added “View in QuickTime Player” shortcut menu item</li>
+	<li>Tweaked the CSS so that inline objects remain inline (thanks Roberto!)</li>
 </ul>
 
 <p id="v1.3.2"><b>Version 1.3.2</b> (August 16, 2010)</p>
 <ul>
-    <li>The “Load All Flash” shortcut menu item is hidden if there is no blocked Flash on the page</li>
-    <li>“View on YouTube” works for playlists</li>
-    <li>Fixed a few unfortunate typos affecting playlist controls</li>
-    <li>Fixed: volume setting became ineffective in 1.6</li>
+	<li>The “Load All Flash” shortcut menu item is hidden if there is no blocked Flash on the page</li>
+	<li>“View on YouTube” works for playlists</li>
+	<li>Fixed a few unfortunate typos affecting playlist controls</li>
+	<li>Fixed: volume setting became ineffective in 1.3</li>
 </ul>
 
 <p id="v1.3.1"><b>Version 1.3.1</b> (August 14, 2010)</p>
 <ul>
-    <li>Added a shortcut menu item to view an embedded video from YouTube, Vimeo, Dailymotion, or Veoh on the main website</li>
-    <li>Fixed more: some embedded YouTube videos were not being replaced</li>
+	<li>Added a shortcut menu item to view an embedded video from YouTube, Vimeo, Dailymotion, or Veoh on the main website</li>
+	<li>Fixed more: some embedded YouTube videos were not being replaced</li>
 </ul>
 
 <p id="v1.3"><b>Version 1.3</b> (August 13, 2010)</p>
 <ul>
-    <li>Playlist support for YouTube and the JW Player</li>
-    <li>Added a shortcut menu item to download the video file</li>
-    <li>Fixed: some embedded YouTube videos were not being replaced</li>
+	<li>Playlist support for YouTube and the JW Player</li>
+	<li>Added a shortcut menu item to download the video file</li>
+	<li>Fixed: some embedded YouTube videos were not being replaced</li>
 </ul>
 
 <p id="v1.2.1"><b>Version 1.2.1</b> (August 8, 2010)</p>
 <ul>
-    <li>Improved handling of QuickTime objects</li>
+	<li>Improved handling of QuickTime objects</li>
 </ul>
 
 <p id="v1.2"><b>Version 1.2</b> (August 8, 2010)</p>
 <ul>
-    <li>Safari’s native MIME types are not blocked anymore</li>
-    <li>Can now replace Silverlight, QuickTime, and Windows Media content by HTML5 videos</li>
-    <li>Fixed invisible elements whitelisting</li>
-    <li>Code optimization made possible by the disappearance of a bug in Safari 5.0.1</li>
+	<li>Safari’s native MIME types are not blocked anymore</li>
+	<li>Can now replace Silverlight, QuickTime, and Windows Media content by HTML5 videos</li>
+	<li>Fixed invisible elements whitelisting</li>
+	<li>Code optimization made possible by the disappearance of a bug in Safari 5.0.1</li>
 </ul>
 
 <p id="v1.1.1"><b>Version 1.1.1</b> (August 6, 2010)</p>
 <ul>
-    <li>Fixed a stupid typo in the code</li>
+	<li>Fixed a stupid typo in the code</li>
 </ul>
 
 <p id="v1.1"><b>Version 1.1</b> (August 6, 2010)</p>
 <ul>
-    <li>Added support for Veoh videos (requires Perian)</li>
-    <li>Added a setting to use nonnative codecs only as a last resort</li>
-    <li>Fixed: some embedded Vimeo videos were not being replaced</li>
-    <li>Worked around the fact that Safari would load fallback content upon restoring an object if fallback content was being used when it was removed</li>
+	<li>Added support for Veoh videos (requires Perian)</li>
+	<li>Added a setting to use nonnative codecs only as a last resort</li>
+	<li>Fixed: some embedded Vimeo videos were not being replaced</li>
+	<li>Worked around the fact that Safari would load fallback content upon restoring an object if fallback content was being used when it was removed</li>
 </ul>
 
 <p id="v1.0.1"><b>Version 1.0.1</b> (August 3, 2010)</p>
 <ul>
-    <li>Fixed potential compatibility issues by trying not to block objects created by other extensions</li>
+	<li>Fixed potential compatibility issues by trying not to block objects created by other extensions</li>
 </ul>
 
 <p id="v1.0"><b>Version 1.0</b> (August 3, 2010)</p>
 <ul>
-    <li>Initial release</li>
-    <li>Extension icon by Ast A. Moore</li>
+	<li>Initial release</li>
+	<li>Extension icon by Ast A. Moore</li>
 </ul>
+</section>
 
 <footer>
-<p id="footer_left">Updated on August 3, 2011</p>
+<p id="footer_left">Updated on August 14, 2011</p>
 <p id="footer_right"><a href="#top">To the top</a></p>
-<p id="footer_middle"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F;verbose=1">XHTML5</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
+<p id="footer_middle"><a href="http://validator.nu/?doc=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F">XHTML5</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
 
 </body>

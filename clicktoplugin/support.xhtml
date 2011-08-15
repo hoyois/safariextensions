@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="author" content="Marc Hoyois"/>
+	<title>ClickToPlugin support</title>
+	<link rel="stylesheet" type="text/css" href="../styles.css"/>
+</head>
+<body>
+<header id="top">
+<h1>ClickToPlugin support</h1>
+<nav>
+	<a href="../">My Safari extensions</a> &gt; <a href="./">ClickToPlugin &amp; ClickToFlash</a> &gt; Support
+</nav>
+</header>
+
+<div class="links">
+<b>Contents</b>
+<ul>
+	<li><a href="#faq">FAQ</a></li>
+	<li><a href="#issues">Solutions to common issues</a></li>
+	<li><a href="#common_invisible">List of common invisible elements</a></li>
+	<li><a href="#safari_bugs">Safari bugs</a></li>
+</ul>
+</div>
+
+<section id="faq">
+<header>
+<h2>FAQ</h2>
+<nav><a href="#top">To the top</a></nav>
+</header>
+
+<p class="question">Can I use this extension together with the ClickToFlash plug-in?</p>
+<p class="answer">No. If you use the extension, you should uninstall the plug-in completely, or add <code>com.apple.Safari</code> to its application whitelist.</p>
+
+<p class="question">Does the replacement of plug-ins by HTML5 videos require the plug-in to be installed?</p>
+<p class="answer">No. However, websites can check if your browser supports a given plug-in, and change the page accordingly. For example, Vimeo and Dailymotion do not insert the Flash player into the page unless Flash is enabled, so there’s nothing for ClickToPlugin to replace.</p>
+
+<p class="question">Could you add HTML5 replacements for …?</p>
+<p class="answer">Maybe. Contact me with as much information as possible on the videos you’d like to see replaced, including at least:</p>
+<ul>
+	<li>a link to a page with a video;</li>
+	<li>if the plug-in-based player offers several video resolutions, links to pages showcasing varying available resolutions;</li>
+	<li>links to the plug-in-based player documentation if there is one.</li>
+</ul>
+<p>Note that I will not be adding killers to the extension from now on. New killers will be uploaded <a href="killers.xhtml#database">here</a> and can be installed following <a href="killers.xhtml#add_killers">these instructions</a>. You can also <a href="killers.xhtml#create_killers">make killers yourself</a> and send them to me for sharing.</p>
+
+<p class="question">Why would I want to allow invisible plug-ins?</p>
+<p class="answer">You don’t. For security and privacy reasons, automatically allowing invisible plug-ins on random pages is not recommended: they are often used to spy on your browsing habits and can store cookies that bypass any of the browser’s privacy settings. Also, it is possible for a plug-in object to be small at first but grow once it is loaded.</p>
+
+<p class="question">Can I use wild cards in the whitelists?</p>
+<p class="answer">All whitelist-like text fields in the preferences support regular expressions. For a string to be considered as a regular expression, it must be preceded by the <code>@</code> symbol. These regular expressions must follow the JavaScript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
+
+<p class="question">Can you move the extension’s preferences back to the dedicated area in Safari’s preferences?</p>
+<p class="answer">Not until all of the following are possible within that dedicated area: language localization; displaying the list of installed plug-ins; customizable keyboard shortcuts; multiline text areas.</p>
+
+<p class="question">Why does ClickToPlugin slow down the SunSpider Javascript benchmark?</p>
+<p class="answer">This is a <a href="#safari_bugs">bug in Safari</a> which affects all extensions that use messaging from the global page to content scripts. It does not indicate that there is something wrong with these extensions, nor that they have a negative effect on Safari’s performance in real-life usage.</p>
+
+<p>In the case of ClickToPlugin, removing the unique listener to <code>message</code> events from the content scripts (which is not needed for ClickToPlugin’s core functionality) results in a SunSpider benchmark which is identical to that obtained with no extensions.</p>
+
+<p class="question">Can I use your code for …?</p>
+<p class="answer">Yes.</p>
+</section>
+
+<section id="issues">
+<header>
+<h2>Solutions to common issues</h2>
+<nav><a href="#top">To the top</a></nav>
+</header>
+
+<h4 id="settings_access">“I can’t access the extension’s preferences!”</h4>
+
+<p>Right-click anywhere on a page except on a placeholder and the command “ClickToPlugin Preferences…” will appear. If it does not, try using the default keyboard shortcut <kbd>⌥,</kbd> (Option-Comma), making sure that the current web page has focus.</p>
+<p>If you have modified this default keyboard shortcut and cannot remember the new shortcut, quit Safari and restore the shortcut menu item using the following Terminal command:</p>
+<p class="code">defaults write com.apple.Safari ExtensionSettings-com.hoyois.safari.clicktoplugin-GY5KR7239Q -dict-add settingsContext -string 'true'</p>
+
+<h4 id="broken_page">“I found a web page that does not work with ClickToPlugin enabled, but does when ClickToPlugin is disabled. Surely there is a bug in ClickToPlugin!”</h4>
+
+<p>More likely the web page’s functionality relies on a hidden or very small plug-in object which ClickToPlugin blocks. In many cases the “Load All Plug-ins” command is enough to restore the web page to a working state. A permanent solution for all cases is the following. Select the “Block plug-ins manually” checkbox in the preferences and reload the page. For every plug-in object on the page, a dialog will appear: click OK to block the object and Cancel to load it. Use this to find out which objects must be loaded for the page to work, and match their sources (given in the dialogs) using the sources whitelist. See also the <a href="#common_invisible">list of common invisible elements</a> below.</p>
+
+<h4 id="ineffective_whitelist">“I whitelisted a page but some plug-ins are still being blocked!”</h4>
+
+<p>A single tab can contain several documents, each with its own URL, and the URL displayed in Safari’s toolbar is that of the root document only. The site whitelist is matched against the URLs of the documents containing the objects. To find out the URL of the document containing a blocked object, select the “Block plug-ins manually” checkbox in the preferences, right-click the object’s placeholder, and choose “Get Plug-in Info”.</p>
+
+<h4>“I’ve read this whole page carefully but I still have a problem!”</h4>
+
+<p>Then you can <a href="./#contact">contact me</a> and I’ll be happy to help.</p>
+</section>
+
+<section id="common_invisible">
+<header>
+<h2>List of common invisible elements</h2>
+<nav><a href="#top">To the top</a></nav>
+</header>
+
+<p>This is a list of invisible elements that you may want to add to the sources whitelist.</p>
+
+<table>
+<thead>
+<tr>
+	<th>Domains</th>
+	<th>Function of invisible element</th>
+	<th>Source match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>www.amazon.*</td>
+	<td>Amazon music samples</td>
+	<td><code>g-ecx.images-amazon.com</code></td>
+</tr>
+<tr>
+	<td>www.discogs.com, prostopleer.com, soundcloud.com, …</td>
+	<td>Required by SoundManager2</td>
+	<td><code>soundmanager2</code></td>
+</tr>
+<tr>
+	<td>?</td>
+	<td>Required by Yahoo! Media Player</td>
+	<td><code>flashsound</code></td>
+</tr>
+<tr>
+	<td>?</td>
+	<td>Required by Yahoo! WebPlayer</td>
+	<td><code>/pb/webplayer</code></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+	<td>www.bbc.co.uk</td>
+	<td>Loads video players on some news pages</td>
+	<td><code>emp_proxy.swf</code></td>
+</tr>
+<tr>
+	<td>www.cnbc.com</td>
+	<td>Loads stock market indexes</td>
+	<td><code>quote.cnbc.com/quoteproxy.swf</code></td>
+</tr>
+<tr>
+	<td>www.hulu.com</td>
+	<td>Loads the main video player</td>
+	<td><code>www.hulu.com/loadplayer.swf</code></td>
+</tr>
+<tr>
+	<td>www.rdio.com</td>
+	<td>Loads the main content</td>
+	<td><code>www.rdio.com/media/flash/player.swf</code></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+	<td>mail.google.com</td>
+	<td>Upload several attachments simultaneously</td>
+	<td><code>mail.google.com/mail/uploader/uploaderapi2.swf</code></td>
+</tr>
+<tr>
+	<td>mail.yahoo.com</td>
+	<td>Upload attachments</td>
+	<td><code>mail.yahoo.com/neo/assets/swf/uploader.swf</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="safari_bugs">
+<header>
+<h2>Safari bugs</h2>
+<nav><a href="#top">To the top</a></nav>
+</header>
+
+<p>This is a list of known bugs in Safari/WebKit that affect parts of the extension. There are currently no known bugs in the extension itself.</p>
+
+<table>
+<thead>
+<tr>
+	<th>Report</th>
+	<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><a href="https://bugs.webkit.org/show_bug.cgi?id=44023">#44023</a></td>
+	<td>The Java plug-in cannot be blocked when embedded via an <code>&lt;applet&gt;</code> element.</td>
+</tr>
+<tr>
+	<td><a href="https://bugs.webkit.org/show_bug.cgi?id=45586">#45586</a> <a href="https://bugs.webkit.org/show_bug.cgi?id=65388">#65388</a></td>
+	<td>The presence of any <code>beforeload</code> event listener breaks some image zooming scripts.</td>
+</tr>
+<tr>
+	<td>?</td>
+	<td>The presence of a <code>beforeload</code> event handler with trivial content can reproducibly make Safari crash, possibly when handling certain plug-ins. This affects SharePoint websites and LogMeIn.</td>
+</tr>
+<tr>
+	<td>?</td>
+	<td>After watching an HTML5 video fullscreen while Safari is in fullscreen mode, the Safari toolbar may stick at the top of the screen when switching spaces.</td>
+</tr>
+<tr>
+	<td>?</td>
+	<td>It can happen that the <code>safari.self.tab</code> object is undefined in content scripts, preventing all extensions that rely on this object from working properly.</td>
+</tr>
+<tr>
+	<td><a href="http://openradar.appspot.com/radar?id=1176403">rdar://8507066</a></td>
+	<td>Pages restored from cache cannot receive messages from the extension’s global page. On such pages several shortcut menu commands will not work.</td>
+</tr>
+<tr>
+	<td><a href="http://openradar.appspot.com/radar?id=1176404">rdar://8443197</a></td>
+	<td>The computer and the computer’s display will go to sleep while an HTML5 video is being watched in fullscreen mode.</td>
+</tr>
+<tr>
+	<td><a href="http://openradar.appspot.com/radar?id=1305402">rdar://9950247</a></td>
+	<td>Listening to <code>message</code> events on <code>safari.self.tab</code> slows down the SunSpider Javascript benchmark significantly.</td>
+</tr>
+<tr>
+	<td><a href="https://bugs.webkit.org/show_bug.cgi?id=23364">#23364</a></td>
+	<td>Subpixel antialiasing is disabled in hardware accelerated layers. This can affect in particular elements with CSS transitions, such as ClickToPlugin’s source selector and ClickToPlugin’s preference window.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<footer>
+<p id="footer_left">Updated on August 14, 2011</p>
+<p id="footer_right"><a href="#top">To the top</a></p>
+<p id="footer_middle"><a href="http://validator.nu/?doc=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F">XHTML5</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
+</footer>
+
+</body>
+</html>

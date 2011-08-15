@@ -1,54 +1,47 @@
+* {
+	text-rendering: optimizelegibility;
+}
+
 body {
-	font-family: "Helvetica", Helvetica, sans-serif;
 	margin: 0 20px;
 }
 
 header {
-    margin: 0 0 20px 0;
-    padding: 20px 0 0 0;
+	position: relative;
 }
 
-header h1 {
-	margin: 0;
-}
-
-p.author {
-	font-size: 80%;
-	margin: 0;
+header#top {
+	margin: 0 0 1em 0;
+	padding: 20px 0 0 0;
 }
 
 nav {
-	margin: 15px 0;
+	margin: 1em 0;
+}
+
+section nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+}
+
+section nav * {
+	font-size: small;
+}
+
+h1 {
+	margin: 0;
 }
 
 h2 {
 	border-bottom: 1px solid #000;
 }
 
-.toplink {
-    position: relative;
-    bottom: 3.3em;
-    float: right;
-    margin: 0;
-    padding: 0;
-    font-size: 80%;
-}
-
-#download {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 0 1em;
-    border: 1px solid black;
-}
-
-#requirements ul, #contents ul {
-    margin: 10px 0;
-}
-
-.warning {
-	font-weight: bold;
-	font-style: italic;
-	margin: 1em;
+.links ul {
+	margin: .5em 0;
 }
 
 p.note::before {
@@ -57,79 +50,78 @@ p.note::before {
 }
 
 p.sub {
-    padding-left: 2em;
+	padding-left: 2em;
 }
 
 figure {
-    display: block;
-	margin: 10px 0;
+	display: block;
+	margin: 1em 0;
 }
 
 figcaption {
-    display: block;
+	display: block;
 	font-style: italic;
 }
 
-code {
-    font-family: "Courier", monospace;
-    font-size: 90%;
+dfn {
+	font-style: italic;
 }
 
-.code {
-    background-color: lightgray;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    font-family: "Courier", monospace;
-    font-size: 90%;
-    padding: 1em;
-    width: intrinsic;
+p.code {
+	color: black;
+	background-color: lightgray;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-family: monospace;
+	padding: 1em;
+	width: intrinsic;
+}
+
+span.keys {
+	font-family: sans-serif;
 }
 
 .init_list {
-    counter-reset: list;
+	counter-reset: list;
 }
 
 .list_item::before {
-    counter-increment: list;
-    content: counter(list) ". ";
+	counter-increment: list;
+	content: counter(list) ". ";
 }
 
 p.question {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 p.question::before {
-    content: "Q. ";
+	content: "Q. ";
 }
 
 p.answer::before {
-    content: "A. ";
-    font-weight: bold;
+	content: "A. ";
+	font-weight: bold;
 }
 
 table {
-    margin: 10px;
-    border-collapse: collapse;
+	margin: 1em;
+	border-collapse: collapse;
 }
 
 thead, tbody {
-    border-bottom: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 th, td {
-    text-align: left;
-    vertical-align: top;
-    padding: 5px 10px;
-}
-
-#list_invisible + table td:last-child {
-    font-family: monospace;
+	text-align: left;
+	vertical-align: top;
+	padding: .8ex 1.6ex;
 }
 
 footer {
 	border-top: 1px solid #000;
-	font-size: 80%;
-	margin-top: 40px;
+	font-size: small;
+	margin-top: 2em;
 }
 
 #footer_left {
@@ -145,8 +137,8 @@ footer {
 }
 
 #footer_middle {
-    text-align: center;
-    padding: 1em 0;
+	text-align: center;
+	padding: 1em 0;
 	margin: 0;
 }
 
