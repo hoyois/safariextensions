@@ -36,7 +36,8 @@
 <p>This extension has a single setting which must be a URL to a Javascript file. This file is included as a script in the extension’s global page.</p>
 </div>
 
-<h3 id="notes">Notes</h3>
+<section id="notes">
+<h3>Notes</h3>
 
 <ul>
 	<li>The <code>file://</code> protocol cannot be used in an extension’s global page. To load local files, use <code>http://localhost/</code> instead.</li>
@@ -45,10 +46,12 @@
 	<li>Content scripts and style sheets can be added with the methods <code>addContentScript</code> and <code>addContentStyleSheet</code> of the <code>safari.extension</code> object.</li>
 	<li>The <code>addContentScriptFromURL</code> and <code>addContentStyleSheetsFromURL</code> methods throw an error if the URL is external to the extension. See the <a href="#script_loader">example</a> below for a workaround.</li>
 </ul>
+</section>
 
-<h3 id="source">Source</h3>
+<section id="source">
+<h3>Source</h3>
 
-This is the extension’s global page:
+<p>This is the extension’s global page:</p>
 
 <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -64,6 +67,7 @@ This is the extension’s global page:
    &lt;/head&gt;
    &lt;body&gt;&lt;/body&gt;
 &lt;/html&gt;</pre>
+</section>
 
 <section id="examples" class="init_list">
 <header>
