@@ -10,11 +10,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>25</string>
+			<string>26</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.4</string>
+			<string>2.4.1</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.4.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.4.1.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -22,11 +22,23 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>25</string>
+			<string>26</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.4</string>
+			<string>2.4.1</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.4.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.4.1.safariextz</string>
+		</dict>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.hoyois.safari-505.clicktoplugin</string>
+			<key>Developer Identifier</key>
+			<string>GY5KR7239Q</string>
+			<key>CFBundleVersion</key>
+			<string>2</string>
+			<key>CFBundleShortVersionString</key>
+			<string>2.2.8</string>
+			<key>URL</key>
+			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.2.8.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
