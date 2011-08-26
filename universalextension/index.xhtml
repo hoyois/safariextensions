@@ -4,7 +4,7 @@
 	<meta name="author" content="Marc Hoyois"/>
 	<meta name="description" content="The universal Safari extension"/>
 	<title>Universal Safari extension</title>
-	<link rel="stylesheet" type="text/css" href="../../styles.css"/>
+	<link rel="stylesheet" href="../../styles.css"/>
 </head>
 <body id="top">
 <header>
@@ -56,10 +56,9 @@
 <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
    &lt;head&gt;
-      &lt;script type="text/javascript"&gt;
+      &lt;script&gt;
          if(safari.extension.settings.script) {
             var scriptElement = document.createElement("script");
-            scriptElement.type = "text/javascript";
             scriptElement.src = safari.extension.settings.script;
             document.head.appendChild(scriptElement);
          }
@@ -84,7 +83,6 @@
 function loadScripts() {
    for(var i = 0; i &lt; arguments.length; i++) {
       var scriptElement = document.createElement("script");
-      scriptElement.type = "text/javascript";
       scriptElement.src = base + arguments[i];
       document.head.appendChild(scriptElement);
    }
@@ -98,12 +96,12 @@ loadScripts("globalScript1.js", "globalScript2.js", "globalScript3.js");</pre>
 
 <pre>function addContentScripts(scripts, whitelist, blacklist, runAtEnd, defer, async) {
    if(scripts.length === 0) return;
-   var script = "function loadScripts(){for(var i=0;i&lt;arguments.length;i++){var s=document.createElement('script');" + (async ? "s.async=true;" : "") + (defer ? "s.defer=true;" : "") + "s.type='text/javascript';s.src=arguments[i];document.documentElement.appendChild(s);}}loadScripts('" + scripts.join("','") + "');";
+   var script = "function loadScripts(){for(var i=0;i&lt;arguments.length;i++){var s=document.createElement('script');" + (async ? "s.async=true;" : "") + (defer ? "s.defer=true;" : "") + "s.src=arguments[i];document.documentElement.appendChild(s);}}loadScripts('" + scripts.join("','") + "');";
    return safari.extension.addContentScript(script, whitelist, blacklist, runAtEnd);
 }
 function addContentStyleSheets(stylesheets, whitelist, blacklist) {
    if(stylesheets.length === 0) return;
-   var script = "function loadStyleSheets(){for(var i=0;i&lt;arguments.length;i++){var s=document.createElement('link');s.rel='stylesheet';s.type='text/css';s.href=arguments[i];document.documentElement.appendChild(s);}}loadStyleSheets('" + stylesheets.join("','") + "');";
+   var script = "function loadStyleSheets(){for(var i=0;i&lt;arguments.length;i++){var s=document.createElement('link');s.rel='stylesheet';s.href=arguments[i];document.documentElement.appendChild(s);}}loadStyleSheets('" + stylesheets.join("','") + "');";
    return safari.extension.addContentStyleSheet(script, whitelist, blacklist);
 }
 
