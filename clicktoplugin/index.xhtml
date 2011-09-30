@@ -15,8 +15,8 @@
 <nav>
 <h4>Resources</h4>
 <ul>
-	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.5.1.safariextz">Download ClickToPlugin 2.5.1</a></li>
-	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.5.1.safariextz">Download ClickToFlash 2.5.1</a></li>
+	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.5.2.safariextz">Download ClickToPlugin 2.5.2</a></li>
+	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.5.2.safariextz">Download ClickToFlash 2.5.2</a></li>
 	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.2.8.safariextz">Download ClickToPlugin 2.2.8</a> (for Safari 5.0.1 to 5.0.5)</li>
 	<li><a href="https://github.com/hoyois/safariextensions/downloads">Browse all versions</a></li>
 	<li><a href="https://github.com/hoyois/clicktoplugin">Browse source</a></li>
@@ -72,7 +72,8 @@
 	<li><a href="http://about.me/astamoore">Ast A. Moore</a>, who designed the extension’s icon and with whom I had many useful conversations;</li>
 	<li>Robert Lange, who designed the <a href="#source_selection">source selector</a>;</li>
 	<li>Félix Cloutier, developer of the <a href="http://safari.laissemoichercherca.com/plugincustoms">Plugin Customs</a> extension, from whom I learned how to detect Java applets;</li>
-	<li>Rodger Combs, developer of the <a href="http://combsconnections.tk/extensions/">Plugin Blocker</a> extension, from which I learned about XHRs and how to use them to fetch the URLs of videos on Vimeo and Veoh.</li>
+	<li>Rodger Combs, developer of the <a href="http://combsconnections.tk/extensions/">Plugin Blocker</a> extension, from which I learned about XHRs and how to use them to fetch the URLs of videos on Vimeo and Veoh;</li>
+	<li>Eric Dubiel, without whose help there would be no Apple TV support.</li>
 </ul>
 
 <p>Further, thanks should be given to</p>
@@ -124,10 +125,22 @@
 
 <p>With the default configuration, ClickToPlugin can create HTML5 versions of most plug-in-based players (both on-site and embedded) from the following websites: Blip.tv, Break, Dailymotion, Facebook, Metacafe, TED, Vimeo, and YouTube. It can also find audio/video replacements to several generic Flash and Silverlight players, and use existing <code>&lt;audio&gt;</code>/<code>&lt;video&gt;</code> fallback content. Finally, it can replace QuickTime, Windows Media, and DivX plug-in objects by HTML media elements.</p>
 
+<section id="player_functions">
+<h4>Additional functions of the media player</h4>
+
+<p>ClickToPlugin’s media player provides additional functions through the <a href="#shortcut_menu">shortcut menu</a> or the <a href="#media_player">source selector</a>. It can</p>
+<ul>
+	<li>make Safari download a media resource;</li>
+	<li>open a media resource in the QuickTime Player application (this requires the QuickTime plug-in for Safari, which is pre-installed on Mac OS X);</li>
+	<li>ask a specified AirPlay device to play a media resource (this requires a compatible AirPlay device, for example an Apple TV);</li>
+	<li>open in a new tab the web page associated to the current track by the killer, if any.</li>
+</ul>
+</section>
+
 <section id="source_selection">
 <h4>Source selection</h4>
 
-<p>A list of all available media sources (for example differing in quality) appears when hovering in the top left corner of a media placeholder (fig. 4 left) or the media player (fig. 4 center). On a media placeholder, clicking a source loads that source in the media player. In the media player, clicking a source loads that source and jumps to the current playback time if the media is seekable. When right-clicking a source, the “Download Video” and “View in QuickTime Player” commands apply to that particular source.</p>
+<p>A list of all available media sources (for example differing in quality) appears when hovering in the top left corner of a media placeholder (fig. 4 left) or the media player (fig. 4 center). On a media placeholder, clicking a source loads that source in the media player. In the media player, clicking a source loads that source and jumps to the current playback time if the media is seekable. When right-clicking a source, the “Download Video”, “Open in QuickTime Player”, and “Send via AirPlay” commands apply to that particular source.</p>
 
 <figure>
 <img src="Sources.png" alt="Source selector on placeholder"/>
@@ -189,8 +202,20 @@
 <dt><b>Show plug-in source as tooltip</b></dt>
 <dd>If checked, the source of the blocked plug-in object appears as a tooltip when hovering its placeholder.</dd>
 
+<dt><b>Allow invisible plug-ins</b></dt>
+<dd>If checked, plug-in objects whose height and width do not exceed 8 pixels will be loaded automatically.</dd>
+
+<dt><b>Block plug-ins manually</b></dt>
+<dd>If checked, a dialog asks for confirmation before blocking any plug-in object. This dialog contains the following information about the object: the name of the plug-in that Safari will use for it (Flash, Silverlight, etc.), its location, its source, its position within its document, and its size. Further, a command “Get Plug-in Info” is added to the shortcut menu of placeholders.</dd>
+
+<dt><b>sIFR text policy</b> [Show text only | Treat as regular Flash | Load automatically]</dt>
+<dd>sIFR is a pre-CSS3 technology for displaying advanced typography on the web. It uses JavaScript to replace some text elements on the page by text-mimicking Flash objects. Choose “Show text only” to disable this process and display the original HTML text.</dd>
+
 <dt><b>Plug-in to HTML5 conversion scripts</b></dt>
 <dd>A list of scripts to be included in the extension’s global page. The default scripts load the built-in killers.</dd>
+
+<dt><b>Load plug-in if HTML5 conversion fails</b></dt>
+<dd>If checked, plug-in object that will not be handled by any killer are loaded automatically.</dd>
 
 <dt><b>Use HTML5 media fallbacks</b></dt>
 <dd><dfn>Fallback content</dfn> is HTML code within an <code>&lt;object&gt;</code> tag designed to be used by the browser in case it lacks a plug-in to handle the object. If checked, plug-in objects with <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> fallback content will behave as if the required plug-in was not installed.</dd>
@@ -198,14 +223,11 @@
 <dt><b>Use a download manager</b></dt>
 <dd>If checked, the “Download Video” command sends the video file to a download manager. This works with Folx, iGetter, Speed Download, and possibly more.</dd>
 
-<dt><b>sIFR text policy</b> [Show text only | Treat as regular Flash | Load automatically]</dt>
-<dd>sIFR is a pre-CSS3 technology for displaying advanced typography on the web. It uses JavaScript to replace some text elements on the page by text-mimicking Flash objects. Choose “Show text only” to disable this process and display the original HTML text.</dd>
+<dt><b>AirPlay device hostname</b></dt>
+<dd>Specify the hostname or IP address of an AirPlay device. For an Apple TV on Mac OS X, the hostname is obtained from the Apple TV’s name (found in Settings > General > Name) by replacing spaces by hyphens and appending <code>.local</code>.</dd>
 
-<dt><b>Allow invisible plug-ins</b></dt>
-<dd>If checked, plug-in objects whose height and width do not exceed 8 pixels will be loaded automatically.</dd>
-
-<dt><b>Block plug-ins manually</b></dt>
-<dd>If checked, a dialog asks for confirmation before blocking any plug-in object. This dialog contains the following information about the object: the name of the plug-in that Safari will use for it (Flash, Silverlight, etc.), its location, its source, its position within its document, and its size. Further, a command “Get Plug-in Info” is added to the shortcut menu of placeholders.</dd>
+<dt><b>AirPlay password</b></dt>
+<dd>Specify a password to use with AirPlay. For an Apple TV, this is the password set in Settings > AirPlay > Set Password (it is empty by default).</dd>
 </dl>
 </section>
 
@@ -259,11 +281,14 @@
 </figure>
 
 <dl>
-<dt><b>Default media player</b> [HTML5 | QuickTime Player | Plug-in]</dt>
+<dt><b>Default media player</b> [HTML5 | Plug-in | QuickTime Player | AirPlay]</dt>
 <dd>Choose which media player to load when clicking a placeholder. Nondefault players can be loaded through the <a href="#source_selection">source selector</a>.</dd>
 
 <dt><b>Load media player automatically</b></dt>
 <dd>If checked, ClickToPlugin automatically replaces blocked elements by HTML5 media elements when available, without waiting for the user to click a placeholder.</dd>
+
+<dt><b>Show preview image</b></dt>
+<dd>If checked, a preview image of the video is shown on the placeholder.</dd>
 </dl>
 
 <p>The next two settings control ClickToPlugin’s choice of default source to be used when the placeholder is clicked. Other sources can only be loaded from the <a href="#source_selection">source selector</a>.</p>
@@ -281,20 +306,23 @@
 <dt><b>Instant autoplay</b></dt>
 <dd>Check this if your internet connection can download videos in real time or faster. This overrides Safari’s default autoplay behavior which is to initiate playback when the <code>canplaythrough</code> event is fired; instead playback will begin as soon as possible.</dd>
 
-<dt><b>Hide “Rewind” button</b></dt>
-<dd>If checked, the “Rewind” button in the default HTML5 media controls is removed.</dd>
-
-<dt><b>Show list of available sources</b></dt>
-<dd>Check this to be able to use the <a href="#source_selection">source selector</a>.</dd>
+<dt><b>Include media sources</b></dt>
+<dd>Check this to be able to select and switch between available sources using the <a href="#source_selection">source selector</a>.</dd>
 
 <dt><b>Include plug-in</b></dt>
 <dd>Clicking the name of the plug-in in the source selector restores the blocked plug-in object.</dd>
 
+<dt><b>Include the video’s web page</b></dt>
+<dd>Clicking this item in the source selector opens the video’s dedicated web page in a new tab.</dd>
+
 <dt><b>Include QuickTime Player</b></dt>
 <dd>Clicking “QT Player” in the source selector opens the current track in QuickTime Player.</dd>
 
-<dt><b>Include the video’s web page</b></dt>
-<dd>Clicking this item in the source selector opens the video’s dedicated web page in a new tab.</dd>
+<dt><b>Include AirPlay</b></dt>
+<dd>Clicking “AirPlay” in the source selector asks the specified AirPlay device to play the current track’s URL.</dd>
+
+<dt><b>Hide “Rewind” button</b></dt>
+<dd>If checked, the “Rewind” button in the default HTML5 media controls is removed.</dd>
 
 <dt><b>Sound volume</b></dt>
 <dd>Sets the initial volume of media elements created by ClickToPlugin.</dd>
@@ -324,20 +352,23 @@
 <dd>Loads all blocked plug-in objects in a document. The number of objects to be loaded is indicated in parentheses.</dd>
 
 <dt><b>Load Invisible Plug-ins</b></dt>
-<dd>A plug-in object is considered invisible if its height and width do not exceed the invisibility threshold. The number of objects to be loaded is indicated in parentheses.</dd>
+<dd>A plug-in object is considered invisible if its height and width do not exceed 8 pixels. The number of objects to be loaded is indicated in parentheses.</dd>
 </dl>
 
-<p>The following three shortcut menu items can appear on media placeholders or media players.</p>
+<p>The following four shortcut menu items can appear on media placeholders or media players.</p>
 
 <dl>
+<dt><b>View on Site</b></dt>
+<dd>Opens the video’s dedicated web page in a new tab. With the default killers, this command applies to embedded Blip.tv, Break, Dailymotion, Facebook, Metacafe, TED, Vimeo, and YouTube videos.</dd>
+
 <dt><b>Download Video</b></dt>
 <dd>Downloads the current track.</dd>
 
 <dt><b>Open in QuickTime Player</b></dt>
 <dd>Opens the current track in the QuickTime Player application.</dd>
 
-<dt><b>View on Site</b></dt>
-<dd>Opens the video’s dedicated web page in a new tab. With the default killers, this command applies to embedded Blip.tv, Break, Dailymotion, Facebook, Metacafe, TED, Vimeo, and YouTube videos.</dd>
+<dt><b>Send via AirPlay</b></dt>
+<dd>Sends a request to the specified AirPlay device asking to play the current track’s URL.</dd>
 
 <dt><b>ClickToPlugin Preferences</b></dt>
 <dd>This command brings up the preference window. It can only be disabled if a <a href="#keyboard_shortcuts">keyboard shortcut</a> is set for the same action.</dd>
@@ -369,6 +400,19 @@
 </header>
 
 <dl>
+<dt id="v2.5.2"><b>Version 2.5.2</b> (<time datetime="2011-09-29">September 29, 2011</time>)</dt>
+<dd><ul>
+	<li>AirPlay support (thanks Eric Dubiel!)
+		<ul>
+			<li>Videos in ClickToPlugin’s media player can be viewed instantly on a <a href="#general">specified Apple TV</a></li>
+			<li>New “Send via AirPlay” shortcut menu item</li>
+			<li>New “AirPlay” item in the source selector</li>
+		</ul>
+	</li>
+	<li>Added an option to automatically load plug-ins that killers cannot handle</li>
+	<li>Fixed a bug that made a video start playing on <code>canplaythrough</code> even if it was previously paused by the user</li>
+</ul></dd>
+
 <dt id="v2.5.1"><b>Version 2.5.1</b> (<time datetime="2011-09-17">September 17, 2011</time>)</dt>
 <dd><ul>
 	<li>Updates the list of killers in the preferences</li>
@@ -542,7 +586,7 @@
 <dt id="v2.0"><b>Version 2.0</b> (<time datetime="2011-01-01">January 1, 2011</time>)</dt>
 <dd><ul>
 	<li>Revamped whitelisting system for plug-ins</li>
-	<li>When several video sources are available, it is now possible to switch between them (<a href="#source_selection">view details</a>)</li>
+	<li>When several video sources are available, it is now possible to switch between them</li>
 	<li>Various killer fixes</li>
 	<li>Revamped settings</li>
 	<li>New shortcut menu item to temporarily disable ClickToPlugin</li>
@@ -578,17 +622,17 @@
 <dt id="v1.5.5"><b>Version 1.5.5</b> (<time datetime="2010-11-06">November 6, 2010</time>)</dt>
 <dd><ul>
 	<li>Some previously unreplaced Vimeo videos are now available in HTML5</li>
-	<li>All event listeners are registered using the addEventListener method, to avoid conflicts with other scripts (thanks Josh Rafofsky!)</li>
+	<li>All event listeners are registered using the <code>addEventListener</code> method, to avoid conflicts with other scripts (thanks Josh Rafofsky!)</li>
 </ul></dd>
 
 <dt id="v1.5.4"><b>Version 1.5.4</b> (<time datetime="2010-10-31">October 31, 2010</time>)</dt>
 <dd><ul>
-	<li>Fixed a bug that caused videos to download needlessly in the background when there were several Vimeo videos on a page (thanks Pedro!)</li>
+	<li>Fixed a typo that caused videos to download needlessly in the background when there were several Vimeo videos on a page (thanks Pedro!)</li>
 </ul></dd>
 
 <dt id="v1.5.3"><b>Version 1.5.3</b> (<time datetime="2010-10-29">October 29, 2010</time>)</dt>
 <dd><ul>
-	<li>Fixed a bug introduced in 1.8.3 that could cause whitelisted elements to be blocked</li>
+	<li>Fixed a bug introduced in 1.5.2 that could cause whitelisted elements to be blocked</li>
 </ul></dd>
 
 <dt id="v1.5.2"><b>Version 1.5.2</b> (<time datetime="2010-10-26">October 26, 2010</time>)</dt>
@@ -629,7 +673,7 @@
 <dd><ul>
 	<li>Does not block <code>&lt;applet&gt;</code> elements anymore</li>
 	<li>Eradicated all listeners to mutation events from the extension</li>
-	<li>Fixed broken CSS introduced in 1.7.6</li>
+	<li>Fixed broken CSS introduced in 1.4.6</li>
 </ul></dd>
 
 <dt id="v1.4.6"><b>Version 1.4.6</b> (<time datetime="2010-09-16">September 16, 2010</time>)</dt>
@@ -643,7 +687,7 @@
 
 <dt id="v1.4.5"><b>Version 1.4.5</b> (<time datetime="2010-09-10">September 10, 2010</time>)</dt>
 <dd><ul>
-	<li>Fixed a bug introduced in 1.7.4 that could create several placeholder elements for the same blocked element</li>
+	<li>Fixed a bug introduced in 1.4.4 that could create several placeholder elements for the same blocked element</li>
 </ul></dd>
 
 <dt id="v1.4.4"><b>Version 1.4.4</b> (<time datetime="2010-09-09">September 9, 2010</time>)</dt>
@@ -757,7 +801,7 @@
 </section>
 
 <footer>
-<div id="footer_left">Marc Hoyois, <time datetime="2011-09-17" pubdate="">September 17, 2011</time></div>
+<div id="footer_left">Marc Hoyois, <time datetime="2011-09-29" pubdate="">September 29, 2011</time></div>
 <div id="footer_right"><a href="#top">To the top</a></div>
 <div id="footer_middle"><a href="http://validator.nu/?doc=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F">XHTML5</a> • <a href="http://hoyois.github.com/html5outliner/?xml=true&amp;url=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F">Outline</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></div>
 </footer>
