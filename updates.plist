@@ -64,6 +64,18 @@
 			<key>URL</key>
 			<string>http://github.com/downloads/hoyois/safariextensions/MediaCenter-1.1.safariextz</string>
 		</dict>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.hoyois.safari.universalextension</string>
+			<key>Developer Identifier</key>
+			<string>GY5KR7239Q</string>
+			<key>CFBundleVersion</key>
+			<string>2</string>
+			<key>CFBundleShortVersionString</key>
+			<string>1.1</string>
+			<key>URL</key>
+			<string>http://github.com/downloads/hoyois/safariextensions/UniversalExtension-1.1.safariextz</string>
+		</dict>
 	</array>
 </dict>
 </plist>
