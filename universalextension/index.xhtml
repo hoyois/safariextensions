@@ -16,7 +16,7 @@
 <nav>
 <h4>Resources</h4>
 <ul>
-	<li><a href="http://github.com/downloads/hoyois/safariextensions/UniversalExtension-1.1.safariextz">Download Universal Extension 1.1</a></li>
+	<li><a href="http://github.com/downloads/hoyois/safariextensions/UniversalExtension-1.2.safariextz">Download Universal Extension 1.2</a></li>
 	<li><a href="https://github.com/hoyois/universalextension">Browse source</a></li>
 </ul>
 </nav>
@@ -33,7 +33,7 @@
 <div id="intro">
 <p>Like a universal Turing machine, a universal extension is an extension that can reproduce the behavior of an arbitrary extension. A universal extension does not actually exist because extension bars and toolbar items cannot be created dynamically. These are however the only restrictions, and this extension is a universal extension with one bar and one toolbar item.</p>
 
-<p>In the settings you can specify scripts to be used in the global page and in the extension’s bar. In these scripts it is possible to create context menus, toolbar menus, and toolbar popovers. The extension’s bar can be hidden permanently by choosing “Hide Universal Bar” from the View menu. The unique identifier for the bar, the unique identifier for the the toolbar item, and the command identifier for the toolbar item are all <code>"universal"</code>.</p>
+<p>In the settings you can specify scripts to be used in the global page and in the extension’s bar. In these scripts it is possible to create context menus, toolbar menus, and toolbar popovers. The extension contains a file <code>popover.html</code> which includes the popover script specified in the settings and can be used to create popover content (see the <a href="#create_popover">example</a> below). The unique identifier for the bar, the unique identifier for the the toolbar item, and the command identifier for the toolbar item are all <code>"universal"</code>.</p>
 </div>
 
 <section id="notes">
@@ -42,6 +42,7 @@
 <ul>
 	<li>The <code>file://</code> protocol cannot be used in an extension’s global page. To load local files, use <code>http://localhost/</code> instead.</li>
 	<li>To reload the global script after it’s been modified, simply disable and enable the extension.</li>
+	<li>The extension’s bar can be hidden permanently by choosing “Hide Universal Bar” from the View menu.</li>
 	<li>The <code>safari.application</code>, <code>safari.extension</code>, and <code>safari.self</code> objects can be used in the global script.</li>
 	<li>Content scripts and style sheets can be added with the methods <code>addContentScript</code> and <code>addContentStyleSheet</code> of the <code>safari.extension</code> object.</li>
 	<li>The <code>addContentScriptFromURL</code> and <code>addContentStyleSheetsFromURL</code> methods throw an error if the URL is external to the extension. See the <a href="#script_loader">example</a> below for a workaround.</li>
@@ -114,6 +115,34 @@ addContentScripts(["http://localhost/~joeshmoe/local.js", "http://example.com/re
 // The style sheet pretty.css will be applied to all pages on the domain someuglysite.com
 addContentStyleSheets(["http://localhost/~joeshmoe/pretty.css"], ["http://someuglysite.com/*"], []);</pre>
 
+<h3 id="create_popover" class="list_item">Using the toolbar item and creating popovers</h3>
+
+<p>The following code in the global script assigns a click action and a popover to the toolbar item:</p>
+
+<pre>function setPopover(popover) {
+   for(var i = 0; i &lt; safari.extension.toolbarItems.length; i++) {
+      safari.extension.toolbarItems[i].popover = popover;
+   }
+}
+
+var universalPopover = safari.extension.createPopover("universal", safari.extension.baseURI + "popover.html");
+setPopover(universalPopover);
+
+function onOpen(event) {
+   if(event.target instanceof SafariBrowserWindow) {
+      setPopover(universalPopover);
+   }
+}
+
+function onCommand(event) {
+   if(event.command === "universal") {
+      alert("The toolbar item was clicked!");
+   }
+}
+
+safari.application.addEventListener("open", onOpen, true);
+safari.application.addEventListener("command", onCommand, false);</pre>
+
 <h3 id="html5_blocker" class="list_item">Blocking HTML5 media</h3>
 
 <p>This global script prevents HTML5 media elements from preloading until the “Play” button is clicked.</p>
@@ -131,14 +160,16 @@ function respondToMessage(event) {
    if(event.name === "canLoad") event.message = canLoad(event.message);
 }
 
-var script = "document.addEventListener('beforeload',handleBeforeLoadEvent,true);function handleBeforeLoadEvent(event){if(!(event.target instanceof HTMLMediaElement)||safari.self.tab.canLoad(event,event.url))return;event.target.autoplay=false;event.target.setAttribute('preload','none');}";
+var script = "document.addEventListener('beforeload',handleBeforeLoadEvent,true);function handleBeforeLoadEvent(event){if(!(event.target instanceof HTMLMediaElement)||safari.self.tab.canLoad(event,event.url))return;event.target.autoplay=false;event.target.preload='none';}";
 
 safari.extension.addContentScript(script, [], [], false);
 safari.application.addEventListener("message", respondToMessage, false);</pre>
+
+
 </section>
 
 <footer>
-<p id="footer_left">Marc Hoyois, <time datetime="2011-12-19" pubdate="">December 19, 2011</time></p>
+<p id="footer_left">Marc Hoyois, <time datetime="2011-12-20" pubdate="">December 20, 2011</time></p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 <p id="footer_middle"><a href="http://validator.nu/?doc=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Funiversalextension%2F">XHTML5</a> • <a href="http://hoyois.github.com/html5outliner/?xml=true&amp;url=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Funiversalextension%2F">Outline</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Funiversalextension%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
