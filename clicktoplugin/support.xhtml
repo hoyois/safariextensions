@@ -45,13 +45,17 @@
 
 <p>Known cases include Vimeo videos, which cannot be viewed on an Apple TV, and Dailymotion videos, which can be played neither in QuickTime Player nor on an Apple TV.</p>
 
+<h4 id="broken_apple_tv">“Whenever I send videos to my Apple TV, they stop playing automatically after a while!”</h4>
+
+<p>Apple TV software versions 4.4 and later are not compatible with the extension anymore. I’m hoping that this will be fixed in a future Apple TV software update, but in the meantime the only way to enjoy this feature is to downgrade the Apple TV software to version 4.3.</p>
+
 <h4 id="ineffective_whitelist">“I whitelisted a page but some plug-ins are still being blocked!”</h4>
 
 <p>This is because a single tab can contain documents whose URLs are different than the URL displayed in the Address Field. To find out the URL of the document containing a blocked object, select the “Block plug-ins manually” checkbox in the preferences, right-click the object’s placeholder, and choose “Get Plug-in Info”.</p>
 
 <h4>“I’ve read this whole page carefully but I still have a problem!”</h4>
 
-<p>Then you can <a href="./#contact">contact me</a> and I’ll be happy to help.</p>
+<p>Uninstall and reinstall the extension (this will reset the extension’s settings). If that doesn’t fix your problem, then you can <a href="./#contact">contact me</a> and I’ll be happy to help.</p>
 </section>
 
 <section id="faq">
@@ -86,8 +90,8 @@
 
 <p>In the case of ClickToPlugin, removing the unique listener to <code>message</code> events from the content scripts (which is not needed for ClickToPlugin’s core functionality) results in a SunSpider benchmark which is identical to that obtained with no extensions.</p>
 
-<h4 class="question">Can I use your code for …?</h4>
-<p class="answer">Yes.</p>
+<h4 class="question">What license is your code under?</h4>
+<p class="answer">None. Feel free to use it in any way.</p>
 </section>
 
 <section id="common_invisible">
@@ -218,7 +222,7 @@
 </section>
 
 <footer>
-<p id="footer_left">Marc Hoyois, <time datetime="2011-12-18" pubdate="">December 18, 2011</time></p>
+<p id="footer_left">Marc Hoyois, <time datetime="2011-12-20" pubdate="">December 20, 2011</time></p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 <p id="footer_middle"><a href="http://validator.nu/?doc=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2Fsupport.xhtml">XHTML5</a> • <a href="http://hoyois.github.com/html5outliner/?xml=true&amp;url=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2Fsupport.xhtml">Outline</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
