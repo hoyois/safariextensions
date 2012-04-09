@@ -39,11 +39,15 @@
 
 <p>More likely the web page’s functionality relies on a hidden or very small plug-in object which ClickToPlugin blocks. In many cases the “Load All Plug-ins” command is enough to restore the web page to a working state. A permanent solution for all cases is the following. Select the “Block plug-ins manually” checkbox in the preferences and reload the page. For every plug-in object on the page, a dialog will appear: click OK to block the object and Cancel to load it. Use this to find out which objects must be loaded for the page to work, and match their sources (given in the dialogs) using the sources whitelist. See also the <a href="#common_invisible">list of common invisible elements</a> below.</p>
 
+<h4 id="youtube_html5">“Flash is not blocked on YouTube anymore!”</h4>
+
+<p>This never has and will never happen. What happens is that YouTube now has its own HTML5 player which looks very similar to its Flash player. The HTML5 player is used instead of the Flash player if either (1) you are enrolled in YouTube’s <a href="http://www.youtube.com/html5">HTML5 trial</a> or (2) you do not have the Flash plug-in. In case (1) you can simply leave the HTML5 trial. In case (2), you can install <a href="https://github.com/downloads/hoyois/safariextensions/DisableYouTubeHTML5.safariextz">this tiny extension</a> (direct link) which prevents YouTube from replacing the Flash player by the HTML5 player.</p>
+
 <h4 id="download_qtp_airplay">“This video cannot be downloaded/viewed in QuickTime Player/viewed on my AirPlay device!”</h4>
 
 <p>This can happen for a variety of reasons over which ClickToPlugin has no control. For example, the server can refuse to respond to requests made from Safari’s downloader or from an Apple TV, and there are video formats that can be played in Safari but not in QuickTime Player or on a given AirPlay device.</p>
 
-<p>Known cases include Vimeo videos, which cannot be viewed on an Apple TV, and Dailymotion videos, which can be played neither in QuickTime Player nor on an Apple TV.</p>
+<p>Known cases include Dailymotion videos, which can be played neither in QuickTime Player nor on an Apple TV.</p>
 
 <h4 id="broken_apple_tv">“Whenever I send videos to my Apple TV, they stop playing automatically after a while!”</h4>
 
@@ -89,6 +93,9 @@
 <p class="answer">This is a <a href="#safari_bugs">bug in Safari</a> which affects all extensions that use messaging from the global page to content scripts. It does not indicate that there is something wrong with these extensions, nor that they have a negative effect on Safari’s performance in real-life usage.</p>
 
 <p>In the case of ClickToPlugin, removing the unique listener to <code>message</code> events from the content scripts (which is not needed for ClickToPlugin’s core functionality) results in a SunSpider benchmark which is identical to that obtained with no extensions.</p>
+
+<h4 class="question">Why is the performance of YouTube’s own HTML5 player significantly worse than ClickToPlugin’s or even than Flash?</h4>
+<p class="answer">It’s because you have Perian installed and YouTube’s HTML5 player uses the WebM version of the video instead of the H.264 version when possible. YouTube does not provide a way to choose the H.264 version, but this can be done using a custom script such as <a href="http://hoyois.github.com/safariextensions/universalextension/#webm_disabler">this one</a>. See also the solution to <a href="#youtube_html5">this common issue</a>.</p>
 
 <h4 class="question">What license is your code under?</h4>
 <p class="answer">None. Feel free to use it in any way.</p>
@@ -214,20 +221,12 @@
 	<td><a href="https://bugs.webkit.org/show_bug.cgi?id=23364">#23364</a></td>
 	<td>Subpixel antialiasing is disabled in hardware accelerated layers. As soon as a media element starts playing, the text in its controls, in ClickToPlugin’s source selector, and in ClickToPlugin’s preference window will be affected.</td>
 </tr>
-<tr>
-	<td><a href="http://openradar.appspot.com/radar?id=1176404">rdar://8443197</a></td>
-	<td>[Fixed in nightly builds!] The computer and the computer’s display will go to sleep while an HTML5 video is being watched in fullscreen mode.</td>
-</tr>
-<tr>
-	<td>?</td>
-	<td>[Fixed in nightly builds!] The <code>ended</code> event on media elements only fires the first time, preventing continuous playback of playlists.</td>
-</tr>
 </tbody>
 </table>
 </section>
 
 <footer>
-<p id="footer_left">Marc Hoyois, <time datetime="2012-03-03">March 3, 2012</time></p>
+<p id="footer_left">Marc Hoyois, <time datetime="2012-04-08">April 8, 2012</time></p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 <p id="footer_middle"><a href="http://validator.nu/?doc=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2Fsupport.xhtml">XHTML5</a> • <a href="http://hoyois.github.com/html5outliner/?xml=true&amp;url=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2Fsupport.xhtml">Outline</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fstyles.css&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
