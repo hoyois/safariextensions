@@ -49,9 +49,13 @@
 
 <p>Known cases include Dailymotion videos, which can be played neither in QuickTime Player nor on an Apple TV.</p>
 
-<h4 id="broken_apple_tv">“Whenever I send videos to my Apple TV, they stop playing automatically after a while!”</h4>
+<!-- <h4 id="broken_apple_tv">“Whenever I send videos to my Apple TV, they stop playing automatically after a while!”</h4>
 
-<p>Apple TV software versions 4.4 and later are not compatible with the extension anymore. I’m hoping that this will be fixed in a future Apple TV software update, but in the meantime the only way to enjoy this feature is to downgrade the Apple TV software to version 4.3.</p>
+<p>Apple TV software versions 4.4 and later are not compatible with the extension anymore. I’m hoping that this will be fixed in a future Apple TV software update, but in the meantime the only way to enjoy this feature is to downgrade the Apple TV software to version 4.3.</p> -->
+
+<h4 id="yahoo_movies">“Yahoo movie trailers do not play with ClickToPlugin!”</h4>
+
+<p>This is a well-understood issue. The only way to watch Yahoo movie trailers with ClickToPlugin enabled is to whitelist the Flash player (<code>d.yimg.com/nl/movies/</code>).</p>
 
 <h4 id="ineffective_whitelist">“I whitelisted a page but some plug-ins are still being blocked!”</h4>
 
@@ -69,7 +73,7 @@
 </header>
 
 <h4 class="question">Does the replacement of plug-ins by HTML5 require the plug-in to be installed?</h4>
-<p class="answer">No. However, websites can check if your browser supports a given plug-in, and change the page accordingly. For example, Vimeo and Dailymotion do not insert the Flash player into the page unless Flash is enabled, so there’s nothing for ClickToPlugin to replace.</p>
+<p class="answer">No. However, websites can check if your browser supports a given plug-in, and change the page accordingly. For example, Dailymotion and Facebook do not insert the Flash player into the page unless Flash is enabled, so there’s nothing for ClickToPlugin to replace.</p>
 
 <h4 class="question">Can I use wild cards in the whitelists?</h4>
 <p class="answer">All whitelist-like text fields in the preferences support regular expressions. For a string to be considered as a regular expression, it must be preceded by the <code>@</code> symbol. These regular expressions must follow the Javascript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
@@ -99,6 +103,9 @@
 
 <h4 class="question">What license is your code under?</h4>
 <p class="answer">None. Feel free to use it in any way.</p>
+
+<h4 class="question">Can you make a Chrome version of ClickToPlugin?</h4>
+<p class="answer">No, but you can!</p>
 </section>
 
 <section id="common_invisible">
