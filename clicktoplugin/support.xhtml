@@ -29,16 +29,16 @@
 <div class="toplink"><a href="#top">To the top</a></div>
 </header>
 
-<h4 id="question1" class="question">Does the replacement of plug-ins by HTML5 require these plug-ins to be installed?</h4>
+<h4 id="faq_installedplugins" class="question">Does the replacement of plug-ins by HTML5 require these plug-ins to be installed?</h4>
 <p class="answer">No. However, websites can check if your browser supports a given plug-in, and change the page accordingly. For example, Dailymotion and Facebook do not insert the Flash player into the page unless Flash is enabled, so there’s nothing for ClickToPlugin to replace.</p>
 
-<h4 id="question2" class="question">Can I use wild cards in the whitelists?</h4>
+<h4 id="faq_wildcards" class="question">Can I use wild cards in the whitelists?</h4>
 <p class="answer">All whitelist-like text fields in the preferences support regular expressions. For a string to be considered as a regular expression, it must be preceded by the <code>@</code> symbol. These regular expressions must follow the Javascript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
 
-<h4 id="question3" class="question">Can you move the extension’s preferences back to the dedicated area in Safari’s preferences?</h4>
+<h4 id="faq_prefpane" class="question">Can you move the extension’s preferences back to the dedicated area in Safari’s preferences?</h4>
 <p class="answer">Not until all of the following are possible within that dedicated area: language localization; displaying the list of installed plug-ins; customizable keyboard shortcuts; multiline text areas.</p>
 
-<h4 id="question4" class="question">Could you add HTML5 replacements for …?</h4>
+<h4 id="faq_html5replacements" class="question">Could you add HTML5 replacements for …?</h4>
 <p class="answer">Maybe. Contact me with as much information as possible on the videos you’d like to see replaced, including at least:</p>
 <ul>
 	<li>a link to a page with a video;</li>
@@ -47,21 +47,24 @@
 </ul>
 <p>Note that I will not be adding killers to the extension from now on. New killers will be uploaded <a href="killers.xhtml#database">here</a> and can be installed following <a href="killers.xhtml#add_killers">these instructions</a>. You can also <a href="killers.xhtml#create_killers">make killers yourself</a> and send them to me for sharing.</p>
 
-<h4 id="question5" class="question">Why would I want to allow invisible plug-ins?</h4>
+<h4 id="faq_invisible" class="question">Why would I want to allow invisible plug-ins?</h4>
 <p class="answer">You don’t. For security and privacy reasons, automatically allowing invisible plug-ins on random pages is not recommended: they are often used to spy on your browsing habits and can store cookies that bypass any of the browser’s privacy settings. Also, it is possible for a plug-in object to be small at first but grow once it is loaded.</p>
 
-<h4 id="question6" class="question">Why does ClickToPlugin slow down the SunSpider Javascript benchmark?</h4>
+<h4 id="faq_sunspider" class="question">Why does ClickToPlugin slow down the SunSpider Javascript benchmark?</h4>
 <p class="answer">This is a <a href="#safari_bugs">bug in Safari</a> which affects all extensions that use messaging from the global page to content scripts. It does not indicate that there is something wrong with these extensions, nor that they have a negative effect on Safari’s performance in real-life usage.</p>
 
 <p>In the case of ClickToPlugin, removing the unique listener to <code>message</code> events from the content scripts (which is not needed for ClickToPlugin’s core functionality) results in a SunSpider benchmark which is identical to that obtained with no extensions.</p>
 
-<h4 id="question7" class="question">Why is the performance of YouTube’s own HTML5 player significantly worse than ClickToPlugin’s or even than Flash?</h4>
+<h4 id="faq_youtubehtml5" class="question">Why is the performance of YouTube’s own HTML5 player significantly worse than ClickToPlugin’s or even than Flash?</h4>
 <p class="answer">It’s because you have Perian installed and YouTube’s HTML5 player uses the WebM version of the video instead of the H.264 version when possible. YouTube does not provide a way to choose the H.264 version, but this can be done using a custom script such as <a href="http://hoyois.github.com/safariextensions/universalextension/#webm_disabler">this one</a>. See also the solution to <a href="#youtube_html5">this common issue</a>.</p>
 
-<h4 id="question8" class="question">What license is your code under?</h4>
+<h4 id="faq_placeholderstyle" class="question">Can I change the default style of the placeholders?</h4>
+<p class="answer">Yes, you can override any extension’s styles in your user stylesheet (selected in Safari’s Advanced preferences). You simply have to make sure that your selectors have higher specificity than those in <a href="https://github.com/hoyois/clicktoplugin/blob/master/ClickToPlugin.safariextension/styles.css">ClickToPlugin’s stylesheet</a>.</p>
+
+<h4 id="faq_license" class="question">What license is your code under?</h4>
 <p class="answer">None. Feel free to use it in any way.</p>
 
-<h4 id="question9" class="question">Can you make a Chrome version of ClickToPlugin?</h4>
+<h4 id="faq_chrome" class="question">Can you make a Chrome version of ClickToPlugin?</h4>
 <p class="answer">No, but you can!</p>
 </section>
 
