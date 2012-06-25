@@ -15,8 +15,8 @@
 <nav>
 <h4>Resources</h4>
 <ul>
-	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.6.5.safariextz">Download ClickToPlugin 2.6.5</a></li>
-	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.6.5.safariextz">Download ClickToFlash 2.6.5</a></li>
+	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.6.6.safariextz">Download ClickToPlugin 2.6.6</a></li>
+	<li><a href="https://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.6.6.safariextz">Download ClickToFlash 2.6.6</a></li>
 	<li><a href="https://github.com/hoyois/safariextensions/downloads">Browse all versions</a></li>
 	<li><a href="https://github.com/hoyois/clicktoplugin">Browse source</a></li>
 </ul>
@@ -221,7 +221,7 @@
 <dd>If checked, the “Download Video” command sends the video file to a download manager. This works with Folx, iGetter, Speed Download, and possibly more.</dd>
 
 <dt><b>AirPlay device hostname</b></dt>
-<dd>Specify the hostname or IP address of an AirPlay device. For an Apple TV on Mac OS X, the hostname is obtained from the Apple TV’s name (found in Settings > General > Name) by replacing spaces by hyphens and appending <code>.local</code>.</dd>
+<dd>Specify the hostname or IP address of an AirPlay device (include the port number if it is different from <code>7000</code>). For an Apple TV on Mac OS X, the hostname is obtained from the Apple TV’s name (found in Settings > General > Name) by replacing spaces by hyphens and appending <code>.local</code>.</dd>
 
 <dt><b>AirPlay password</b></dt>
 <dd>Specify a password to use with AirPlay. For an Apple TV, this is the password set in Settings > AirPlay > Set Password (it is empty by default).</dd>
@@ -356,7 +356,7 @@
 
 <dl>
 <dt><b>View on Site</b></dt>
-<dd>Opens the video’s dedicated web page in a new tab. With the default killers, this command applies to embedded Blip.tv, Break, Dailymotion, Facebook, Metacafe, TED, Vimeo, and YouTube videos.</dd>
+<dd>Opens the video’s dedicated web page in a new tab. With the default killers, this command applies to embedded Blip.tv, Break, Dailymotion, Facebook, Metacafe, TED, YouTube videos, and more.</dd>
 
 <dt><b>Download Video</b></dt>
 <dd>Downloads the current track.</dd>
@@ -386,7 +386,7 @@
 
 <p>Clearing a shortcut prevents ClickToPlugin from registering a listener to this shortcut.</p>
 
-<p class="note">Alphanumeric keyboard shortcuts and mouse shortcuts do not work while watching a video fullscreen. If applicable, the “Enter fullscreen” shortcut can be used to exit fullscreen. The <kbd>⎋</kbd> (Escape) key can also be used to exit fullscreen.</p>
+<p class="note">Some shortcuts will not work while watching a video in fullscreen mode. If applicable, the “Enter fullscreen” shortcut can be used to exit fullscreen. The <kbd>⎋</kbd> (Escape) key can also be used to exit fullscreen.</p>
 </section>
 </section>
 
@@ -397,6 +397,16 @@
 </header>
 
 <dl>
+<dt id="v2.6.6"><b>Version 2.6.6</b> (<time datetime="2012-06-24">June 24, 2012</time>)</dt>
+<dd><ul>
+	<li>It is now possible to set both a keyboard and a mouse shortcut for the same task</li>
+	<li>The default AirPlay port can be overridden in the AirPlay device hostname</li>
+	<li>Fixed TED killer</li>
+	<li>Removed Vimeo killer since it does not work with the redesigned Vimeo</li>
+	<li>Fixed Disable/Enable mechanism in Safari 6</li>
+	<li>Fixed media player button layout in Safari 6</li>
+</ul></dd>
+
 <dt id="v2.6.5"><b>Version 2.6.5</b> (<time datetime="2012-05-19">May 19, 2012</time>)</dt>
 <dd><ul>
 	<li>The AirPlay feature now works with the current Apple TV software (thanks Andreas Treichel!)</li>
@@ -862,7 +872,7 @@
 </section>
 
 <footer>
-<div id="footer_left">Marc Hoyois, <time datetime="2012-05-19">May 19, 2012</time></div>
+<div id="footer_left">Marc Hoyois, <time datetime="2012-06-24">June 24, 2012</time></div>
 <div id="footer_right"><a href="#top">To the top</a></div>
 <div id="footer_middle"><a href="http://validator.nu/?doc=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F">XHTML5</a> • <a href="http://hoyois.github.com/html5outliner/?xml=true&amp;url=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2F">Outline</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fstyles.css&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></div>
 </footer>
