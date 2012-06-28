@@ -58,11 +58,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>7</string>
+			<string>8</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.5</string>
+			<string>1.6</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/MediaCenter-1.5.safariextz</string>
+			<string>http://github.com/downloads/hoyois/safariextensions/MediaCenter-1.6.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
