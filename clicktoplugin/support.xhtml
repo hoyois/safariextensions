@@ -29,11 +29,23 @@
 <div class="toplink"><a href="#top">To the top</a></div>
 </header>
 
+<h4 id="faq_uninstall" class="question">How do I uninstall ClickToPlugin?</h4>
+<p class="answer">Open Safari’s preferences from the Safari menu in the menu bar; click on the Extensions tab, then click on ClickToPlugin in the left column; finally, click the Uninstall button in the right-hand pane.</p>
+
+
 <h4 id="faq_installedplugins" class="question">Does the replacement of plug-ins by HTML5 require these plug-ins to be installed?</h4>
 <p class="answer">No. However, websites can check if your browser supports a given plug-in, and change the page accordingly. For example, Dailymotion and Facebook do not insert the Flash player into the page unless Flash is enabled, so there’s nothing for ClickToPlugin to replace.</p>
 
 <h4 id="faq_wildcards" class="question">Can I use wild cards in the whitelists?</h4>
 <p class="answer">All whitelist-like text fields in the preferences support regular expressions. For a string to be considered as a regular expression, it must be preceded by the <code>@</code> symbol. These regular expressions must follow the Javascript syntax (in particular, lookbehinds are not supported). Invalid regular expressions are ignored.</p>
+
+<h4 id="faq_preference_access" class="question">How do I access ClickToPlugin’s preferences?</h4>
+<p class="answer">There are three ways to access ClickToPlugin’s preference pane:</p>
+<ul>
+	<li>From <b>Safari’s preferences</b>: open Safari’s preferences from the Safari menu in the menu bar; click on the Extensions tab, then click on ClickToPlugin in the left column; finally, click on the checkbox labeled “Click this checkbox to access the settings”.</li>
+	<li>From the <b>shortcut menu</b> (or contextual menu): right-click on any web page and choose “ClickToPlugin Preferences…” from the shortcut menu. This menu command will not appear if you have disabled it from within ClickToPlugin’s preferences.</li>
+	<li>Using a <b>keyboard shortcut</b>: within ClickToPlugin’s preferences you can set a keyboard shortcut to open the preferences. By default, this keyboard shortcut is <kbd>⌥,</kbd> (Option-Comma).</li>
+</ul>
 
 <h4 id="faq_prefpane" class="question">Can you move the extension’s preferences back to the dedicated area in Safari’s preferences?</h4>
 <p class="answer">Not until all of the following are possible within that dedicated area: language localization; displaying the list of installed plug-ins; customizable keyboard shortcuts; multiline text areas.</p>
@@ -56,13 +68,13 @@
 <p>In the case of ClickToPlugin, removing the unique listener to <code>message</code> events from the content scripts (which is not needed for ClickToPlugin’s core functionality) results in a SunSpider benchmark which is identical to that obtained with no extensions.</p>
 
 <h4 id="faq_youtubehtml5" class="question">Why is the performance of YouTube’s own HTML5 player significantly worse than ClickToPlugin’s or even than Flash?</h4>
-<p class="answer">It’s because you have Perian installed and YouTube’s HTML5 player uses the WebM version of the video instead of the H.264 version when possible. YouTube does not provide a way to choose the H.264 version, but this can be done using a custom script such as <a href="http://hoyois.github.com/safariextensions/universalextension/#webm_disabler">this one</a>. See also the solution to <a href="#youtube_html5">this common issue</a>.</p>
+<p class="answer">It’s because you have Perian installed and YouTube’s HTML5 player uses the WebM version of the video instead of the H.264 version when possible. YouTube does not provide a way to choose the H.264 version, but this can be done using a custom script such as <a href="http://hoyois.github.com/safariextensions/universalextension/#webm_disabler">this one</a> or by upgrading to Safari 6 which <a href="http://trac.webkit.org/changeset/117147">hides WebM playback capability on YouTube</a>.</p>
 
 <h4 id="faq_placeholderstyle" class="question">Can I change the default style of the placeholders?</h4>
 <p class="answer">Yes, you can override any extension’s styles in your user stylesheet (selected in Safari’s Advanced preferences). You simply have to make sure that your selectors have higher specificity than those in <a href="https://github.com/hoyois/clicktoplugin/blob/master/ClickToPlugin.safariextension/styles.css">ClickToPlugin’s stylesheet</a>.</p>
 
 <h4 id="faq_license" class="question">What license is your code under?</h4>
-<p class="answer">None. Feel free to use it in any way.</p>
+<p class="answer">None, but feel free to use it in any way.</p>
 
 <h4 id="faq_chrome" class="question">Can you make a Chrome version of ClickToPlugin?</h4>
 <p class="answer">No, but you can!</p>
@@ -98,7 +110,7 @@
 
 <h4>“I’ve read this whole page carefully but I still have a problem!”</h4>
 
-<p>Uninstall and reinstall the extension (this will reset the extension’s settings). If that doesn’t fix your problem, then you can <a href="./#contact">contact me</a> and I’ll be happy to help.</p>
+<p><a href="#faq_uninstall">Uninstall</a> and reinstall the extension (this will reset the extension’s settings). If that doesn’t fix your problem, then you can <a href="./#contact">contact me</a> and I’ll be happy to help.</p>
 </section>
 
 <section id="common_invisible">
@@ -210,8 +222,12 @@
 	<td>The presence of a <code>beforeload</code> event handler with trivial content can reproducibly make Safari crash, possibly when handling certain plug-ins. This affects SharePoint websites and LogMeIn.</td>
 </tr>
 <tr>
+	<td>rdar://11662657</td>
+	<td>In Safari 6, messages from an extension’s global page are artificially delayed by a fraction of a second. This causes a noticeable delay in some of ClickToPlugin’s operations, such as opening the preferences or applying some shortcut menu commands.</td>
+</tr>
+<tr>
 	<td><a href="http://openradar.appspot.com/radar?id=1176403">rdar://8507066</a></td>
-	<td>The <code>safari.self.tab</code> object is undefined in documents restored from cache. Such documents cannot communicate with the extension’s global page, which breaks shortcut menu commands and some keyboard shortcuts.</td>
+	<td><i>[Fixed in Safari 6!]</i> The <code>safari.self.tab</code> object is undefined in documents restored from cache. Such documents cannot communicate with the extension’s global page, which breaks shortcut menu commands and some keyboard shortcuts.</td>
 </tr>
 <tr>
 	<td><a href="http://openradar.appspot.com/radar?id=1305402">rdar://9950247</a></td>
@@ -226,7 +242,7 @@
 </section>
 
 <footer>
-<p id="footer_left">Marc Hoyois, <time datetime="2012-06-24">June 24, 2012</time></p>
+<p id="footer_left">Marc Hoyois, <time datetime="2012-07-14">July 14, 2012</time></p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 <p id="footer_middle"><a href="http://validator.nu/?doc=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2Fsupport.xhtml">XHTML5</a> • <a href="http://hoyois.github.com/html5outliner/?xml=true&amp;url=http%3A%2F%2Fhoyois.github.com%2Fsafariextensions%2Fclicktoplugin%2Fsupport.xhtml">Outline</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.com%2Fstyles.css&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
