@@ -16,14 +16,15 @@
 <nav>
 <h4>Resources</h4>
 <ul>
-	<li><a href="http://github.com/downloads/hoyois/safariextensions/StopReloadButton-1.3.safariextz">Download Stop/Reload Button 1.3</a></li>
+	<li><a href="http://github.com/downloads/hoyois/safariextensions/StopReloadButton-1.4.safariextz">Download Stop/Reload Button 1.4</a></li>
+	<li><a href="http://github.com/downloads/hoyois/safariextensions/StopReloadButton-1.3.safariextz">Download Stop/Reload Button 1.3</a> (for Safari 5.0 to 5.0.6)</li>
 	<li><a href="https://github.com/hoyois/stopreloadbutton">Browse source</a></li>
 </ul>
 </nav>
 </nav>
 </header>
 
-<p>This simple proof-of-concept extension adds a reload button in Safari’s toolbar that transforms into a stop button when a page is loading. It thus provides exactly the same functionality as the built-in Stop/Reload control in the address field, but in the form of a button that can be placed anywhere in the toolbar (as it used to be before Safari 4).</p>
+<p>This simple proof-of-concept extension adds a reload button in Safari’s toolbar that transforms into a stop button when a page is loading. It thus provides exactly the same functionality as the built-in Stop/Reload button in the address field, but in the form of a standard toolbar button.</p>
 
 <figure>
 <img src="Stop.png" alt="Stop button"/>
@@ -31,10 +32,37 @@
 </figure>
 
 <h3>Known issues</h3>
-<p>In Safari 5.*, the button does not work on pages restored from Safari’s cache. This is the consequence of a bug in Safari that prevents such pages from receiving messages sent by an extension’s global page. This bug has disappeared in Safari 6.</p>
+<ul>
+	<li>The button does not work on PDF files and on Safari’s error pages, even though it is not disabled.</li>
+	<li>When switching tabs in Tab View, the button will not update itself until exiting Tab View.</li>
+	<li>If a loading page turns into a download, the button will remain in the Stop state until clicked.</li>
+	<li>In Safari 5, the button does not work on pages restored from cache.</li>
+</ul>
+
+<h3>Release notes</h3>
+
+<dl>
+<dt id="v1.4"><b>Version 1.4</b> (<time datetime="2012-08-01">August 1, 2012</time>)</dt>
+<dd><ul>
+	<li>Improved extension icon</li>
+	<li>Vector graphics for the toolbar button</li>
+	<li>Takes advantage of APIs introduced in Safari 5.1</li>
+</ul></dd>
+
+<dt id="v1.3"><b>Version 1.3</b> (<time datetime="2011-02-04">February 4, 2011</time>)</dt>
+<dd><ul>
+	<li>Fixed a critical HTML typo that prevented the extension from working in the WebKit nightly builds</li>
+</ul></dd>
+
+<dt id="v1.2"><b>Version 1.2</b> (<time datetime="2010-10-10">October 10, 2010</time>)</dt>
+<dd><ul>
+	<li>First working release</li>
+</ul></dd>
+</dl>
+
 
 <footer>
-<p id="footer_left">Marc Hoyois, <time datetime="2012-07-23">July 23, 2012</time></p>
+<p id="footer_left">Marc Hoyois, <time datetime="2012-08-01">August 1, 2012</time></p>
 </footer>
 
 </body>
