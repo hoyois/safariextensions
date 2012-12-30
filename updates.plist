@@ -10,11 +10,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>46</string>
+			<string>47</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.7.1</string>
+			<string>2.7.2</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.7.1.safariextz</string>
+			<string>http://hoyois.github.com/safariextensions/builds/ClickToPlugin-2.7.2.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -22,11 +22,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>46</string>
+			<string>47</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.7.1</string>
+			<string>2.7.2</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToFlash-2.7.1.safariextz</string>
+			<string>http://hoyois.github.com/safariextensions/builds/ClickToFlash-2.7.2.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -38,7 +38,7 @@
 			<key>CFBundleShortVersionString</key>
 			<string>2.2.9</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/ClickToPlugin-2.2.9.safariextz</string>
+			<string>http://hoyois.github.com/safariextensions/builds/ClickToPlugin-2.2.9.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -50,7 +50,7 @@
 			<key>CFBundleShortVersionString</key>
 			<string>1.6</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/StopReloadButton-1.6.safariextz</string>
+			<string>http://hoyois.github.com/safariextensions/builds/StopReloadButton-1.6.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -62,7 +62,7 @@
 			<key>CFBundleShortVersionString</key>
 			<string>1.9</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/MediaCenter-1.9.safariextz</string>
+			<string>http://hoyois.github.com/safariextensions/builds/MediaCenter-1.9.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -74,7 +74,7 @@
 			<key>CFBundleShortVersionString</key>
 			<string>1.2</string>
 			<key>URL</key>
-			<string>http://github.com/downloads/hoyois/safariextensions/UniversalExtension-1.2.safariextz</string>
+			<string>http://hoyois.github.com/safariextensions/builds/UniversalExtension-1.2.safariextz</string>
 		</dict>
 	</array>
 </dict>
