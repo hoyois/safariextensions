@@ -69,7 +69,7 @@
 <p>In the case of ClickToPlugin, removing the unique listener to <code>message</code> events from the content scripts (which is not needed for ClickToPlugin’s core functionality) results in a SunSpider benchmark which is identical to that obtained with no extensions.</p>
 
 <h4 id="faq_youtubehtml5" class="question">Why is the performance of YouTube’s own HTML5 player significantly worse than ClickToPlugin’s or even than Flash?</h4>
-<p class="answer">It’s because you have Perian installed and YouTube’s HTML5 player uses the WebM version of the video instead of the H.264 version when possible. YouTube does not provide a way to choose the H.264 version, but this can be done using a custom script such as <a href="http://hoyois.github.com/safariextensions/universalextension/#webm_disabler">this one</a> or by upgrading to Safari 6 which <a href="http://trac.webkit.org/changeset/117147">hides WebM playback capability on YouTube</a>.</p>
+<p class="answer">It’s because you have Perian installed and YouTube’s HTML5 player uses the WebM version of the video instead of the H.264 version when possible. YouTube does not provide a way to choose the H.264 version, but this can be done using a custom script such as <a href="http://hoyois.github.io/safariextensions/universalextension/#webm_disabler">this one</a> or by upgrading to Safari 6 which <a href="http://trac.webkit.org/changeset/117147">hides WebM playback capability on YouTube</a>.</p>
 
 <h4 id="faq_placeholderstyle" class="question">Can I change the default style of the placeholders?</h4>
 <p class="answer">Yes, you can override any extension’s styles in your user stylesheet (selected in Safari’s Advanced preferences). You simply have to make sure that your selectors have higher specificity than those in <a href="https://github.com/hoyois/clicktoplugin/blob/master/ClickToPlugin.safariextension/styles.css">ClickToPlugin’s stylesheet</a>.</p>
@@ -128,7 +128,7 @@
 
 <h4 id="youtube_html5">“Flash is not blocked on YouTube anymore!”</h4>
 
-<p>This never has and will never happen. What happens is that YouTube now has its own HTML5 player which looks very similar to its Flash player. The HTML5 player is used instead of the Flash player if either (1) you are enrolled in YouTube’s <a href="http://www.youtube.com/html5">HTML5 trial</a> or (2) you do not have the Flash plug-in. In case (1) you can simply leave the HTML5 trial. In case (2), you can install <a href="http://hoyois.github.com/safariextensions/builds/DisableYouTubeHTML5-1.4.safariextz">this tiny extension</a> (direct link) which prevents YouTube from replacing the Flash player by the HTML5 player.</p>
+<p>This never has and will never happen. What happens is that YouTube now has its own HTML5 player which looks very similar to its Flash player. The HTML5 player is used instead of the Flash player if either (1) you are enrolled in YouTube’s <a href="http://www.youtube.com/html5">HTML5 trial</a> or (2) you do not have the Flash plug-in. In case (1) you can simply leave the HTML5 trial. In case (2), you can install <a href="http://hoyois.github.io/safariextensions/builds/DisableYouTubeHTML5-1.4.safariextz">this tiny extension</a> (direct link) which prevents YouTube from replacing the Flash player by the HTML5 player.</p>
 
 <h4 id="download_qtp_airplay">“This video cannot be downloaded/viewed in QuickTime Player/viewed on my AirPlay device!”</h4>
 
