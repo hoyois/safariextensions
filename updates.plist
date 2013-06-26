@@ -82,11 +82,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>5</string>
+			<string>6</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.4</string>
+			<string>v1</string>
 			<key>URL</key>
-			<string>http://hoyois.github.io/safariextensions/builds/DisableYouTubeHTML5-1.4.safariextz</string>
+			<string>http://hoyois.github.io/safariextensions/builds/YouTubeFlashProxy-v1.safariextz</string>
 		</dict>
 	</array>
 </dict>
