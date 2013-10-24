@@ -10,11 +10,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>63</string>
+			<string>64</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.8.8</string>
+			<string>2.8.9</string>
 			<key>URL</key>
-			<string>https://github.com/hoyois/clicktoplugin/releases/download/v2.8.8/ClickToPlugin.safariextz</string>
+			<string>https://github.com/hoyois/clicktoplugin/releases/download/v2.8.9/ClickToPlugin.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -22,11 +22,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>63</string>
+			<string>64</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.8.8</string>
+			<string>2.8.9</string>
 			<key>URL</key>
-			<string>https://github.com/hoyois/clicktoplugin/releases/download/v2.8.8/ClickToFlash.safariextz</string>
+			<string>https://github.com/hoyois/clicktoplugin/releases/download/v2.8.9/ClickToFlash.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -46,11 +46,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>12</string>
+			<string>13</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.0</string>
+			<string>2.1</string>
 			<key>URL</key>
-			<string>http://hoyois.github.io/safariextensions/builds/MediaCenter-2.0.safariextz</string>
+			<string>http://hoyois.github.io/safariextensions/builds/MediaCenter-2.1.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
