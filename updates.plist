@@ -10,11 +10,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>69</string>
+			<string>70</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.9.3</string>
+			<string>2.9.4</string>
 			<key>URL</key>
-			<string>https://github.com/hoyois/clicktoplugin/releases/download/v2.9.3/ClickToPlugin.safariextz</string>
+			<string>https://github.com/hoyois/clicktoplugin/releases/download/v2.9.4/ClickToPlugin.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -22,11 +22,11 @@
 			<key>Developer Identifier</key>
 			<string>GY5KR7239Q</string>
 			<key>CFBundleVersion</key>
-			<string>69</string>
+			<string>70</string>
 			<key>CFBundleShortVersionString</key>
-			<string>2.9.3</string>
+			<string>2.9.4</string>
 			<key>URL</key>
-			<string>https://github.com/hoyois/clicktoplugin/releases/download/v2.9.3/ClickToFlash.safariextz</string>
+			<string>https://github.com/hoyois/clicktoplugin/releases/download/v2.9.4/ClickToFlash.safariextz</string>
 		</dict>
 		<dict>
 			<key>CFBundleIdentifier</key>
