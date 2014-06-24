@@ -15,7 +15,6 @@
 <h4>Contents</h4>
 <ul>
 	<li><a href="#faq">FAQ</a></li>
-	<li><a href="#known_bugs">Known bugs</a></li>
 	<li><a href="#common_issues">Solutions to common issues</a></li>
 	<li><a href="#safari_bugs">Safari bugs</a></li>
 </ul>
@@ -48,6 +47,7 @@
 	<li>From the <b>shortcut menu</b> (or contextual menu): right-click on any web page and choose “ClickToPlugin Preferences…” from the shortcut menu. This menu command will not appear if you have disabled it from within ClickToPlugin’s preferences.</li>
 	<li>Using a <b>keyboard shortcut</b>: within ClickToPlugin’s preferences you can set a keyboard shortcut to open the preferences. By default, this keyboard shortcut is <kbd>⌥,</kbd> (Option-Comma).</li>
 </ul>
+<p>Starting with Safari 7, the last two methods only work on web pages whose security policy allows the loading of iframes.</p>
 
 <h4 id="faq_prefpane" class="question">Can you move the extension’s preferences back to the dedicated area in Safari’s preferences?</h4>
 <p class="answer">Not until all of the following are possible within that dedicated area: language localization; displaying the list of installed plug-ins; customizable keyboard shortcuts; multiline text areas.</p>
@@ -83,37 +83,6 @@
 
 <h4 id="faq_chrome" class="question">Can you make a Chrome version of ClickToPlugin?</h4>
 <p class="answer">No.</p>
-</section>
-
-<section id="known_bugs">
-<header>
-<h2>Known bugs</h2>
-<div class="toplink"><a href="#top">To the top</a></div>
-</header>
-
-<h4>Placeholders do not resize</h4>
-<p>The dimensions of placeholder elements are always absolute and hence placeholders may not resize in the same way that the blocked plug-in objects would. This is unfortunately a shortcoming of the CSS APIs themselves which <a href="http://dev.w3.org/csswg/cssom/#resolved-values">can only read</a> the <i>used values</i> for the <code>height</code> and <code>width</code> CSS properties, and not the <i>computed values</i>.</p>
-
-<h4>Placeholders can be too small</h4>
-<p>In rare cases, it can happen that a placeholder is smaller than expected. More precisely, its dimensions may not equal the dimensions that the plug-in object should have according to the CSS cascade at the time the blocking takes place. This happens because the latter dimensions are not always correctly determined by Safari at that time.</p>
-
-<!--
-<p>Due to the nature of Safari extensions, it is not possible for an extension like ClickToPlugin to “just work” on all imaginable web pages. ClickToPlugin includes several mechanisms to minimize undesirable behavior while avoiding site-specific hacks. Still, there are known websites where ClickToPlugin does not work as expected; they are listed in the table below.  Note that the “Disable ClickToPlugin” shortcut menu item provides a universal workaround.</p>
-
-<table>
-<thead>
-<tr>
-	<th>Domain affected</th>
-	<th>Description of the bug</th>
-	<th>Reason</th>
-	<th>Workaround</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
--->
-
 </section>
 
 <section id="common_issues">
@@ -188,7 +157,7 @@
 </section>
 
 <footer>
-<p id="footer_left">Marc Hoyois, <time datetime="2014-01-15">January 15, 2014</time></p>
+<p id="footer_left">Marc Hoyois, <time datetime="2014-06-24">June 24, 2014</time></p>
 <p id="footer_right"><a href="#top">To the top</a></p>
 <p id="footer_middle"><a href="http://validator.nu/?doc=http%3A%2F%2Fhoyois.github.io%2Fsafariextensions%2Fclicktoplugin%2Fhelp.xhtml">XHTML5</a> • <a href="http://hoyois.github.io/html5outliner/?xml=true&amp;url=http%3A%2F%2Fhoyois.github.io%2Fsafariextensions%2Fclicktoplugin%2Fhelp.xhtml">Outline</a> • <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhoyois.github.io%2Fstyles.css&amp;profile=css3&amp;usermedium=all&amp;warning=1">CSS3</a></p>
 </footer>
