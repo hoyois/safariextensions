@@ -23,7 +23,7 @@
 </nav>
 </header>
 
-<p>This extension adds contextual menu items to links and HTML5 media elements (fig. 1) that allow you to download the media source, open it in the QuickTime Player application, or view it on an Apple TV (or any compatible AirPlay device).</p>
+<p>This extension adds contextual menu items to links and HTML5 media elements (fig. 1) to download the media source, open it in the QuickTime Player application, or view it on an AirPlay-enabled device. The AirPlay device can be specified in the extension’s preferences using the format <code>IPAddress[:port]</code>.</p>
 
 <p>The extension also provides a toolbar button to stop playback on your AirPlay device (fig. 2). You can add it to Safari’s toolbar by choosing Customize Toolbar from the View menu.</p>
 
@@ -36,14 +36,16 @@
 <figcaption>Figure 2: Toolbar button</figcaption>
 </figure>
 
-<h3>Features</h3>
+<h3>Notes</h3>
 
 <ul>
+	<li>Opening in QuickTime Player requires version ≤ 7.7.1 of the QuickTime web plug-in. In Safari 6.1+, the plug-in must run in unsafe mode.</li>
 	<li>The following devices or applications provide AirPlay servers that are known to be compatible with the extension:
 		<ul>
 			<li>Apple TV (with software version 4.3 or later)</li>
 			<li><a href="http://www.airserverapp.com">AirServer</a></li>
-			<li><a href="http://xbmc.org">XBMC</a></li>
+			<li><a href="http://xbmc.org">XBMC</a> (listens on port <code>36667</code> by default)</li>
+			<li><a href="https://play.google.com/store/apps/details?id=com.waxrain.airplaydmr2&amp;hl=en">AirPlay/DLNA Receiver</a></li>
 		</ul>
 	</li>
 	<li>Works with HTML5 videos on YouTube, Vimeo, and Dailymotion</li>
@@ -124,7 +126,7 @@
 </dl>
 
 <footer>
-<p id="footer_left">Marc Hoyois, <time datetime="2013-10-29">October 29, 2013</time></p>
+<p id="footer_left">Marc Hoyois, <time datetime="2014-12-07">December 7, 2014</time></p>
 </footer>
 
 </body>
